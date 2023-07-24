@@ -1,7 +1,31 @@
-h3{
+h6 {
     text-transform: uppercase;
 }
 
-ul li{
-    text-decoration: none;
+ul li {
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: -32px;
+}
+
+img {
+    width: 90px;
+    height: 30px
+}
+
+.sect1 {
+    background-color: antiquewhite;
+}
+
+.sect2 {
+    background-color: aquamarine;
+}
+
+.social{
+   margin-left: -2px;
+
+}
+
+#countries{
+    cursor: pointer;
 }
