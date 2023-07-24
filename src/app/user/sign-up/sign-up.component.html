@@ -1,0 +1,114 @@
+<div class="container  mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 shadow-lg mt-5 mb-5 text-center rounded-3  col-sm-12">
+            <h3 class="text-center p-5">Sign-Up</h3>
+            <form class="example-form container" [formGroup]="myForm1" (ngSubmit)="myForm1.valid"
+                novalidate>
+                <div class="row d-flex">
+                    <div class="col">
+                        <mat-form-field class="example-full-width form-group">
+                            <mat-label>Firstname</mat-label>
+                            <input  matInput  formControlName="firstname" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="First_Name.hasError('pattern') && !First_Name.hasError('required')">Please enter a valid First Name</mat-error>
+                            <mat-error *ngIf="First_Name.hasError('required')">
+                                First Name is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field class="example-full-width form-group">
+                            <mat-label>Lastname</mat-label>
+                            <input  matInput formControlName="lastname" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="Last_Name.hasError('pattern') && !Last_Name.hasError('required')">Please enter a valid Last Name</mat-error>
+                            <mat-error *ngIf="Last_Name.hasError('required')">
+                                Last Name is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row d-flex">
+                    <div class="col">
+                        <mat-form-field class="example-full-width form-group">
+                            <mat-label>Email</mat-label>
+                            <input  matInput  formControlName="email" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="Email.hasError('email') && !Email.hasError('required')">Please enter a valid email address</mat-error>
+                            <mat-error *ngIf="Email.hasError('required')">
+                                Email is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row d-flex">
+                    <div class="col">
+                        <mat-form-field class="example-full-width form-group">
+                            <mat-label>Password</mat-label>
+                            <input class="" matInput placeholder="" formControlName="firstname" [ngClass]="{
+                              'is-invalid':
+                                First_Name.errors && (First_Name.touched || First_Name.dirty),
+                              'is-valid': First_Name.valid
+                            }" required>
+                            <mat-error *ngIf="First_Name.errors && First_Name.dirty">Required Field</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field class="example-full-width form-group">
+                            <mat-label>Confirn Password</mat-label>
+                            <input class="" matInput placeholder="" formControlName="firstname" [ngClass]="{
+                              'is-invalid':
+                                First_Name.errors && (First_Name.touched || First_Name.dirty),
+                              'is-valid': First_Name.valid
+                            }" required>
+                            <mat-error *ngIf="First_Name.errors && First_Name.dirty">Required Field</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row d-flex">
+                    <div class="col">
+                        <mat-form-field>
+                            <mat-label>Select</mat-label>
+                            <mat-select>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                              <mat-option></mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="col">
+                       
+                    </div>
+                </div>
+                <div class="col pb-5">
+                    <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/login" class="text-decoration-none">Already have
+                        an account?Login!</a></p>
+                        <button mat-raised-button color="primary" type="submit" (ngSubmit)="myForm1.valid"
+                        class="example-full-width">
+                        Register
+                      </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
