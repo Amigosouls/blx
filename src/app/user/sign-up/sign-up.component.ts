@@ -55,7 +55,7 @@ export class SignUpComponent implements OnInit {
   Email!: FormControl;
   Password!: FormControl;
   State!: FormControl;
-  //Confirm_Password!: FormControl;
+  Confirm_Password!: FormControl;
   srcResult!: FormControl;
 
 
@@ -81,7 +81,7 @@ export class SignUpComponent implements OnInit {
       lastname: this.Last_Name,
       email: this.Email,
       password: this.Password,
-      // confirm_password:this.Confirm_Password,
+      confirm_password:this.Confirm_Password,
       state: this.State,
     });
   }
