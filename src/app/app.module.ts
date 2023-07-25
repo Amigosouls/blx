@@ -23,6 +23,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { HelpsComponent } from './helps/helps.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HelpsComponent } from './helps/helps.component';
     UserComponent,
     SignInComponent,
     SignUpComponent,
-    HelpsComponent
+    HelpsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
