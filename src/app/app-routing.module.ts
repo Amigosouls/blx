@@ -8,10 +8,6 @@ const routes: Routes = [
   {
     path: 'help',
     component: HelpsComponent,
-  },
-  {
-    path:'signup',
-    component:SignUpComponent
   }
 ];
 
