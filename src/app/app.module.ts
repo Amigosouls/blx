@@ -22,6 +22,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { HelpsComponent } from './helps/helps.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MatMenuModule } from '@angular/material/menu';
     NavbarComponent,
     UserComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    HelpsComponent
   ],
   imports: [
     BrowserModule,
