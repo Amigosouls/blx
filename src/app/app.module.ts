@@ -24,7 +24,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { HelpsComponent } from './helps/helps.component';
 import { HomeComponent } from './home/home.component';
-
+import {MatStepperModule} from '@angular/material/stepper';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +47,8 @@ import { HomeComponent } from './home/home.component';
     MatSelectModule,
     MatButtonModule,
     MegaMenuModule,
-    MatMenuModule
+    MatMenuModule,
+    MatStepperModule
   
   ],
   providers: [],
