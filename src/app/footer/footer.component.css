@@ -34,7 +34,3 @@ img {
 #countries {
     cursor: pointer;
 }
-
-.accordion-header,.accordion-body{
-    background: transparent;
-}
