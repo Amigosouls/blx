@@ -8,6 +8,11 @@ ul li {
     margin-left: -32px;
 }
 
+ul a {
+    text-decoration: none;
+    color: #212529;
+}
+
 img {
     width: 90px;
     height: 30px
@@ -15,18 +20,23 @@ img {
 
 .sect1 {
     background-color:
-    #626b9e;
+        #626b9e;
 }
 
 .sect2 {
     background-color: #777c99;
 }
 
-.social{
-   margin-left: -2px;
+.social {
+    margin-left: -2px;
+    color: #FFFFFF;
 
 }
 
-#countries{
+#countries {
     cursor: pointer;
+}
+
+.accordion-header,.accordion-body{
+    background: transparent;
 }
