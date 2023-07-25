@@ -67,6 +67,8 @@ export class SignUpComponent implements OnInit {
       };
   
       reader.readAsArrayBuffer(inputNode.files[0]);
+      
+      console.log(inputNode.files[0].name)
     }
   }
 }

@@ -1,3 +1,4 @@
+<img [src]="srcResult" alt="">
 <div class="container  mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-lg-6 shadow-lg mt-5 mb-5 text-center rounded-3  col-sm-12">
@@ -103,6 +104,7 @@
                         </mat-form-field>
                     </div>
                     <div class="col">
+                       
                         <button type="button" mat-raised-button color="primary" (click)="fileInput.click()">Choose</button>
                         <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
                         
