@@ -1,0 +1,14 @@
+{
+  "userdetails": [
+    {
+      "firstname": "Sharon",
+      "lastname": "D",
+      "email": "sadaad@1233",
+      "password": "Bas@123",
+      "confirmpassword": "Bas@123",
+      "state": "Tamil Nadu",
+      "islogged": false,
+      "id": 1
+    }
+  ]
+}
