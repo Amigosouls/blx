@@ -4,8 +4,9 @@ import { PostComponent } from './post/post.component';
 import { HelpsComponent } from './helps/helps.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
+import { PostadComponent } from './post/postad/postad.component';
 const routes: Routes = [
-  { path: 'post', component: PostComponent },
+ { path: 'post', component: PostComponent },
   {
     path:"help",component:HelpsComponent
   },
@@ -14,6 +15,9 @@ const routes: Routes = [
   },
   {
     path:"signup",component:SignUpComponent
+  },
+  {
+    path:"postad/:id",component:PostadComponent
   }
 ];
 

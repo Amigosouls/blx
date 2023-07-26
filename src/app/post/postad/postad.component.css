@@ -1,0 +1,17 @@
+.container{
+    border: 1px solid gray;
+    max-width: 60%;
+}
+.container-fluid h3{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.postad .row{
+    height: 10vh;
+    
+}
+.postad .row h4{
+    font-size: 20px;
+    font-weight: bold;
+}

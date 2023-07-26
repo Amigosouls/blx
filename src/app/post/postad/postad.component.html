@@ -1,0 +1,24 @@
+<div class="container-fluid justify-content-center postad">
+    <h3 class="text-center">POST YOUR AD</h3>
+    <div class="container">
+      <form [formGroup]="postAdForm">
+        <mat-stepper formArrayName="formArray" linear>
+          <mat-step formGroupName="firstFormGroup" [stepControl]="formArray.get([0])">
+            ...
+            <div>
+              <button mat-button matStepperNext type="button">Next</button>
+            </div>
+          </mat-step>
+          <mat-step formGroupName="secondFormGroup" [stepControl]="formArray.get([1])">
+            ...
+            <div>
+              <button mat-button matStepperPrevious type="button">Back</button>
+              <button mat-button matStepperNext type="button">Next</button>
+            </div>
+          </mat-step>
+          ...
+        </mat-stepper>
+      </form>
+      
+    </div>
+</div>

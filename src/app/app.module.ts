@@ -25,6 +25,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { HelpsComponent } from './helps/helps.component';
 import { HomeComponent } from './home/home.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import { PostComponent } from './post/post.component';
+import { PostadComponent } from './post/postad/postad.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import {MatStepperModule} from '@angular/material/stepper';
     SignInComponent,
     SignUpComponent,
     HelpsComponent,
-    HomeComponent
+    HomeComponent,
+    PostComponent,
+    PostadComponent
   ],
   imports: [
     BrowserModule,
