@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faq } from 'src/models/helpModel';
 
 
@@ -8,6 +9,7 @@ import { faq } from 'src/models/helpModel';
   styleUrls: ['./helps.component.css']
 })
 export class HelpsComponent implements OnInit {
+
 faqs:faq[]=[
   {
     "title":'Contact Seller',
@@ -46,8 +48,16 @@ faqs:faq[]=[
   
 
 
+constructor(private router:Router) {
+
+  
+}
  
     ngOnInit(): void {
     }
 
+    faqRouting(routerLink: string) {
+      this.router.navigate(['faq/'+routerLink])
+      
+      }
 }
