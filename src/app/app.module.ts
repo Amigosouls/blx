@@ -15,6 +15,7 @@ import { SignUpComponent } from './user/sign-up/sign-up.component';
 
 //primeng
 import { MegaMenuModule } from 'primeng/megamenu'
+import { TreeSelectModule } from 'primeng/treeselect';
 
 // Mat UI
 import {MatInputModule} from '@angular/material/input';
@@ -52,7 +53,8 @@ import { PostadComponent } from './post/postad/postad.component';
     MatButtonModule,
     MegaMenuModule,
     MatMenuModule,
-    MatStepperModule
+    MatStepperModule,
+    TreeSelectModule
   
   ],
   providers: [],

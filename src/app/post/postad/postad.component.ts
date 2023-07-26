@@ -15,6 +15,20 @@ import {
 })
 export class PostadComponent implements OnInit {
   isLinear = false;
+  selectedNodes: any;
+  nodes: any[]=[
+    {
+      key:0,
+      label:"TVS",
+      children:[
+        {
+          key:0-0,
+          label:"Apache"
+        }
+      ]
+    }
+  ];
+ // bikeList:Array<string>=["TVS","Bajaj","Hero","YAMAHA","KTM","RE","HONDA",""]
   postAdForm!: FormGroup;
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
