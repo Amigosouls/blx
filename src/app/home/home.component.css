@@ -1,0 +1,23 @@
+#cardBg {
+    background-color: rgb(228, 228, 228);
+    padding-bottom: 20px;
+}
+
+#Feature {
+    z-index: 2;
+    position: absolute;
+    margin-top: -150px;
+    background-color: #ffce32;
+}
+
+.leftborder {
+    border-left: 5px solid #ffce32;
+    margin-right: 25px;
+}
+
+#like {
+    z-index: 3;
+    position: absolute;
+    margin-top: -150px;
+    margin-left: 200px;
+}

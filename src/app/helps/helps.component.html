@@ -21,9 +21,9 @@
 
   <div class="container-fluid" id="layer2">
     <h1 class="text-center">FAQs</h1>
-    <div class="row d-flex justify-content-center align-items-center">
+    <div class="row d-flex justify-content-center align-items-center" >
       <div class="col-lg-3 col-sm-11 card m-2" *ngFor="let question of faqs">
-        <div class="card-body text-center">{{question.title}}</div>
+        <div class="card-body text-center" (click)="faqRouting(question.routerLink)">{{question.title}}</div>
       </div>
     </div>
   </div>
