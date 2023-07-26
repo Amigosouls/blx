@@ -4,24 +4,14 @@ import { PostComponent } from './post/post.component';
 import { HelpsComponent } from './helps/helps.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
-import { PostadComponent } from './post/postad/postad.component';
-import { FaqComponent } from './helps/faq/faq.component';
+import { HomeComponent } from './home/home.component';
 const routes: Routes = [
  { path: 'post', component: PostComponent },
   {
-    path:"help",component:HelpsComponent
-  },
-  {
-    path:"signin",component:SignInComponent
-  },
-  {
-    path:"signup",component:SignUpComponent
-  },
-  {
-    path:"postad/:id",component:PostadComponent
-  },
-  {
-    path:"faq/:id",component:FaqComponent
+    path: 'help',
+    component: HelpsComponent,
+  },{
+    path:'',component:HomeComponent
   }
 ];
 

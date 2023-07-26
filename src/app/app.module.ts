@@ -28,6 +28,13 @@ import { HomeComponent } from './home/home.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { PostComponent } from './post/post.component';
 import { PostadComponent } from './post/postad/postad.component';
+
+
+//Carousel Home 
+import {CarouselModule} from 'primeng/carousel';
+import {ButtonModule} from 'primeng/button';
+import {ToastModule} from 'primeng/toast';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +61,10 @@ import { PostadComponent } from './post/postad/postad.component';
     MegaMenuModule,
     MatMenuModule,
     MatStepperModule,
-    TreeSelectModule
+    TreeSelectModule,
+    CarouselModule,
+    ToastModule,
+    ButtonModule
   
   ],
   providers: [],
