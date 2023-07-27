@@ -9,44 +9,61 @@
       "state": "Tamil Nadu",
       "islogged": false,
       "id": 1
+    },
+    {
+      "firstname": "Sharon",
+      "lastname": "D",
+      "email": "sharonantony2408@gmail.com",
+      "password": "Kokki@123",
+      "confirmpassword": "Kokki@123",
+      "state": "Tamil Nadu",
+      "islogged": false,
+      "id": 2
+    },
+    {
+      "firstname": "Sharon",
+      "lastname": "D",
+      "email": "sharonantony2408@gmail.com",
+      "password": "Sad@123",
+      "confirmpassword": "Sad@123",
+      "state": "Assam",
+      "islogged": false,
+      "id": 3
     }
   ],
-  "Ads":[
-    
-  ],
-  "faq":[
+  "Ads": [],
+  "faq": [
     {
-      "title":"Contact Seller",
-      "routerLink":"contactseller"
+      "title": "Contact Seller",
+      "routerLink": "contactseller"
     },
     {
-      "title":"Password Reset",
-      "routerLink":"pwdreset"
+      "title": "Password Reset",
+      "routerLink": "pwdreset"
     },
     {
-      "title":"Contact Buyer",
-      "routerLink":"contactbuyer"
+      "title": "Contact Buyer",
+      "routerLink": "contactbuyer"
     },
-    
-      {
-        "title": "Create an Account",
-        "routerLink": "createaccount"
-      },
-      {
-        "title": "Free Ad Posting",
-        "routerLink": "postad"
-      },
-      {
-        "title": "Edit or Delete Ad",
-        "routerLink": "editdeletead"
-      },
-      {
-        "title": "Report Suspicious Ad",
-        "routerLink": "reportaduser"
-      },
-      {
-        "title": "Posting Guidelines",
-        "routerLink": "postingguidelines"
-      }
+    {
+      "title": "Create an Account",
+      "routerLink": "createaccount"
+    },
+    {
+      "title": "Free Ad Posting",
+      "routerLink": "postad"
+    },
+    {
+      "title": "Edit or Delete Ad",
+      "routerLink": "editdeletead"
+    },
+    {
+      "title": "Report Suspicious Ad",
+      "routerLink": "reportaduser"
+    },
+    {
+      "title": "Posting Guidelines",
+      "routerLink": "postingguidelines"
+    }
   ]
 }

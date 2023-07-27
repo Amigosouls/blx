@@ -39,4 +39,20 @@ signUp(form:user_details){
   );
   
 }
+
+signIn(){
+  return this.http.get<user_details[]>(this.user_details_url);
+
+}
+
+isLoggedIn(item:user_details,id:number){
+  let reg = this.user_details_url +'/'+ id;
+  item.islogged=true;
+  return this.http.put(reg,item).subscribe(()=>{});
+}
+isLoggedOut(item:user_details,id:number){
+  let reg = this.user_details_url +'/'+ id;
+  item.islogged=false;
+  return this.http.put(reg,item).subscribe(()=>{});
+}
 }

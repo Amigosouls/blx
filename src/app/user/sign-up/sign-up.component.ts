@@ -10,6 +10,9 @@ import { Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { matchValidator } from 'src/shared/confirm-password';
 import { RegisterationService } from 'src/services/registeration.service';
+import { MessageService } from 'primeng/api';
+import { Router } from '@angular/router';
+import { user_details } from 'src/models/user_details';
 
 // For Validation Messages
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -34,7 +37,9 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class SignUpComponent implements OnInit {
   constructor(
     private builder: FormBuilder,
-    private registeration: RegisterationService
+    private registeration: RegisterationService,
+    private alert:MessageService,
+    private router:Router
   ) {}
 
   signupForm!: FormGroup;
@@ -44,6 +49,7 @@ export class SignUpComponent implements OnInit {
   Password!: FormControl;
   State!: FormControl;
   Confirm_Password!: FormControl;
+  user_details: user_details[] = [];
 
   ngOnInit(): void {
     this.First_Name = new FormControl('', [
@@ -79,6 +85,35 @@ export class SignUpComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
 
   onSubmit() {
+    const email_check =  this.registeration.signIn().subscribe((response)=>{
+      this.user_details = response
+      this.user_details.find((a:any)=>{
+        if(a.email === this.signupForm.value.email)
+        {
+          console.log()
+          this.alert.add({
+            key: 'tc',
+            severity: 'error',
+            summary: 'E-mail already taken',
+            detail: 'Please choose a different E-mail ID',
+          })
+          return false
+        }
+        return true
+      })
+      if(email_check){
     this.registeration.signUp(this.signupForm.value);
+    this.alert.add({
+      key: 'tc',
+      severity: 'success',
+      summary: 'Success',
+      detail: 'Registration Successful',
+    });
+    setTimeout(() => {
+     // this.router.navigate(['/signin']);
+    }, 2000);
+  }
+    })
+  
   }
 }
