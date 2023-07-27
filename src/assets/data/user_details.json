@@ -11,40 +11,42 @@
       "id": 1
     }
   ],
-  "Ads": [],
-  "faq": [
+  "Ads":[
+    
+  ],
+  "faq":[
     {
-      "title": "Contact Seller",
-      "routerLink": "contactseller"
+      "title":"Contact Seller",
+      "routerLink":"contactseller"
     },
     {
-      "title": "Password Reset",
-      "routerLink": "pwdreset"
+      "title":"Password Reset",
+      "routerLink":"pwdreset"
     },
     {
-      "title": "Contact Buyer",
-      "routerLink": "contactbuyer"
+      "title":"Contact Buyer",
+      "routerLink":"contactbuyer"
     },
-
-    {
-      "title": "Create Account",
-      "routerLink": "createaccount"
-    },
-    {
-      "title": "Free Ad Posting",
-      "routerLink": "postad"
-    },
-    {
-      "title": "Edit or Delete Ad",
-      "routerLink": "editdeletead"
-    },
-    {
-      "title": "Report Suspicious Ad",
-      "routerLink": "reportaduser"
-    },
-    {
-      "title": "Posting Guidelines",
-      "routerLink": "postingguidelines"
-    }
+    
+      {
+        "title": "Create Account",
+        "routerLink": "createaccount"
+      },
+      {
+        "title": "Free Ad Posting",
+        "routerLink": "postad"
+      },
+      {
+        "title": "Edit or Delete Ad",
+        "routerLink": "editdeletead"
+      },
+      {
+        "title": "Report Suspicious Ad",
+        "routerLink": "reportaduser"
+      },
+      {
+        "title": "Posting Guidelines",
+        "routerLink": "postingguidelines"
+      }
   ]
 }
