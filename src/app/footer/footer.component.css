@@ -19,11 +19,11 @@ img {
 }
 
 .sect1 {
-    background-color:#acb6eb;
+    background-color: #acb6eb;
 }
 
 .sect2 {
-    background-color:#626b9e ;
+    background-color: #626b9e;
     color: #FFFFFF;
 }
 
@@ -33,4 +33,25 @@ img {
 
 #countries {
     cursor: pointer;
+}
+
+/* .accordion-header:focus,
+.accordion-button:focus {
+    border: none !important;
+}
+
+
+.accordion-header:active,
+.accordion-button:active {
+    outline: none !important;
+} */
+
+.accordion-button:not(.collapsed),
+.accordion-button:not(.collapsed):focus {
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px;
+}
+
+.accordion-button:is(.collapsed),
+.accordion-button:is(.collapsed):focus {
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px;
 }
