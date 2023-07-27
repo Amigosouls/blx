@@ -35,17 +35,6 @@ img {
     cursor: pointer;
 }
 
-/* .accordion-header:focus,
-.accordion-button:focus {
-    border: none !important;
-}
-
-
-.accordion-header:active,
-.accordion-button:active {
-    outline: none !important;
-} */
-
 .accordion-button:not(.collapsed),
 .accordion-button:not(.collapsed):focus {
     box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px;
