@@ -2,11 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Inject } from '@angular/core';
 import {
-  FormBuilder,
   Validators,
-  FormsModule,
-  ReactiveFormsModule,
   FormGroup,
+  FormControl,
 } from '@angular/forms';
 @Component({
   selector: 'app-postad',
@@ -45,33 +43,56 @@ export class PostadComponent implements OnInit {
   ];
  bikeList:Array<any>=[]
   postAdForm!: FormGroup;
-  firstFormGroup!: FormGroup;
-  secondFormGroup!: FormGroup;
+  brand!:FormControl;
+  year !:FormControl;
+  kmdriven!:FormControl;
+  adtitle!:FormControl;
+  description!:FormControl;
+  price!:FormControl;
+  imagelink!:FormControl;
+
+
+
+
   constructor(
-    private fb : FormBuilder,
     private router: ActivatedRoute, 
-  ) {
-    this.postAdForm = fb.group({
-      
-    });
-  }
+  ) {}
   id!: string;
   ngOnInit(): void {
     this.id = this.router.snapshot.params['id'];
-    this.firstFormGroup=this.fb.group({
-      firstCtrl: ['', Validators.required],
-    }),
-    this.secondFormGroup= this.fb.group({
-      secondCtrl: ['', Validators.required],
-    })
-  
+    this.brand = new FormControl('');
+    this.year = new FormControl('');
+    this.kmdriven = new FormControl('');
+    this.adtitle = new FormControl('');
+    this.description = new FormControl('');
+    this.price = new FormControl('');
+    this.imagelink = new FormControl('');
+    this.postAdForm = new FormGroup({
+      brand : this.brand,
+      year : this.year,
+      kmdriven : this.kmdriven,
+      adtitle : this.adtitle,
+      description : this.description,
+      price : this.price,
+      imagelink : this.imagelink,
+
+    });
+   
   }
-  getImage(vechicle:string){
-    fetch(`https://pixabay.com/api/?key=36007746-b36ae27c3528436e0e7b2219a&q=&image_type=photo&category=&min_width=300&min_height=400&order=`,{method:"GET"  //api link from pixaby
+  setimageLink(link : any){
+    console.log(link.imageURL);
+  }
+  getImage(){
+    fetch(`https://pixabay.com/api/?key=36007746-b36ae27c3528436e0e7b2219a&q=${this.id}&image_type=photo&category=transportation&min_width=300&min_height=400&order=popular`,{method:"GET"  //api link from pixaby
     }).then(res => res.json())
     .then(image=>{
-        
+        console.log(image);
+        this.bikeList=image.hits;
     
     })
-}
+  }
+  onSubmission(form:FormGroup){
+    form.value.brand=this.selectedNodes.label;
+    console.log(form.value);
+  }
 }
