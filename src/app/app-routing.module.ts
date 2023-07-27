@@ -5,6 +5,7 @@ import { HelpsComponent } from './helps/helps.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
+import { PostadComponent } from './post/postad/postad.component';
 //import * as path from 'path';
 const routes: Routes = [
  { path: 'post', component: PostComponent },
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   {
   path:'signup',component:SignUpComponent
+  },
+  {
+    path:'postad/:id', component:PostadComponent
   }
 ];
 
