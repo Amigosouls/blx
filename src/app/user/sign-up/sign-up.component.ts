@@ -8,6 +8,8 @@ import {
 } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { matchValidator } from 'src/shared/confirm-password';
+import { RegisterationService } from 'src/services/registeration.service';
 
 // For Validation Messages
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -24,30 +26,16 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   }
 }
 
-interface SelectProtected {
-  readonly wrapperElement: HTMLDivElement;
-  readonly inputElement: HTMLInputElement;
-}
-
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css'],
 })
-
-
 export class SignUpComponent implements OnInit {
- 
-  uploadForm: FormGroup;
-  imageURL!: string;
-  constructor(private fb: FormBuilder) { this.uploadForm = this.fb.group({
-    avatar: [null],
-    name: ['']
-  })}
-
- 
-
- 
+  constructor(
+    private builder: FormBuilder,
+    private registeration: RegisterationService
+  ) {}
 
   signupForm!: FormGroup;
   First_Name!: FormControl;
@@ -56,8 +44,6 @@ export class SignUpComponent implements OnInit {
   Password!: FormControl;
   State!: FormControl;
   Confirm_Password!: FormControl;
-  srcResult!: FormControl;
-
 
   ngOnInit(): void {
     this.First_Name = new FormControl('', [
@@ -75,27 +61,24 @@ export class SignUpComponent implements OnInit {
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{6,}$/
       ),
     ]);
+    this.Confirm_Password = new FormControl('', [
+      Validators.required,
+      matchValidator('password'),
+    ]);
     this.State = new FormControl('', [Validators.required]);
     this.signupForm = new FormGroup({
       firstname: this.First_Name,
       lastname: this.Last_Name,
       email: this.Email,
       password: this.Password,
-      confirm_password:this.Confirm_Password,
+      confirmpassword: this.Confirm_Password,
       state: this.State,
+      islogged: this.builder.control(false),
     });
   }
   matcher = new MyErrorStateMatcher();
 
-  onFileSelected() {
-    // const inputNode: any = document.querySelector('#file');
-    // if (typeof (FileReader) !== 'undefined') {
-    //   const reader = new FileReader();
-    //   reader.onload = (e: any) => {
-    //     this.srcResult = e.target.result;
-    //   };
-    //   reader.readAsArrayBuffer(inputNode.files[0]);
-    // }
+  onSubmit() {
+    this.registeration.signUp(this.signupForm.value);
   }
-
 }

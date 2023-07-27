@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { faq } from 'src/models/helpModel';
+import { FaqService } from 'src/services/faq.service';
 
 
 @Component({
@@ -10,50 +11,26 @@ import { faq } from 'src/models/helpModel';
 })
 export class HelpsComponent implements OnInit {
 
-faqs:faq[]=[
-  {
-    "title":'Contact Seller',
-    "routerLink":'contactseller'
-  },
-  {
-    "title":'Password Reset',
-    "routerLink":"pwdreset"
-  },
-  {
-    "title":'Contact Buyer',
-    "routerLink":'contactbuyer'
-  },
+  faqs: faq[] = [];
   
-    {
-      "title": "Create Account",
-      "routerLink": "createaccount"
-    },
-    {
-      "title": "Free Ad Posting",
-      "routerLink": "postad"
-    },
-    {
-      "title": "Edit or Delete Ad",
-      "routerLink": "editdeletead"
-    },
-    {
-      "title": "Report Suspicious Ad",
-      "routerLink": "reportaduser"
-    },
-    {
-      "title": "Posting Guidelines",
-      "routerLink": "postingguidelines"
-    }
-  ]
+
   
 
 
-constructor(private router:Router) {
+constructor(private router:Router,private faqService:FaqService) {
 
   
 }
  
     ngOnInit(): void {
+      this.faqService.getFaqData().subscribe(
+        {
+          next:(res)=>{
+            this.faqs=res;
+          }
+        }
+      )
+      
     }
 
     faqRouting(routerLink: string) {

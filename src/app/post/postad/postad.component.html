@@ -1,55 +1,110 @@
 <div class="container-fluid justify-content-center postad">
-    <h3 class="text-center">POST YOUR AD</h3>
-    <div class="container">
-      <!-- <form [formGroup]="postAdForm">
-        <mat-stepper formArrayName="formArray" linear>
-          <mat-step formGroupName="firstFormGroup" [stepControl]="formArray.get([0])">
-            ...
-            <div>
-              <button mat-button matStepperNext type="button">Next</button>
-            </div>
-          </mat-step>
-          <mat-step formGroupName="secondFormGroup" [stepControl]="formArray.get([1])">
-            ...
-            <div>
-              <button mat-button matStepperPrevious type="button">Back</button>
-              <button mat-button matStepperNext type="button">Next</button>
-            </div>
-          </mat-step>
-          ...
-        </mat-stepper>
-      </form> -->
-      <mat-vertical-stepper labelPosition="bottom" linear>
-        <mat-step label="Include Some Details" 
-                  completed="true">
-                  <div class="form-floating mb-3">
-                    <p-treeSelect class="w-full md:w-20rem" containerStyleClass="w-full" [(ngModel)]="selectedNodes" [options]="nodes" [metaKeySelection]="false" selectionMode="multiple" placeholder="Select Item"></p-treeSelect>
-                    <label for="floatingInput">Brand</label>
-                  </div>
-            <button mat-button matStepperPrevious>
-              Back
-          </button>
-           <button mat-button matStepperNext>
-              Next
-            </button>
-        </mat-step>
-        <mat-step label="Billing Address" 
-                  completed="false" optional>
-            <p>Billing Address Details</p>
-            <div>
-                <button mat-button matStepperPrevious>
-                      Back
-                  </button>
-                <button mat-button matStepperNext>
-                      Next
-                  </button>
-            </div>
-        </mat-step>
-        <mat-step label="Place Order" completed="false">
-            <p>Order Details</p>
-        </mat-step>
-    </mat-vertical-stepper>
+  <h3 class="text-center">POST YOUR AD</h3>
+  <div class="container">
+    <form [formGroup]="postAdForm" (ngSubmit)="postAdForm.valid && onSubmission(postAdForm)" >
+    <mat-horizontal-stepper labelPosition="bottom" linear>
+     
+      <mat-step label="Include Some Details">
+          <p-treeSelect
+            class="w-full md:w-30rem"
+            containerStyleClass="w-full"
+            formControlName="brand"
+            [options]="nodes"
+            matInput
+            [metaKeySelection]="false"
+            [(ngModel)]="selectedNodes"
+            placeholder="Brand"
+          ></p-treeSelect>
+          <input
+            type="number"
+            formArrayName="year"
+            matInput
+            id="floatingInput"
+            placeholder="name@example.com"
+          />
+          <label for="floatingInput">Year</label>
+          <input
+            type="text"
+            matInput
+            class="mat-form-field"
+            id="floatingInput"
+            formControlName="kmdriven"
+            placeholder="name@example.com"
+          />
+          <label for="floatingInput">Km Driven</label>
 
-      
+          <input
+            type="text"
+            matInput
+            id="floatingInput"
+            class="mat-form-field"
+            formControlName = "adtitle"
+            placeholder="name@example.com"
+          />
+          <label for="floatingInput">Ad Title</label>
+          <textarea
+            name=""
+            id=""
+            matInput
+            cols="30"
+            class="mat-form-field"
+            formControlName = "description"
+           
+            rows="3"
+          ></textarea>
+          <label for="floatingInput">Description</label>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </mat-step>
+     
+      <mat-step label="Set Price" >
+          <input
+            type="number"
+            matInput
+            class="mat-form-field"
+            id="floatingInput"
+            formControlName = "price"
+            placeholder="name@example.com"
+          />
+          <label for="floatingInput">Price</label>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step label="Finalize" >
+          <input
+            type="text"
+            formControlName="imagelink"
+            matInput
+            id="floatingInput"
+            class="mat-form-field"
+            value="fdfwedeyd"
+            placeholder="Upload Your vehicle photo"
+          />
+          <label for="floatingInput">File</label>
+          <button class="btn btn-primary" (click)="getImage()" data-bs-toggle="modal" data-bs-target="#chooseVehicle">Select</button>
+          <button class="btn btn-primary mt-3" type="submit">Post</button>
+      </mat-step>
+    
+    </mat-horizontal-stepper>
+  </form>
+  </div>
+</div>
+
+<div class="modal fade" id="chooseVehicle" tabindex="-1" aria-labelledby="chooseVehicleModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="chooseVehicleModal">Click the Image to Choose</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <button  *ngFor="let img of bikeList" (click)="setimageLink(img)" [ngStyle]="{'background-image': 'url(${img.imageURL})'}" style="height: 100px; width: 100px; padding: 3px; background-image:'url($(img.imageURL))'"></button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
     </div>
+  </div>
 </div>

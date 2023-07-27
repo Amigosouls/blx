@@ -1,0 +1,52 @@
+{
+  "userdetails": [
+    {
+      "firstname": "Sharon",
+      "lastname": "D",
+      "email": "sadaad@1233",
+      "password": "Bas@123",
+      "confirmpassword": "Bas@123",
+      "state": "Tamil Nadu",
+      "islogged": false,
+      "id": 1
+    }
+  ],
+  "Ads":[
+    
+  ],
+  "faq":[
+    {
+      "title":"Contact Seller",
+      "routerLink":"contactseller"
+    },
+    {
+      "title":"Password Reset",
+      "routerLink":"pwdreset"
+    },
+    {
+      "title":"Contact Buyer",
+      "routerLink":"contactbuyer"
+    },
+    
+      {
+        "title": "Create Account",
+        "routerLink": "createaccount"
+      },
+      {
+        "title": "Free Ad Posting",
+        "routerLink": "postad"
+      },
+      {
+        "title": "Edit or Delete Ad",
+        "routerLink": "editdeletead"
+      },
+      {
+        "title": "Report Suspicious Ad",
+        "routerLink": "reportaduser"
+      },
+      {
+        "title": "Posting Guidelines",
+        "routerLink": "postingguidelines"
+      }
+  ]
+}

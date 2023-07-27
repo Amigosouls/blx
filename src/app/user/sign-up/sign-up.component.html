@@ -1,8 +1,9 @@
+<p-toast position="top-center" key="tc"></p-toast>
 <div class="container  mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-lg-6 shadow-lg mt-5 mb-5 text-center rounded-3  col-sm-12">
             <h3 class="text-center p-3">Sign-Up</h3>
-            <form class="example-form container" [formGroup]="signupForm" (ngSubmit)="signupForm.valid" novalidate>
+            <form class="example-form container" [formGroup]="signupForm" (ngSubmit)="signupForm.valid && onSubmit()" novalidate>
                 <div class="row d-flex">
                     <div class="col">
                         <mat-form-field class="example-full-width form-group">
@@ -52,8 +53,9 @@
                     <div class="col">
                         <mat-form-field class="example-full-width form-group">
                             <mat-label>Confirm Password</mat-label>
-                            <input matInput  formControlName="confirm_password"  >
-                            <mat-error *ngIf="Confirm_Password.hasError('required')&& Confirm_Password.dirty">Required Field</mat-error>
+                            <input type="password" matInput  formControlName="confirmpassword" [errorStateMatcher]="matcher" >
+                            <mat-error *ngIf="Confirm_Password.hasError('required')">Required Field</mat-error>
+                            <mat-error *ngIf="Confirm_Password.hasError('matching')">Passwords not matched</mat-error>
                         </mat-form-field>
                     </div>
                 </div>
@@ -102,12 +104,12 @@
                             <mat-error *ngIf="State.hasError('required')">State is Required</mat-error>
                         </mat-form-field>
                     </div>
-                    <div class="col">
+                    <!-- <div class="col">
                        
                         <button type="button" mat-raised-button color="primary" (click)="fileInput.click()">Choose</button>
                         <input hidden accept="image/*"  (change)="onFileSelected()" #fileInput type="file" id="file">
                         
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col pb-5">
                     <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/login"

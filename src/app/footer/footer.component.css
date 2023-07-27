@@ -19,11 +19,11 @@ img {
 }
 
 .sect1 {
-    background-color:#acb6eb;
+    background-color: #acb6eb;
 }
 
 .sect2 {
-    background-color:#626b9e ;
+    background-color: #626b9e;
     color: #FFFFFF;
 }
 
@@ -33,4 +33,9 @@ img {
 
 #countries {
     cursor: pointer;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
 }
