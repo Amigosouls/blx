@@ -5,6 +5,7 @@ import {
   Validators,
   FormGroup,
   FormControl,
+  FormBuilder,
 } from '@angular/forms';
 @Component({
   selector: 'app-postad',
@@ -43,6 +44,9 @@ export class PostadComponent implements OnInit {
   ];
  bikeList:Array<any>=[]
   postAdForm!: FormGroup;
+  includeDetails!:FormGroup;
+  setPrice!:FormGroup;
+  finalize!:FormGroup;
   brand!:FormControl;
   year !:FormControl;
   kmdriven!:FormControl;
@@ -60,23 +64,50 @@ export class PostadComponent implements OnInit {
   id!: string;
   ngOnInit(): void {
     this.id = this.router.snapshot.params['id'];
-    this.brand = new FormControl('');
-    this.year = new FormControl('');
-    this.kmdriven = new FormControl('');
-    this.adtitle = new FormControl('');
-    this.description = new FormControl('');
-    this.price = new FormControl('');
-    this.imagelink = new FormControl('');
-    this.postAdForm = new FormGroup({
-      brand : this.brand,
-      year : this.year,
-      kmdriven : this.kmdriven,
-      adtitle : this.adtitle,
-      description : this.description,
-      price : this.price,
-      imagelink : this.imagelink,
+    this.brand = new FormControl('',Validators.required);
+    this.year = new FormControl('',Validators.required);
+    this.kmdriven = new FormControl('',Validators.required);
+    this.adtitle = new FormControl('',Validators.required);
+    this.description = new FormControl('',Validators.required);
+    this.price = new FormControl('',Validators.required);
+    this.imagelink = new FormControl('',Validators.required);
+    this.setPrice = new FormGroup({
+      price:this.price
+    })
+    this.includeDetails = new FormGroup(
+      {
+        brand:this.brand,
+        year :this.year,
+        kmdriven:this.kmdriven,
+        adtitle:this.adtitle,
+        description:this.description
+      }
+    );
+    this.finalize =new FormGroup({
+      imagelink:this.imagelink
+    })
+    
+    this.postAdForm=new FormGroup({
+      brand:this.brand,
+      year:this.year,
+      kmdriven:this.kmdriven,
+      adtitle:this.adtitle,
+      description:this.description,
+      price:this.price,
+      imagelink:this.imagelink,
+    })
 
-    });
+    
+    // this.postAdForm = new FormGroup({
+    //   brand : this.brand,
+    //   year : this.year,
+    //   kmdriven : this.kmdriven,
+    //   adtitle : this.adtitle,
+    //   description : this.description,
+    //   price : this.price,
+    //   imagelink : this.imagelink,
+
+    // });
    
   }
   setimageLink(link : any){
