@@ -35,8 +35,16 @@
   "faq": [
     {
       "title": "Contact Seller",
-      "routerLink": "contactseller"
-    },
+      "routerLink": "contactseller",
+      "description": "Contacting the Seller is the basic thing one can expect from a E-Commerce Website.We are pleasd to act as a medium between the Buyer and Seller. We ensure to provide a nice community to buy or sell bikes.",
+    "pointsTobenoted":[
+      "You can contact the seller directly by clicking on their name in ad listing page"
+    ,
+    "Once you have reached to them they will provide all necessary information about your product",
+    "If there is any issue with delivery of products then buyers should report it through the messaging option provided.",
+    "If there is any issue with payment then we would request for a refund",
+    "Please note that if buyers are not satisfied after receiving feedback from seller than it's our responsibility and policy to take action against those unhappy customers"
+  ]},
     {
       "title": "Password Reset",
       "routerLink": "pwdreset"

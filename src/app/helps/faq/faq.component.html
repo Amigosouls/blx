@@ -1,6 +1,18 @@
 <div class="container">
     <h2 class="text-center m-4">
-       How To <span><b> {{singleFaqData[0].title}}</b> </span>
+        How To <span><b> {{singleFaqData[0].title}}</b> </span>
     </h2>
 
+    <div class="container">
+        <h2>
+            Description
+        </h2>
+
+        <p class="col-11 fs-4">{{singleFaqData[0].description}}</p>
+        <!-- <ng-template *ngFor="let point of singleFaqData[0].pointsTobenoted">{{point}}</ng-template> -->
+        
+    </div>
+
+
 </div>
+<h3 *ngFor="let point of singleFaqData[0].pointsTobenoted"></h3>

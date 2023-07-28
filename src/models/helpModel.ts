@@ -1,4 +1,7 @@
 export interface faq{
     title:string,
-    routerLink:string
+    routerLink:string,
+    description:string,
+    pointsTobenoted:string[]
 }
+
