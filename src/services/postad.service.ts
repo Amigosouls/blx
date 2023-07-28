@@ -12,4 +12,7 @@ export class PostadService {
     this.httpObj.post(environment.post_Ad,adForm).subscribe();
   }
 
+  getAd(){
+   return this.httpObj.get<PostAd[]>(environment.post_Ad);
+  }
 }

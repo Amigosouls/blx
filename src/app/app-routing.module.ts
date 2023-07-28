@@ -7,7 +7,8 @@ import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { PostadComponent } from './post/postad/postad.component';
 import { FaqComponent } from './helps/faq/faq.component';
-import { authGuardGuard } from 'src/shared/auth-guard.guard';
+ import { authGuardGuard } from 'src/shared/auth-guard.guard';
+// import { ViewProductComponent } from './home/view-product/view-product.component';
 //import * as path from 'path';
 const routes: Routes = [
   {
@@ -37,7 +38,11 @@ const routes: Routes = [
   {
     path: 'signin',
     component: SignInComponent,
-  },
+  },  
+  // {
+  //   path: 'viewProduct/:id',
+  //   component: ViewProductComponent,
+  // },
 ];
 
 @NgModule({

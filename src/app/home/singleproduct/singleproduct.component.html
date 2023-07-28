@@ -1,0 +1,18 @@
+<div class="content_img">
+    <!-- <img class="card-img" src="{{ products.imagelink }}" (click)="viewProduct(products.id)" width='100%' height='100%' />
+    <h6 class="card-title">{{ products.price }}</h6> -->
+
+    <div class="card-body" (mouseenter)="toggle()" (mouseleave)="toggle()">
+        <div class="text-center">
+            <img src="{{products.imagelink}}" alt="blxImg" width="200px" height="150px">
+        </div>
+        <span id="Feature" class="px-1  fs-6"><i class="fa-solid fa-bolt-lightning me-2 fs-6"></i>Featured</span>
+        <span id="like" class="px-1 float-end"><i class="fa-regular fa-heart"></i></span>
+
+        <div class="leftborder">
+            <h5 class="card-title mt-4 ms-4">{{products.price }}</h5>
+            <h6 class="card-subtitle mb-2 ms-4 text-muted">Kilometer</h6>
+            <p class="card-text mb-3 ms-4">Description</p>
+        </div>
+    </div>
+</div>

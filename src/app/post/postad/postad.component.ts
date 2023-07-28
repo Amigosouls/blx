@@ -224,7 +224,7 @@ export class PostadComponent implements OnInit {
   }
   onSubmission(form: PostAd) {
     form.brand= this.selectedNodes.label;
-    form.user_id=this.activeUserId;
+    //form.user_id=this.activeUserId;
     this.postAdObj.postAd(form);
     this.message.add({severity:'success', summary:'POST AD', detail:'Ad Posted Successfully'});
     

@@ -34,6 +34,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { PostComponent } from './post/post.component';
 import { PostadComponent } from './post/postad/postad.component';
 import { FaqComponent } from './helps/faq/faq.component';
+import { SingleproductComponent } from './home/singleproduct/singleproduct.component';
 
 
 
@@ -53,7 +54,8 @@ import { FaqComponent } from './helps/faq/faq.component';
     HomeComponent,
     PostComponent,
     PostadComponent,
-    FaqComponent
+    FaqComponent,
+    SingleproductComponent,
   ],
   imports: [
     BrowserModule,
