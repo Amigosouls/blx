@@ -22,7 +22,6 @@
     }
   ],
   "Ads": [
-   
     {
       "brand": "BAJAJ",
       "year": 343434,
@@ -99,8 +98,25 @@
       "routerLink": "postingguidelines"
     }
   ],
-  "userComments":[
-
+  "userComments": [
+    {
+      "username": "SrikanthJP",
+      "email": "sri027.cvb@gmail.com",
+      "feedback": "Thanks for the website I got my bike.",
+      "id": 1
+    },
+    {
+      "username": "SharonDavid",
+      "email": "sharon@gmail.com",
+      "feedback": "Hello this is sharon",
+      "id": 2
+    },
+    {
+      "username": "hemanthBBH",
+      "email": "hemanth@gmail.com",
+      "feedback": "This is better than OLX",
+      "id": 3
+    }
   ],
   "Cities": [
     {
