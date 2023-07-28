@@ -2,7 +2,7 @@ a{
     color: aliceblue;
 }
 #nav:hover {
-    color: #f00000; /* Change this color to your desired hover effect color */
+    color: #3f51b5; /* Change this color to your desired hover effect color */
     /* You can add other styles here, such as background color or underline */
   }
 .sell {
@@ -31,6 +31,12 @@ a{
     border-color:#2196F3 #0000ee rgb(245, 245, 9);
    
   }
-  
-
-  
+  .btn{
+    color: aliceblue;
+  }
+.btn:hover{
+    background-color: #3f51b5;
+}
+.one:hover{
+    color:#3f51b5;
+}
