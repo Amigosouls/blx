@@ -1,5 +1,5 @@
 .container{
-    border: 1px solid gray;
+   
     max-width: 60%;
 }
 .container-fluid h3{
@@ -21,4 +21,13 @@
 
 .postad i,img{
     padding-right: 30px;
+}
+
+li{
+    background-color: #a7b0e4;
+    color: white;
+}
+
+i{
+    color: black;
 }

@@ -17,18 +17,8 @@
       "password": "Kokki@123",
       "confirmpassword": "Kokki@123",
       "state": "Tamil Nadu",
-      "islogged": false,
+      "islogged": true,
       "id": 2
-    },
-    {
-      "firstname": "Sharon",
-      "lastname": "D",
-      "email": "sharonantony2408@gmail.com",
-      "password": "Sad@123",
-      "confirmpassword": "Sad@123",
-      "state": "Assam",
-      "islogged": false,
-      "id": 3
     }
   ],
   "Ads": [
@@ -61,6 +51,16 @@
       "price": 33213,
       "imagelink": "https://pixabay.com/get/g13ee838820c3a45333c4a98e0646ca06c70bab20a60432b320d96a0535c4e245efed68d2c68deed97b4bfbcb495290e055ea9f112ccc6357d2ffdd64accf39fa_1280.jpg",
       "id": 3
+    },
+    {
+      "brand": "BAJAJ",
+      "year": 2018,
+      "kmdriven": 60000,
+      "adtitle": "Suuper Bike",
+      "description": "kjhfvkyujtttttttttttttttghgmbnvbghcdrxgfszasdsrdr",
+      "price": 300,
+      "imagelink": "https://pixabay.com/get/g099abc2c14f1f42b70c0ad9c84a7783347120212917097969b467513df341d4cc8e54771b14fb79ba86f5711987d7e7909f084e52e661bb3ae5e166e25f474c8_1280.jpg",
+      "id": 4
     }
   ],
   "faq": [

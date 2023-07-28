@@ -14,7 +14,8 @@ export const authGuardGuard: CanActivateFn = (route, state) => {
     key: "tc",
     severity: "error",
     summary: "Plese Login to Post Ad"
-  })
+  });
+  router.navigate(['/signin']);
   return false;
 }
 };

@@ -88,6 +88,7 @@ export class SignUpComponent implements OnInit {
     const email_check =  this.registeration.signIn().subscribe((response)=>{
       this.user_details = response
       this.user_details.find((a:any)=>{
+        console.log(a)
         if(a.email === this.signupForm.value.email)
         {
           console.log()
@@ -106,8 +107,7 @@ export class SignUpComponent implements OnInit {
     this.alert.add({
       key: 'tc',
       severity: 'success',
-      summary: 'Success',
-      detail: 'Registration Successful',
+      summary: 'Success!Registration Successful',
     });
     setTimeout(() => {
      // this.router.navigate(['/signin']);

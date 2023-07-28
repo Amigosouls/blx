@@ -12,7 +12,7 @@ import { authGuardGuard } from 'src/shared/auth-guard.guard';
 const routes: Routes = [
   {
     path: 'post',
-    component: PostComponent,//canActivate:[authGuardGuard]
+    component: PostComponent,canActivate:[authGuardGuard]
   },
   {
     path: 'help',
