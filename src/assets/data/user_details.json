@@ -31,20 +31,41 @@
       "id": 3
     }
   ],
-  "Ads": [],
+  "Ads": [
+    {
+      "brand": "BAJAJ",
+      "year": 2003,
+      "kmdriven": 342343,
+      "adtitle": "kjfew;lfkle;wf",
+      "description": "ewrewewwef",
+      "price": 3424324,
+      "imagelink": "https://pixabay.com/get/g030fc0c2d90843f843b47582711f21f1f8ac8fa1ee59408e8e264121d54a3aaa96a07287822458ec00aedfff9af14e6c7626ce2b5cb61d1d2a75251cfb7f08ad_1280.jpg",
+      "id": 1
+    },
+    {
+      "brand": "BAJAJ",
+      "year": 32434,
+      "kmdriven": 3322374,
+      "adtitle": "Bike sale",
+      "description": "very good bike",
+      "price": 3434,
+      "imagelink": "https://pixabay.com/get/g46569f3732d4921705ea71e4d206e6135f5fca4f8f200e3e523520f3e857f3952f5cfbffc8cd7d9a7ea152ac986e4f672b7aaac7201daa3740dc5e793c1efbd1_1280.jpg",
+      "id": 2
+    }
+  ],
   "faq": [
     {
       "title": "Contact Seller",
       "routerLink": "contactseller",
       "description": "Contacting the Seller is the basic thing one can expect from a E-Commerce Website.We are pleasd to act as a medium between the Buyer and Seller. We ensure to provide a nice community to buy or sell bikes.",
-    "pointsTobenoted":[
-      "You can contact the seller directly by clicking on their name in ad listing page"
-    ,
-    "Once you have reached to them they will provide all necessary information about your product",
-    "If there is any issue with delivery of products then buyers should report it through the messaging option provided.",
-    "If there is any issue with payment then we would request for a refund",
-    "Please note that if buyers are not satisfied after receiving feedback from seller than it's our responsibility and policy to take action against those unhappy customers"
-  ]},
+      "pointsTobenoted": [
+        "You can contact the seller directly by clicking on their name in ad listing page",
+        "Once you have reached to them they will provide all necessary information about your product",
+        "If there is any issue with delivery of products then buyers should report it through the messaging option provided.",
+        "If there is any issue with payment then we would request for a refund",
+        "Please note that if buyers are not satisfied after receiving feedback from seller than it's our responsibility and policy to take action against those unhappy customers"
+      ]
+    },
     {
       "title": "Password Reset",
       "routerLink": "pwdreset"

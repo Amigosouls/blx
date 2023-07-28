@@ -33,6 +33,7 @@ import { HomeComponent } from './home/home.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { PostComponent } from './post/post.component';
 import { PostadComponent } from './post/postad/postad.component';
+import { FaqComponent } from './helps/faq/faq.component';
 
 
 
@@ -51,7 +52,8 @@ import { PostadComponent } from './post/postad/postad.component';
     HelpsComponent,
     HomeComponent,
     PostComponent,
-    PostadComponent
+    PostadComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
