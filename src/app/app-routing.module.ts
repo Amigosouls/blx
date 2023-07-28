@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { PostadComponent } from './post/postad/postad.component';
 import { FaqComponent } from './helps/faq/faq.component';
  import { authGuardGuard } from 'src/shared/auth-guard.guard';
+import { LocationsComponent } from './locations/locations.component';
 // import { ViewProductComponent } from './home/view-product/view-product.component';
 //import * as path from 'path';
 const routes: Routes = [
@@ -43,6 +44,10 @@ const routes: Routes = [
   //   path: 'viewProduct/:id',
   //   component: ViewProductComponent,
   // },
+  {
+    path:'locations',
+    component:LocationsComponent
+  }
 ];
 
 @NgModule({
