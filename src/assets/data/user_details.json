@@ -17,8 +17,18 @@
       "password": "Kokki@123",
       "confirmpassword": "Kokki@123",
       "state": "Tamil Nadu",
-      "islogged": true,
+      "islogged": false,
       "id": 2
+    },
+    {
+      "firstname": "Srikanth",
+      "lastname": "JeyaPrakash",
+      "email": "sri027.cvb@gmail.com",
+      "password": "ThisOneMeansForever@13",
+      "confirmpassword": "ThisOneMeansForever@13",
+      "state": "Tamil Nadu",
+      "islogged": false,
+      "id": 3
     }
   ],
   "Ads": [
@@ -132,69 +142,66 @@
       "city": "Lucknow",
       "id": 13
     }
-
   ],
   "faq": [
-    
-      {
-        "title": "Contact Seller",
-        "routerLink": "contactseller",
-        "description": "Contacting the Seller is the basic thing one can expect from a E-Commerce Website.We are pleasd to act as a medium between the Buyer and Seller. We ensure to provide a nice community to buy or sell bikes.",
-        "pointsTobenoted": [
-          "You can contact the seller directly by clicking on their name in ad listing page",
-          "Once you have reached to them they will provide all necessary information about your product",
-          "If there is any issue with delivery of products then buyers should report it through the messaging option provided.",
-          "If there is any issue with payment then we would request for a refund",
-          "Please note that if buyers are not satisfied after receiving feedback from seller than it's our responsibility and policy to take action against those unhappy customers"
-        ]
-      },
-      {
-        "title": "Password Reset",
-        "routerLink": "pwdreset",
-        "descrption": "Password reset is the process of invalidating the current password for an account on a website,service,or device, and then creating a new one.",
-        "pointsTobenoted": [
-          "Use email as the primary method for password reset.",
-          "Password reset can be done using various verification methods, such as security questions, email verification, SMS verification, or multi-factor authentication."
-        ]
-      },
-      {
-        "title": "Contact Buyer",
-        "routerLink": "contactbuyer",
-        "description":"contact buyer is an ability for a seller or service provider to communicate with a potential or existing buyer to discuss terms, follow up, or ask questions.",
-        "pointsTobenoted":[
-          "Familiarize yourself with the buyer and their needs.",
-          "Contact the buyer for clarification of evaluation criteria or terminology.",
-          "Establish your expertise with the buyer quickly."
-        ]
-      },
-      {
-        "title": "Create an Account",
-        "routerLink": "createaccount",
-        "description":"Creating an account is a straightforward process that allows you to access various online services and features. ",
-        "pointsTobenoted":
-        [
-          "Provide only the necessary information.",
-          "Verify your email address or phone number to ensure that you can receive important notifications."
-        ]
-      },
-      {
-        "title": "Free Ad Posting",
-        "routerLink": "postad"
-      },
-      {
-        "title": "Edit or Delete Ad",
-        "routerLink": "editdeletead"
-      },
-      {
-        "title": "Report Suspicious Ad",
-        "routerLink": "reportaduser"
-      },
-      {
-        "title": "Posting Guidelines",
-        "routerLink": "postingguidelines",
-        "description":"Posting guidelines are a set of rules or recommendations that provide guidance on how to create effective and appropriate content for a specific platform or purpose."
-      }
-    ],
+    {
+      "title": "Contact Seller",
+      "routerLink": "contactseller",
+      "description": "Contacting the Seller is the basic thing one can expect from a E-Commerce Website.We are pleasd to act as a medium between the Buyer and Seller. We ensure to provide a nice community to buy or sell bikes.",
+      "pointsTobenoted": [
+        "You can contact the seller directly by clicking on their name in ad listing page",
+        "Once you have reached to them they will provide all necessary information about your product",
+        "If there is any issue with delivery of products then buyers should report it through the messaging option provided.",
+        "If there is any issue with payment then we would request for a refund",
+        "Please note that if buyers are not satisfied after receiving feedback from seller than it's our responsibility and policy to take action against those unhappy customers"
+      ]
+    },
+    {
+      "title": "Password Reset",
+      "routerLink": "pwdreset",
+      "descrption": "Password reset is the process of invalidating the current password for an account on a website,service,or device, and then creating a new one.",
+      "pointsTobenoted": [
+        "Use email as the primary method for password reset.",
+        "Password reset can be done using various verification methods, such as security questions, email verification, SMS verification, or multi-factor authentication."
+      ]
+    },
+    {
+      "title": "Contact Buyer",
+      "routerLink": "contactbuyer",
+      "description": "contact buyer is an ability for a seller or service provider to communicate with a potential or existing buyer to discuss terms, follow up, or ask questions.",
+      "pointsTobenoted": [
+        "Familiarize yourself with the buyer and their needs.",
+        "Contact the buyer for clarification of evaluation criteria or terminology.",
+        "Establish your expertise with the buyer quickly."
+      ]
+    },
+    {
+      "title": "Create an Account",
+      "routerLink": "createaccount",
+      "description": "Creating an account is a straightforward process that allows you to access various online services and features. ",
+      "pointsTobenoted": [
+        "Provide only the necessary information.",
+        "Verify your email address or phone number to ensure that you can receive important notifications."
+      ]
+    },
+    {
+      "title": "Free Ad Posting",
+      "routerLink": "postad"
+    },
+    {
+      "title": "Edit or Delete Ad",
+      "routerLink": "editdeletead"
+    },
+    {
+      "title": "Report Suspicious Ad",
+      "routerLink": "reportaduser"
+    },
+    {
+      "title": "Posting Guidelines",
+      "routerLink": "postingguidelines",
+      "description": "Posting guidelines are a set of rules or recommendations that provide guidance on how to create effective and appropriate content for a specific platform or purpose."
+    }
+  ],
   "userComments": [
     {
       "username": "SrikanthJP",

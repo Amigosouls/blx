@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { user_details } from 'src/models/user_details';
+import { RegisterationService } from 'src/services/registeration.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 
  
 export class NavbarComponent implements OnInit {
+  constructor(private regService:RegisterationService){}
   hide!:boolean;
 ngOnInit(): void {
   const token = localStorage.getItem('token')
@@ -18,6 +21,19 @@ ngOnInit(): void {
     this.hide=false;
   }
 
+  this.regService.authSubject.subscribe({
+    next:(res)=>{
+      this.hide=res;
+    }
+  });
+}
+
+logoutUser(){
+    localStorage.removeItem('token');
+    this.regService.getActiveUser().subscribe((res)=>{
+      this.regService.isLoggedOut(res[0],res[0].id);
+      this.regService.validateAuth(false);
+    })
 }
 
 }
