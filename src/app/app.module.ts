@@ -36,6 +36,8 @@ import { PostadComponent } from './post/postad/postad.component';
 import { FaqComponent } from './helps/faq/faq.component';
 import { SingleproductComponent } from './home/singleproduct/singleproduct.component';
 import { LocationsComponent } from './locations/locations.component';
+import { SingleLocationComponent } from './locations/single-location/single-location.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -58,6 +60,7 @@ import { LocationsComponent } from './locations/locations.component';
     FaqComponent,
     SingleproductComponent,
     LocationsComponent,
+    SingleLocationComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +79,8 @@ import { LocationsComponent } from './locations/locations.component';
     HttpClientModule,
     ToastModule,
     CarouselModule,
-    ButtonModule
+    ButtonModule,
+    MatCardModule
   
   ],
   providers: [MessageService],

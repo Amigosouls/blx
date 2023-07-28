@@ -1,1 +1,9 @@
-<p>locations works!</p>
+<div class="container-fluid">
+  <h2 class="text-center">Popular Locations</h2>
+
+  <div class="d-flex row justify-content-center m-5">
+    <mat-card class="col-lg-6" *ngFor="let city of citiesData">
+      <app-single-location [city]="city"></app-single-location>
+    </mat-card>
+  </div>
+</div>
