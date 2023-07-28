@@ -10,6 +10,8 @@ import {
 import { PostadService } from 'src/services/postad.service';
 import { PostAd } from 'src/models/postad';
 import { MessageService } from 'primeng/api';
+import { CitiesService } from 'src/services/cities.service';
+import { Cities } from 'src/models/cities';
 @Component({
   selector: 'app-postad',
   templateUrl: './postad.component.html',
@@ -144,8 +146,11 @@ export class PostadComponent implements OnInit {
   description!: FormControl;
   price!: FormControl;
   imagelink!: FormControl;
+  city!:FormControl;
+  cityList:Cities[]=[];
+ 
 
-  constructor(private router: ActivatedRoute, private postAdObj:PostadService, private message:MessageService ) {}
+  constructor(private router: ActivatedRoute, private cityObj:CitiesService, private postAdObj:PostadService, private message:MessageService ) {}
   id!: string;
   ngOnInit(): void {
     this.id = this.router.snapshot.params['id'];
@@ -156,6 +161,7 @@ export class PostadComponent implements OnInit {
     this.description = new FormControl('', Validators.required);
     this.price = new FormControl('', Validators.required);
     this.imagelink = new FormControl('', Validators.required);
+    this.city=new FormControl('',Validators.required);
     this.setPrice = new FormGroup({
       price: this.price,
     });
@@ -168,6 +174,7 @@ export class PostadComponent implements OnInit {
     });
     this.finalize = new FormGroup({
       imagelink: this.imagelink,
+      city:this.city
     });
 
     this.postAdForm = new FormGroup({
@@ -178,8 +185,19 @@ export class PostadComponent implements OnInit {
       description: this.description,
       price: this.price,
       imagelink: this.imagelink,
+      city:this.city
+
     });
+    this.cityObj.getcities().subscribe(
+      (res)=>{
+        this.cityList=res;
+        this.cityList.sort();
+      }
+    )
+
+
   }
+
   setimageLink(link: any) {
     this.imagelink.setValue(link.largeImageURL)
   }

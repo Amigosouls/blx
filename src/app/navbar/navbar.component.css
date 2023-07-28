@@ -1,5 +1,5 @@
 a{
-    color: aliceblue;
+    color: black;
 }
 #nav:hover {
     color: #3f51b5; /* Change this color to your desired hover effect color */
@@ -31,12 +31,13 @@ a{
     border-color:#2196F3 #0000ee rgb(245, 245, 9);
    
   }
-  .btn{
-    color: aliceblue;
+  .btns{
+    color: rgb(0, 0, 0);
   }
-.btn:hover{
+.btns:hover{
     background-color: #3f51b5;
+    color: ghostwhite;
 }
 .one:hover{
-    color:#3f51b5;
+    color:#ffffff;
 }
