@@ -7,10 +7,11 @@
         <h2>
             Description
         </h2>
-
         <p class="col-11 fs-4">{{singleFaqData[0].description}}</p>
-        <!-- <ng-template *ngFor="let point of singleFaqData[0].pointsTobenoted">{{point}}</ng-template> -->
-        
+        <h2>
+            Instructions
+        </h2>
+        <ul *ngFor="let point of singleFaqData[0].pointsTobenoted" ><li>{{point}}</li></ul>
     </div>
 
 
