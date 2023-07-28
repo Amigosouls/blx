@@ -29,11 +29,14 @@ ngOnInit(): void {
 }
 
 logoutUser(){
+  const confirmation = confirm('You will be Logged out!');
+  if(confirmation){
     localStorage.removeItem('token');
     this.regService.getActiveUser().subscribe((res)=>{
       this.regService.isLoggedOut(res[0],res[0].id);
       this.regService.validateAuth(false);
     })
+  }
 }
 
 }

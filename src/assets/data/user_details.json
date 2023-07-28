@@ -29,6 +29,16 @@
       "state": "Tamil Nadu",
       "islogged": false,
       "id": 3
+    },
+    {
+      "firstname": "Sharon",
+      "lastname": "D",
+      "email": "sharon@one.com",
+      "password": "Basket9486!",
+      "confirmpassword": "Basket9486!",
+      "state": "Goa",
+      "islogged": false,
+      "id": 4
     }
   ],
   "Ads": [
