@@ -42,7 +42,10 @@ signUp(form:user_details){
 
 signIn(){
   return this.http.get<user_details[]>(this.user_details_url);
+}
 
+getActiveUser(){
+  return this.http.get<user_details[]>(this.user_details_url)
 }
 
 isLoggedIn(item:user_details,id:number){

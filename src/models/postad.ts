@@ -5,5 +5,7 @@ export interface PostAd{
     adtitle:string,
     description:string,
     price:number,
-    imagelink:string
+    location:string,
+    imagelink:string,
+    user_id:number
 }
