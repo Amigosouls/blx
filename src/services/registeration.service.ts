@@ -45,7 +45,7 @@ signIn(){
 }
 
 getActiveUser(){
-  return this.http.get<user_details[]>(this.user_details_url)
+  return this.http.get<user_details[]>(this.user_details_url+'/?islogged_like=true')
 }
 
 isLoggedIn(item:user_details,id:number){

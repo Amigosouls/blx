@@ -22,7 +22,6 @@
     }
   ],
   "Ads": [
-   
     {
       "brand": "BAJAJ",
       "year": 343434,
@@ -33,6 +32,18 @@
       "imagelink": "https://pixabay.com/get/g95327f7326981576f309842384741a0fcdd42dba7347452c0d35140ed347062c6d69d0a0ac12d67f59db71d2f08ad935f05ec527d5008cd6485179da808e8845_1280.jpg",
       "city": "Chennai",
       "id": 4
+    },
+    {
+      "brand": "BAJAJ",
+      "year": 2000,
+      "kmdriven": 432434,
+      "adtitle": "Selling of Car",
+      "description": "Very Nice car in good condition",
+      "price": 200000,
+      "imagelink": "https://pixabay.com/get/g19a710e3afcd43dcd7ca128f804c51248008fbcad32a936c7423aa295c1f38bdaa5587e3ed85d2cd96950abf0b79fa614525ad10e59c7c28db76b948b0f1fad7_1280.jpg",
+      "city": "Palakkad",
+      "user_id": 2,
+      "id": 5
     }
   ],
   "faq": [
