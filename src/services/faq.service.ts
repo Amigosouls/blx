@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { faq } from 'src/models/helpModel';
@@ -6,7 +6,7 @@ import { faq } from 'src/models/helpModel';
 @Injectable({
   providedIn: 'root',
 })
-export class FaqService implements OnInit {
+export class FaqService{
   constructor(private http: HttpClient) {}
   faqUrl = environment.faq;
 
@@ -19,5 +19,10 @@ export class FaqService implements OnInit {
     return this.http.get<faq[]>(singleFaqurl)
   }
 
-  ngOnInit(): void {}
+  postUserComment(formData:any){
+    // const postUserUrl=this.
+
+
+  }
+
 }
