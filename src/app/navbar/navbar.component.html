@@ -8,34 +8,31 @@
         <span class="navbar-toggler-icon"></span>
       </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item active">
                         <a class="nav-link" id="nav" routerLink="">Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="nav" href="#">Productions</a>
+                        <a class="nav-link" id="nav" routerLink="" >Products</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" id="nav" href="#"> Location</a>
+                        <a class="nav-link" id="nav" routerLink=""> Location</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="nav" routerLink="help">Help</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <div class="input-group me-2">
-                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                        <button type="button" class="btn btn-primary">search</button>
+                <div class="input-group me-2 ms-4">
+                    <input type="search"  id="ser" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                </div>
+                <div class="d-flex"> 
+                    <button class="btn btn-outline-light me-2 btns" routerLink="signin" *ngIf="!hide">SignIn</button>
+                    <button class="btn btn-outline-light me-2 btns" routerLink="signup" *ngIf="!hide">SignUp</button>
+                    <button class="me-2 sell shadow-lg" routerLink="post" *ngIf="!hide"><i class="fa-solid fa-plus"></i> Sell</button>
+                    <a class="nav-link me-2 mt-2 heart" *ngIf="hide" routerLink="post"><i class="fa-solid fa-heart fa-xl"></i></a>
+                    <button class="btn btn-outline-light me-2 btns"  *ngIf="hide">Logout</button>
                     </div>
-                    <a class="nav-link me-2 mt-2 one" href="#"><i class="fa-regular fa-comment fa-xl"></i></a>
-                    <a class="nav-link me-2 mt-2 one" href="#"><i class="fa-regular fa-bell fa-xl"></i></a>
-                    <a class="nav-link me-2 mt-2 one" href="#"><i class="fa-solid fa-user-plus fa-xl"></i></a>
-                    <a class="nav-link me-2 mt-2 one" routerLink="post"><i class="fa-solid fa-shopping-cart fa-xl"></i></a>
-                    <button class="btn btns me-2" routerLink="signin">SignIn</button>
-                    <button class="btn btns me-2" routerLink="signup">SignUp</button>
-                    <button class="me-2 sell" routerLink="post"><i class="fa-solid fa-plus"></i> Sell</button>
-                    <button class="btn btns me-2">Logout</button>                    
-                </form>
             </div>
         </div>
     </nav>

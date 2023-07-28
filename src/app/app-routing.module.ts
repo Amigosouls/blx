@@ -28,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'postad/:id',
-    component: PostadComponent,
+    component: PostadComponent,canActivate:[authGuardGuard]
   },
   {
     path: 'faq/:id',

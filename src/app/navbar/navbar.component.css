@@ -1,10 +1,6 @@
 a{
     color: black;
 }
-#nav:hover {
-    color: #3f51b5; /* Change this color to your desired hover effect color */
-    /* You can add other styles here, such as background color or underline */
-  }
 .sell {
     /* Set the desired width and height */
     width: 150px;
@@ -31,13 +27,22 @@ a{
     border-color:#2196F3 #0000ee rgb(245, 245, 9);
    
   }
-  .btns{
-    color: rgb(0, 0, 0);
-  }
+ 
 .btns:hover{
     background-color: #3f51b5;
-    color: ghostwhite;
+    color: rgb(255, 255, 255);
 }
-.one:hover{
-    color:#ffffff;
+
+  .form-control{
+    border-radius: 0%;
+  }
+.form-control:focus{
+  box-shadow:none;
+  border-color: #626fb8;
+  border-radius: 0%;
+  border-width: 3px;
+}
+
+.sell{
+  width:80px;
 }
