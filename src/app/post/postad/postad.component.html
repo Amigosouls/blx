@@ -1,13 +1,9 @@
+<p-toast></p-toast>
 <div class="container-fluid justify-content-center postad">
   <h3 class="text-center">POST YOUR AD</h3>
   <div class="container">
     <mat-stepper linear>
       <mat-step [stepControl]="description" >
-        {{includeDetails.valid}}
-        {{brand.valid}}
-        {{kmdriven.valid}}
-        {{adtitle.valid}}
-        {{description.valid}}
         <form [formGroup]="includeDetails">
           <ng-template matStepLabel>Include Vehicle Details</ng-template>
           <p-treeSelect matInput class="w-full md:w-30rem" containerStyleClass="w-full" formControlName="brand"
@@ -53,7 +49,7 @@
         <form [formGroup]="finalize">
           <mat-form-field>
             <mat-label>Upload Image</mat-label>
-            <input matInput type="text" formControlName="imagelink" id="floatingInput"
+            <input matInput type="text" readonly formControlName="imagelink" id="floatingInput"
               placeholder="Upload Your vehicle photo" />
           </mat-form-field>
           <div>
@@ -65,7 +61,7 @@
 
         </form>
 
-        <form [formGroup]="postAdForm" (ngSubmit)="postAdForm.valid && onSubmission(postAdForm)">
+        <form [formGroup]="postAdForm" (ngSubmit)="postAdForm.valid && onSubmission(postAdForm.value)">
           <button class="btn btn-primary mt-3" type="submit">Post</button>
         </form>
       </mat-step>
@@ -85,14 +81,18 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <button *ngFor="let img of bikeList" (click)="setimageLink(img)"
-          [ngStyle]="{ 'background-image': 'url(${img.imageURL})' }" style="
-            height: 100px;
-            width: 100px;
-            padding: 3px;
-            background-image: 'url($(img.imageURL))';
-          "></button>
+
+        <img *ngFor="let img of bikeList" (click)="setimageLink(img) "
+        height="100px"
+        width="100px"
+        src={{img.largeImageURL}}
+        data-bs-dismiss="modal"
+        >
+         
+          
+          
       </div>
+      
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Close

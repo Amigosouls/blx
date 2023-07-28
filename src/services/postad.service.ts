@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 export class PostadService {
 
   constructor(private httpObj:HttpClient) { }
-  postAd(adForm:PostAd[]){
+  postAd(adForm:PostAd){
     this.httpObj.post(environment.post_Ad,adForm).subscribe();
   }
 

@@ -7,6 +7,9 @@ import {
   FormControl,
   FormBuilder,
 } from '@angular/forms';
+import { PostadService } from 'src/services/postad.service';
+import { PostAd } from 'src/models/postad';
+import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-postad',
   templateUrl: './postad.component.html',
@@ -142,7 +145,7 @@ export class PostadComponent implements OnInit {
   price!: FormControl;
   imagelink!: FormControl;
 
-  constructor(private router: ActivatedRoute) {}
+  constructor(private router: ActivatedRoute, private postAdObj:PostadService, private message:MessageService ) {}
   id!: string;
   ngOnInit(): void {
     this.id = this.router.snapshot.params['id'];
@@ -178,11 +181,11 @@ export class PostadComponent implements OnInit {
     });
   }
   setimageLink(link: any) {
-    console.log(link.imageURL);
+    this.imagelink.setValue(link.largeImageURL)
   }
   getImage() {
     fetch(
-      `https://pixabay.com/api/?key=36007746-b36ae27c3528436e0e7b2219a&q=${this.id}&image_type=photo&category=transportation&min_width=300&min_height=400&order=popular`,
+      `https://pixabay.com/api/?key=36007746-b36ae27c3528436e0e7b2219a&q=${this.id}+full+image&image_type=photo&min_width=300&min_height=400&order=latest`,
       {
         method: 'GET', //api link from pixaby
       }
@@ -193,8 +196,10 @@ export class PostadComponent implements OnInit {
         this.bikeList = image.hits;
       });
   }
-  onSubmission(form: FormGroup) {
-    form.value.brand = this.selectedNodes.label;
-    console.log(form.value);
+  onSubmission(form: PostAd) {
+    form.brand= this.selectedNodes.label;
+    this.postAdObj.postAd(form);
+    this.message.add({severity:'success', summary:'POST AD', detail:'Ad Posted Successfully'});
+    
   }
 }
