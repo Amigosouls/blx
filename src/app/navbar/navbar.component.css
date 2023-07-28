@@ -1,3 +1,36 @@
-a:hover{
-    color: rgb(10, 118, 212);
+a{
+    color: aliceblue;
 }
+#nav:hover {
+    color: #f00000; /* Change this color to your desired hover effect color */
+    /* You can add other styles here, such as background color or underline */
+  }
+.sell {
+    /* Set the desired width and height */
+    width: 150px;
+    height: 40px;
+    
+    /* Set the border radius to create a rounded button */
+    border-radius: 20px;
+    
+    /* Add padding to create space between the text and the border */
+    padding: 5px 10px;
+    
+    /* Set the font size and text color */
+    font-size: 16px;
+    color: #0c0c0c;
+    
+    /* Set the button background color */
+    background-color: transparent;
+    
+    /* Set the default border color */
+    border: 5px solid #FFC107;
+    
+    /* Set the transition for smooth color changes on hover */
+    transition: border-color 0.3s;
+    border-color:#2196F3 #0000ee rgb(245, 245, 9);
+   
+  }
+  
+
+  

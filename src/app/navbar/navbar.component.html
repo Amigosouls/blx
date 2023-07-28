@@ -9,16 +9,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link text-white" routerLink="">Home </a>
+                        <a class="nav-link" id="nav" routerLink="">Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Productions</a>
+                        <a class="nav-link" id="nav" href="#">Productions</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-white" href="#"> Location</a>
+                        <a class="nav-link" id="nav" href="#"> Location</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" routerLink="help">Help</a>
+                        <a class="nav-link" id="nav" routerLink="help">Help</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -26,13 +26,14 @@
                         <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                         <button type="button" class="btn btn-outline-primary">search</button>
                     </div>
-                    <button class="btn btn-primary me-2" routerLink="signin">SignIn</button>
-                    <button class="btn btn-primary me-2" routerLink="signup">SignUp</button>
-                    <button class="btn btn-primary me-2">Logout</button>
-                    <a class="nav-link me-2" href="#"><i class="fa-regular fa-comment fa-xl"></i></a>
-                    <a class="nav-link me-2" href="#"><i class="fa-regular fa-bell fa-xl"></i></a>
-                    <a class="nav-link me-2" href="#"><i class="fa-solid fa-user-plus fa-xl"></i></a>
-                    <a class="nav-link me-2" routerLink="post"><i class="fa-solid fa-shopping-cart fa-xl"></i></a>
+                    <button class="btn btn-outline-light me-2" routerLink="signin">SignIn</button>
+                    <button class="btn btn-outline-light me-2" routerLink="signup">SignUp</button>
+                    <button class="me-2 sell"><i class="fa-solid fa-plus"></i> Sell</button>
+                    <button class="btn btn-outline-light me-2">Logout</button>
+                    <a class="nav-link me-2 text-white" href="#"><i class="fa-regular fa-comment fa-xl"></i></a>
+                    <a class="nav-link me-2 text-white" href="#"><i class="fa-regular fa-bell fa-xl"></i></a>
+                    <a class="nav-link me-2 text-white" href="#"><i class="fa-solid fa-user-plus fa-xl"></i></a>
+                    <a class="nav-link me-2 text-white" routerLink="post"><i class="fa-solid fa-shopping-cart fa-xl"></i></a>
                 </form>
             </div>
         </div>
