@@ -35,6 +35,7 @@ import { PostComponent } from './post/post.component';
 import { PostadComponent } from './post/postad/postad.component';
 import { FaqComponent } from './helps/faq/faq.component';
 import { SingleproductComponent } from './home/singleproduct/singleproduct.component';
+import { LocationsComponent } from './locations/locations.component';
 
 
 
@@ -56,6 +57,7 @@ import { SingleproductComponent } from './home/singleproduct/singleproduct.compo
     PostadComponent,
     FaqComponent,
     SingleproductComponent,
+    LocationsComponent,
   ],
   imports: [
     BrowserModule,
