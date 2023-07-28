@@ -33,6 +33,28 @@
       "imagelink": "https://pixabay.com/get/g95327f7326981576f309842384741a0fcdd42dba7347452c0d35140ed347062c6d69d0a0ac12d67f59db71d2f08ad935f05ec527d5008cd6485179da808e8845_1280.jpg",
       "city": "Chennai",
       "id": 4
+    },
+    {
+      "brand": "BAJAJ",
+      "year": 343434,
+      "kmdriven": 23434234,
+      "adtitle": "23322343",
+      "description": "fwfwefewf",
+      "price": 34234324,
+      "imagelink": "https://pixabay.com/get/g95327f7326981576f309842384741a0fcdd42dba7347452c0d35140ed347062c6d69d0a0ac12d67f59db71d2f08ad935f05ec527d5008cd6485179da808e8845_1280.jpg",
+      "city": "Chennai",
+      "id": 4
+    },
+    {
+      "brand": "BAJAJ",
+      "year": 343434,
+      "kmdriven": 23434234,
+      "adtitle": "23322343",
+      "description": "fwfwefewf",
+      "price": 34234324,
+      "imagelink": "https://pixabay.com/get/g95327f7326981576f309842384741a0fcdd42dba7347452c0d35140ed347062c6d69d0a0ac12d67f59db71d2f08ad935f05ec527d5008cd6485179da808e8845_1280.jpg",
+      "city": "Chennai",
+      "id": 4
     }
   ],
   "faq": [
@@ -76,6 +98,9 @@
       "title": "Posting Guidelines",
       "routerLink": "postingguidelines"
     }
+  ],
+  "userComments":[
+
   ],
   "Cities": [
     {
