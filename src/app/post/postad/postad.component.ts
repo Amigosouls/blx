@@ -12,6 +12,7 @@ import { PostAd } from 'src/models/postad';
 import { MessageService } from 'primeng/api';
 import { CitiesService } from 'src/services/cities.service';
 import { Cities } from 'src/models/cities';
+import { RegisterationService } from 'src/services/registeration.service';
 @Component({
   selector: 'app-postad',
   templateUrl: './postad.component.html',
@@ -148,9 +149,10 @@ export class PostadComponent implements OnInit {
   imagelink!: FormControl;
   city!:FormControl;
   cityList:Cities[]=[];
+  activeUserId=0;
  
 
-  constructor(private router: ActivatedRoute, private cityObj:CitiesService, private postAdObj:PostadService, private message:MessageService ) {}
+  constructor(private router: ActivatedRoute,private userObj:RegisterationService, private cityObj:CitiesService, private postAdObj:PostadService, private message:MessageService ) {}
   id!: string;
   ngOnInit(): void {
     this.id = this.router.snapshot.params['id'];
@@ -194,6 +196,12 @@ export class PostadComponent implements OnInit {
         this.cityList.sort();
       }
     )
+    this.userObj.getActiveUser().subscribe(
+      (res)=>{
+        this.activeUserId=res[0].id;
+        console.log(res);
+      }
+    )
 
 
   }
@@ -216,6 +224,7 @@ export class PostadComponent implements OnInit {
   }
   onSubmission(form: PostAd) {
     form.brand= this.selectedNodes.label;
+    form.user_id=this.activeUserId;
     this.postAdObj.postAd(form);
     this.message.add({severity:'success', summary:'POST AD', detail:'Ad Posted Successfully'});
     
