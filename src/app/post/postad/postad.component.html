@@ -1,120 +1,77 @@
 <div class="container-fluid justify-content-center postad">
   <h3 class="text-center">POST YOUR AD</h3>
   <div class="container">
-    <!-- <mat-horizontal-stepper labelPosition="bottom" linear>
-      <mat-step label="Include Some Details">
-        <form [formGroup]="includeDetails">
-          <ng-template matStepLabel>Brand</ng-template>
-          <mat-form-field>
-            <p-treeSelect matInput class="w-full md:w-30rem" containerStyleClass="w-full" formControlName="brand"
-              [options]="nodes"  [metaKeySelection]="false" [(ngModel)]="selectedNodes"
-              placeholder="Brand"></p-treeSelect>
-          </mat-form-field>
-          <ng-template matStepLabel>year</ng-template>
-          <mat-form-field>
-            <input matInput type="number" formArrayName="year"  id="floatingInput" placeholder="name@example.com" />
-          </mat-form-field>
-          <ng-template matStepLabel>Km Driven</ng-template>
-          <mat-form-field>
-            <input matInput type="text"  id="floatingInput" formControlName="kmdriven" placeholder="name@example.com" />
-          </mat-form-field>
-          <ng-template matStepLabel>ad title</ng-template>
-          <mat-form-field>
-            <input matInput type="text" id="floatingInput" formControlName="adtitle" placeholder="name@example.com" />
-          </mat-form-field>
-          <ng-template matStepLabel="">Description</ng-template>
-          <mat-form-field>
-            <textarea matInput name="" id=""  cols="30" formControlName="description" rows="3"></textarea>
-          </mat-form-field>
-          <button mat-button matStepperNext>Next</button>
-        </form>
-      </mat-step>
-
-      <mat-step label="Set Price">
-        <form [formGroup]="setPrice">
-          <ng-template matStepLabel="">Set Price</ng-template>
-          <mat-form-field>
-            <input matInput type="number"  id="floatingInput" formControlName="price" placeholder="name@example.com" />
-          </mat-form-field>
-
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </form>
-      </mat-step>
-      <mat-step label="Finalize">
-        <form [formGroup]="finalize">
-          <ng-template matStepLabel>Choose Image</ng-template>
-          <mat-form-field>
-            <input matInput type="text" formControlName="imagelink"  id="floatingInput" value="fdfwedeyd"
-              placeholder="Upload Your vehicle photo" />
-          </mat-form-field>
-          <button class="btn btn-primary" (click)="getImage()" data-bs-toggle="modal" data-bs-target="#chooseVehicle">
-            Select
-          </button>
-          <button class="btn btn-primary mt-3" type="submit">Post</button>
-        </form>
-      </mat-step>
-    </mat-horizontal-stepper> -->
-    <form [formGroup]="postAdForm"  (ngSubmit)="postAdForm.valid && onSubmission(postAdForm)">
-    <mat-stepper [linear]="isLinear" #stepper>
-      <mat-step [stepControl]="includeDetails">
+    <mat-stepper linear>
+      <mat-step [stepControl]="description" >
+        {{includeDetails.valid}}
+        {{brand.valid}}
+        {{kmdriven.valid}}
+        {{adtitle.valid}}
+        {{description.valid}}
         <form [formGroup]="includeDetails">
           <ng-template matStepLabel>Include Vehicle Details</ng-template>
-            <p-treeSelect  class="w-full md:w-30rem" containerStyleClass="w-full" formControlName="brand"
-            [options]="nodes"  [metaKeySelection]="false" [(ngModel)]="selectedNodes"
-            placeholder="Brand"></p-treeSelect>
-            <mat-form-field>
-              <mat-label>Year </mat-label>
-              <input matInput type="number" formControlName="year"  id="floatingInput" placeholder="name@example.com" />
-            </mat-form-field>
-            <mat-form-field>
-              <mat-label>Km Driven</mat-label>
-              <input matInput type="text"  id="floatingInput" formControlName="kmdriven" placeholder="name@example.com" />
-            </mat-form-field>
-            <mat-form-field>
-              <mat-label>Ad Title</mat-label>
-              <input matInput type="text" id="floatingInput" formControlName="adtitle" placeholder="name@example.com" />
-            </mat-form-field>
-            <mat-form-field>
-              <mat-label>Description</mat-label>
-              <textarea matInput name="" id=""  cols="30" formControlName="description" rows="3"></textarea>
-            </mat-form-field>
+          <p-treeSelect matInput class="w-full md:w-30rem" containerStyleClass="w-full" formControlName="brand"
+            [options]="nodes" [metaKeySelection]="false" [(ngModel)]="selectedNodes" placeholder="Brand"></p-treeSelect>
+          <mat-form-field [style.width.px]=327>
+            <mat-label>Year </mat-label>
+            <input matInput type="number" formControlName="year" id="floatingInput"
+              placeholder="Year of Manufacturing" />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Km Driven</mat-label>
+            <input matInput type="number" id="floatingInput" formControlName="kmdriven" placeholder="Total Km Driven" />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Ad Title</mat-label>
+            <input matInput type="text" id="floatingInput" formControlName="adtitle"
+              placeholder="Type the Ad title you wish to give" />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Description</mat-label>
+            <textarea matInput name="" id="" cols="30" placeholder="Detailed Description of Your Vehicle"
+              formControlName="description" rows="3"></textarea>
+          </mat-form-field>
           <div>
-            <button mat-button matStepperNext>Next</button>
+            <button class="btn btn-primary" mat-button matStepperNext>Next</button>
           </div>
         </form>
       </mat-step>
-      <mat-step [stepControl]="setPrice" label="Fill out your address">
+      <mat-step [stepControl]="price" label="Set Price">
         <form [formGroup]="setPrice">
           <mat-form-field>
             <mat-label>Set Price</mat-label>
-            <input matInput type="number"  id="floatingInput" formControlName="price" placeholder="name@example.com" />
+            <input matInput type="number" id="floatingInput" formControlName="price"
+              placeholder="Set a price for your vehicle" />
           </mat-form-field>
           <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
+            <button class="btn btn-primary me-3" mat-button matStepperPrevious>Back</button>
+            <button class="btn btn-primary ps-3" mat-button matStepperNext>Next</button>
           </div>
         </form>
       </mat-step>
-      <mat-step [stepControl]="finalize" label="Fill out your address">
+      <mat-step [stepControl]="finalize" label="Choose Image">
         <form [formGroup]="finalize">
           <mat-form-field>
             <mat-label>Upload Image</mat-label>
-            <input matInput type="text" formControlName="imagelink"  id="floatingInput" value="fdfwedeyd"
+            <input matInput type="text" formControlName="imagelink" id="floatingInput"
               placeholder="Upload Your vehicle photo" />
           </mat-form-field>
           <div>
             <button class="btn btn-primary" (click)="getImage()" data-bs-toggle="modal" data-bs-target="#chooseVehicle">
               Select
             </button>
-           
+
           </div>
 
         </form>
+
+        <form [formGroup]="postAdForm" (ngSubmit)="postAdForm.valid && onSubmission(postAdForm)">
+          <button class="btn btn-primary mt-3" type="submit">Post</button>
+        </form>
       </mat-step>
     </mat-stepper>
-    <button class="btn btn-primary mt-3" type="submit">Post</button>
-  </form>
+
+
   </div>
 </div>
 

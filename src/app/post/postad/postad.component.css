@@ -22,3 +22,18 @@ mat-step{
     position: relative;
     display: block;
 }
+
+mat-form-field{
+    display: block;
+    width: 75%;
+}
+
+form button{
+    background-color: #609af8;
+}
+
+form button:hover{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
