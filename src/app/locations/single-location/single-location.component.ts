@@ -1,5 +1,6 @@
 import { Component,Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { PostadService } from 'src/services/postad.service';
 
 @Component({
   selector: 'app-single-location',
@@ -11,7 +12,7 @@ export class SingleLocationComponent implements OnInit {
   @Input()
   city:string='';
 
-  constructor(private route:Router){}
+  constructor(private route:Router,private postAd:PostadService){}
 
 
   ngOnInit(): void {
@@ -19,9 +20,8 @@ export class SingleLocationComponent implements OnInit {
   }
 
   routeLocation(cityLink:string){
-   
-    console.log(cityLink);
-    this.route.navigate([""]);
+    this.postAd.changeSearchTerm(cityLink);
+    // this.route.navigate(["/"]);
 
   }
 
