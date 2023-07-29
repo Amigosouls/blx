@@ -105,17 +105,6 @@
         }
     ],
     "Ads": [{
-            "brand": "BAJAJ",
-            "year": 2021,
-            "kmdriven": 11000,
-            "adtitle": "23322343",
-            "description": "fwfwefewf",
-            "price": 27000,
-            "imagelink": "https://pixabay.com/get/g95327f7326981576f309842384741a0fcdd42dba7347452c0d35140ed347062c6d69d0a0ac12d67f59db71d2f08ad935f05ec527d5008cd6485179da808e8845_1280.jpg",
-            "city": "Chennai",
-            "id": 4
-        },
-        {
             "brand": "TVS",
             "year": 2022,
             "kmdriven": 23434,
@@ -181,17 +170,7 @@
             "city": "Delhi",
             "id": 10
         },
-        {
-            "brand": "RE",
-            "year": 2018,
-            "kmdriven": 56780,
-            "adtitle": "36521427",
-            "description": "ofodfihf",
-            "price": 50000000,
-            "imagelink": "https://pixabay.com/get/g7f8418cd97ff4a68fee83d57a99819a6d93d2ebb37ae1c500c520df7267c3ae1ca0c0537eee7f62124167662351433343840b47128ad7119480ad3f94d12b4bf_1280.jpg",
-            "city": "Pune",
-            "id": 11
-        },
+
         {
             "brand": "Bajaj",
             "year": 2018,
