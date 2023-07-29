@@ -1,0 +1,13 @@
+#car-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.caption {
+    font-size: .9em;
+}
+
+i {
+    font-size: xx-large;
+}
