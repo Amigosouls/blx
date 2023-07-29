@@ -32,6 +32,15 @@ export class LocationsComponent implements OnInit {
    
     
    
+    for (const product1 of this.productData) {
+    if(this.citiesData.includes(product1.city)){
+      console.log("already exists")
+    }
+    else{
+      this.citiesData.push(product1.city);
+      console.log(this.citiesData);
+    }
+    }
   }
  
 }
