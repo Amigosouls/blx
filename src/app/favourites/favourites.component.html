@@ -1,1 +1,35 @@
-<p>favourites works!</p>
+<section>
+    <div class="container">
+        <h1 class="text-center">`Your Favourites`</h1>
+    </div>
+    <hr>
+    <div class="container" *ngIf="favourites.length==0; else favours" style="padding-bottom: 400px;">
+        <div class="row">
+            <h3 class="empty">Your shopping cart is empty!</h3>
+            <button mat-raised-button color="primary" routerLink=''>Add Favourites</button>
+        </div>
+    </div>
+    <ng-template #favours>
+        <div class="container mb-5" *ngFor="let fav of favourites">
+            <div class="row mb-3">
+                <div class="col-4">
+                    <p-card class="card" header="Brand : {{fav.brand}}" subheader="Model : {{fav.adtitle}}"
+                        [style]="{ width: '346px' }">
+                        <ng-template pTemplate="header">
+                            <img alt="Card" src="{{fav.imagelink}}" />
+                        </ng-template>
+                        <div class="card-body">
+                            <h4>Price : {{fav.price | currency : "INR" : "symbol" : "3.0"}}</h4><br/>
+                        <button class="me-3" mat-icon mat-raised-button color="accent">{{fav.city}}
+                            <mat-icon>place</mat-icon>
+                        </button> 
+                        <button  mat-icon mat-raised-button color="warn">{{fav.kmdriven}}
+                            <mat-icon>motorcycle</mat-icon>
+                        </button>
+                    </div>
+                    </p-card>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</section>

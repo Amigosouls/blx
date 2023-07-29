@@ -5,7 +5,7 @@ export interface Favourites{
     adtitle:string,
     description:string,
     price:number,
-    location:string,
+    city:string,
     imagelink:string,
     user_id:number
 }

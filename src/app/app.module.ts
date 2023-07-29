@@ -13,7 +13,6 @@ import { UserComponent } from './user/user.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 
-
 //primeng
 import { MegaMenuModule } from 'primeng/megamenu'
 import { TreeSelectModule } from 'primeng/treeselect';
@@ -21,6 +20,7 @@ import { MessageService } from 'primeng/api';
 import {CarouselModule} from 'primeng/carousel';
 import {ButtonModule} from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
+import { CardModule } from 'primeng/card';
 
 // Mat UI
 import {MatInputModule} from '@angular/material/input';
@@ -39,12 +39,14 @@ import { SingleproductComponent } from './home/singleproduct/singleproduct.compo
 import { LocationsComponent } from './locations/locations.component';
 import { SingleLocationComponent } from './locations/single-location/single-location.component';
 import {MatCardModule} from '@angular/material/card';
-import { SortlocationPipe } from '../shared/sortlocation.pipe';import { FaqPipePipe } from '../shared/faq-pipe.pipe';
+import { SortlocationPipe } from '../shared/sortlocation.pipe';
+import { FaqPipePipe } from '../shared/faq-pipe.pipe';
 
 
 
 
 
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -85,7 +87,9 @@ import { SortlocationPipe } from '../shared/sortlocation.pipe';import { FaqPipeP
     ToastModule,
     CarouselModule,
     ButtonModule,
-    MatCardModule
+    MatCardModule,
+    CardModule,
+    MatIconModule
   
   ],
   providers: [MessageService],

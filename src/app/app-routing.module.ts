@@ -9,6 +9,7 @@ import { PostadComponent } from './post/postad/postad.component';
 import { FaqComponent } from './helps/faq/faq.component';
  import { authGuardGuard } from 'src/shared/auth-guard.guard';
 import { LocationsComponent } from './locations/locations.component';
+import { FavouritesComponent } from './favourites/favourites.component';
 // import { ViewProductComponent } from './home/view-product/view-product.component';
 //import * as path from 'path';
 const routes: Routes = [
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     path:'locations',
     component:LocationsComponent
+  },
+  {
+    path:'favourites',
+    component:FavouritesComponent
   }
 ];
 
