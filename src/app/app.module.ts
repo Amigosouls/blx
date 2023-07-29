@@ -39,7 +39,7 @@ import { SingleproductComponent } from './home/singleproduct/singleproduct.compo
 import { LocationsComponent } from './locations/locations.component';
 import { SingleLocationComponent } from './locations/single-location/single-location.component';
 import {MatCardModule} from '@angular/material/card';
-
+import { SortlocationPipe } from '../shared/sortlocation.pipe';
 
 
 
@@ -62,7 +62,8 @@ import {MatCardModule} from '@angular/material/card';
     LocationsComponent,
     SingleLocationComponent,
     SingleproductComponent,
-    FavouritesComponent
+    FavouritesComponent,
+    SortlocationPipe
   ],
   imports: [
     BrowserModule,
