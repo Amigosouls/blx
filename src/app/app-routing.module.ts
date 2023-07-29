@@ -14,7 +14,7 @@ import { LocationsComponent } from './locations/locations.component';
 const routes: Routes = [
   {
     path: 'post',
-    component: PostComponent,canActivate:[authGuardGuard]
+    component: PostComponent//,canActivate:[authGuardGuard]
   },
   {
     path: 'help',
@@ -30,7 +30,7 @@ const routes: Routes = [
   },
   {
     path: 'postad/:id',
-    component: PostadComponent,canActivate:[authGuardGuard]
+    component: PostadComponent//,canActivate:[authGuardGuard]
   },
   {
     path: 'faq/:id',

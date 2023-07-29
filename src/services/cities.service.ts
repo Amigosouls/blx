@@ -13,4 +13,8 @@ export class CitiesService {
   getcities(){
     return this.httpObj.get<Cities[]>(environment.cities);
   }
+
+  getVehicles(){
+    return this.httpObj.get<any[]>(environment.vehicles);
+  }
 }

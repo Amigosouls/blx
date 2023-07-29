@@ -1,11 +1,11 @@
-export interface PostAd{
+export interface Favourites{
     brand : string,
     year : number ,
     kmdriven:number,
     adtitle:string,
     description:string,
     price:number,
-    city:string,
+    location:string,
     imagelink:string,
     user_id:number
 }

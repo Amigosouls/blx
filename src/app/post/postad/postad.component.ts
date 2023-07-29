@@ -20,121 +20,7 @@ import { RegisterationService } from 'src/services/registeration.service';
 })
 export class PostadComponent implements OnInit {
   selectedNodes: any;
-  nodes: any[] = [
-    {
-      key: '0',
-      label: 'TVS',
-      data: 'Documents Folder',
-      children: [
-        {
-          key: '0-0',
-          label: 'APACHE',
-          data: 'Work Folder',
-        },
-        {
-          key: '0-1',
-          label: 'SPORT',
-          data: 'Home Folder',
-        },
-        {
-          key: '0-2',
-          label: 'STAR CITY',
-          data: 'Home Folder',
-        },
-      ],
-    },
-    {
-      key: '1',
-      label: 'BAJAJ',
-      data: 'Documents Folder',
-      children: [
-        {
-          key: '1-0',
-          label: 'DOMINAR',
-          data: 'Work Folder',
-        },
-        {
-          key: '1-1',
-          label: 'PULSAR',
-          data: 'Home Folder',
-        },
-        {
-          key: '1-2',
-          label: 'PLATINA',
-          data: 'Home Folder',
-        },
-      ],
-    },
-    {
-      key: '2',
-    label: 'HERO',
-    data: 'Documents Folder',
-    children: [
-        {
-            key: '2-0',
-            label: 'X-PULSE',
-            data: 'Work Folder',
-        },
-        {
-            key: '2-1',
-            label: 'GLAMOUR',
-            data: 'Home Folder',
-        },
-        {
-          key: '2-2',
-          label: 'SPLENDOR',
-          data: 'Home Folder',
-      },
-
-    ]
-    },
-    {
-      key: '3',
-    label: 'YAMAHA',
-    data: 'Documents Folder',
-    children: [
-        {
-            key: '3-0',
-            label: 'MT',
-            data: 'Work Folder',
-        },
-        {
-            key: '3-1',
-            label: 'R15',
-            data: 'Home Folder',
-        },
-        {
-          key: '3-2',
-          label: 'FZ',
-          data: 'Home Folder',
-      },
-
-    ]
-    },
-    {
-      key: '4',
-    label: 'HONDA',
-    data: 'Documents Folder',
-    children: [
-        {
-            key: '4-0',
-            label: 'SHINE',
-            data: 'Work Folder',
-        },
-        {
-            key: '4-1',
-            label: 'UNICORN',
-            data: 'Home Folder',
-        },
-        {
-          key: '4-2',
-          label: 'HIGHNESS',
-          data: 'Home Folder',
-      },
-
-    ]
-    }
-  ];
+  nodes: any[] = [];
   bikeList: Array<any> = [];
   postAdForm!: FormGroup;
   includeDetails!: FormGroup;
@@ -153,7 +39,7 @@ export class PostadComponent implements OnInit {
  
 
   constructor(private router: ActivatedRoute,private userObj:RegisterationService, private cityObj:CitiesService, private postAdObj:PostadService, private message:MessageService ) {}
-  id!: string;
+  id= "";
   ngOnInit(): void {
     this.id = this.router.snapshot.params['id'];
     this.brand = new FormControl('');
@@ -199,10 +85,20 @@ export class PostadComponent implements OnInit {
     this.userObj.getActiveUser().subscribe(
       (res)=>{
         this.activeUserId=res[0].id;
-        console.log(res);
       }
     )
-
+      this.cityObj.getVehicles().subscribe(
+        (res)=>{
+          for (const vechicle of res) {
+            console.log(vechicle.label==this.id)
+            if(vechicle.data==this.id)
+            {
+              this.nodes.push(vechicle);
+              console.log(this.nodes);
+            }
+          }
+        }
+      )
 
   }
 
@@ -224,7 +120,7 @@ export class PostadComponent implements OnInit {
   }
   onSubmission(form: PostAd) {
     form.brand= this.selectedNodes.label;
-    //form.user_id=this.activeUserId;
+    form.user_id=this.activeUserId;
     this.postAdObj.postAd(form);
     this.message.add({severity:'success', summary:'POST AD', detail:'Ad Posted Successfully'});
     
