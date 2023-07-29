@@ -1,6 +1,10 @@
 a{
     color: black;
 }
+.btn{
+  border:none;
+  color: #0c0c0c;
+}
 .sell {
     /* Set the desired width and height */
     width: 150px;
