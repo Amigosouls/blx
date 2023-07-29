@@ -73,4 +73,12 @@ isLoggedOut(item:user_details,id:number){
   item.islogged=false;
   return this.http.put(reg,item).subscribe(()=>{});
 }
+
+getUserByMail(){
+  return this.http.get<user_details[]>(this.user_details_url+'/?email_like=true');
+}
+putUser(userId:number,data:user_details){
+  this.http.put(environment.user_details+`/${userId}`,data).subscribe();
+}
+
 }

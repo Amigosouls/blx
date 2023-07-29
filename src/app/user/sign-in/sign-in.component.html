@@ -1,3 +1,4 @@
+<p-toast></p-toast>
 <div class="container  mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-lg-6 shadow-lg mt-5 mb-5 text-center rounded-3  col-sm-12">
@@ -20,7 +21,8 @@
                         <mat-error *ngIf="Password.hasError('required')">
                             Password is required</mat-error>
                     </mat-form-field>
-                    <mat-hint class="text-end"><a routerLink=".">Forgot Password?</a></mat-hint>
+                    <mat-hint class="text-end" data-bs-toggle="modal" data-bs-target="#forgotPassword"><a
+                            routerLink=".">Forgot Password?</a></mat-hint>
                 </div>
                 <br>
                 <div class="col pb-5">
@@ -31,6 +33,38 @@
                     </button>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="forgotPassword" tabindex="-1" aria-labelledby="forgotPasswordLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="forgotPasswordLabel">Forgot Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="forgotpassword" (ngSubmit)="forgotpassword.valid && changePassword(forgotpassword)"
+                    novalidate>
+                    <input type="email" class="form-control mb-3" placeholder="Email" formControlName="fmail">
+                    <input type="text" placeholder="Your Deep Secret" class="form-control mb-3"
+                        formControlName="fanswer">
+                    <div *ngIf="validdetail">
+                        <input type="password" class="form-control mb-3" placeholder="enter your Passsword"
+                            formControlName="chpass">
+                        <input type="password" placeholder="Re-enter your Passsword" class="form-control mb-3"
+                            formControlName="conchpass">
+                        <span id="error" *ngIf="chpass.hasError('pattern')">Password must contain more than 6 characters
+                            with a Uppercase,lowercase,number and a symbol.</span>
+                        <span id="error" *ngIf="conchpass.hasError('matching')">Passwords Must Match</span>
+                    </div>
+                    <button type="button" class="btn btn-secondary me-3" data-bs-dismiss="modal">Close</button>
+                    <button type="button" *ngIf="!validdetail" (click)="forgotPassword(forgotpassword)"
+                        class="btn btn-primary">Next</button>
+                    <button type="submit" *ngIf="validdetail" class="btn btn-danger" data-bs-dismiss="modal">Change
+                        Password</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
