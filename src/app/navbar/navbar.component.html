@@ -29,7 +29,7 @@
                 <div class="d-flex"> 
                     <button class="btn btn-outline-light me-2 btns" routerLink="signin" *ngIf="!hide">SignIn</button>
                     <button class="btn btn-outline-light me-2 btns" routerLink="signup" *ngIf="!hide">SignUp</button>
-                    <a class="nav-link me-2 mt-2 heart" *ngIf="hide" routerLink="post"><i class="fa-solid fa-heart fa-xl"></i></a>
+                    <a class="nav-link me-2 mt-2 heart" *ngIf="hide" routerLink="favourites"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <button class="btn btn-outline-light me-2 btns" (click)="logoutUser()"  *ngIf="hide">Logout</button>
                     <button class="me-2 sell shadow-lg" routerLink="post"><i class="fa-solid fa-plus"></i> Sell</button>
                 </div>
