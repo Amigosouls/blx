@@ -1,4 +1,4 @@
-
+<p-toast></p-toast>
 <div class="container-fluid justify-content-center postad">
   <h3 class="text-center">POST YOUR AD</h3>
   <div class="container">
@@ -62,8 +62,8 @@
             <mat-label>Choose Location</mat-label>
             
             <mat-select  formControlName="city">
-              <mat-option *ngFor="let city of cityList" [value]="city.city">
-                {{city.city}}
+              <mat-option *ngFor="let city of cityList" [value]="city.name">
+                {{city.name}}
               </mat-option>
             </mat-select>
           </mat-form-field>

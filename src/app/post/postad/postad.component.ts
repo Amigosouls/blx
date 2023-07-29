@@ -13,6 +13,7 @@ import { MessageService } from 'primeng/api';
 import { CitiesService } from 'src/services/cities.service';
 import { Cities } from 'src/models/cities';
 import { RegisterationService } from 'src/services/registeration.service';
+import { VehicleService } from 'src/services/vehicle.service';
 @Component({
   selector: 'app-postad',
   templateUrl: './postad.component.html',
@@ -21,6 +22,7 @@ import { RegisterationService } from 'src/services/registeration.service';
 export class PostadComponent implements OnInit {
   selectedNodes: any;
   nodes: any[] = [];
+  current_date = new Date();
   bikeList: Array<any> = [];
   postAdForm!: FormGroup;
   includeDetails!: FormGroup;
@@ -33,13 +35,19 @@ export class PostadComponent implements OnInit {
   description!: FormControl;
   price!: FormControl;
   imagelink!: FormControl;
-  city!:FormControl;
-  cityList:Cities[]=[];
-  activeUserId=0;
- 
+  city!: FormControl;
+  cityList: Cities[] = [];
+  activeUserId = 0;
 
-  constructor(private router: ActivatedRoute,private userObj:RegisterationService, private cityObj:CitiesService, private postAdObj:PostadService, private message:MessageService ) {}
-  id= "";
+  constructor(
+    private router: ActivatedRoute,
+    private userObj: RegisterationService,
+    private cityObj: CitiesService,
+    private postAdObj: PostadService,
+    private message: MessageService,
+    private vehicleObj: VehicleService
+  ) {}
+  id = '';
   ngOnInit(): void {
     this.id = this.router.snapshot.params['id'];
     this.brand = new FormControl('');
@@ -49,7 +57,7 @@ export class PostadComponent implements OnInit {
     this.description = new FormControl('', Validators.required);
     this.price = new FormControl('', Validators.required);
     this.imagelink = new FormControl('', Validators.required);
-    this.city=new FormControl('',Validators.required);
+    this.city = new FormControl('', Validators.required);
     this.setPrice = new FormGroup({
       price: this.price,
     });
@@ -62,7 +70,7 @@ export class PostadComponent implements OnInit {
     });
     this.finalize = new FormGroup({
       imagelink: this.imagelink,
-      city:this.city
+      city: this.city,
     });
 
     this.postAdForm = new FormGroup({
@@ -73,37 +81,23 @@ export class PostadComponent implements OnInit {
       description: this.description,
       price: this.price,
       imagelink: this.imagelink,
-      city:this.city
-
+      city: this.city,
     });
-    this.cityObj.getcities().subscribe(
-      (res)=>{
-        this.cityList=res;
-        this.cityList.sort();
-      }
-    )
-    this.userObj.getActiveUser().subscribe(
-      (res)=>{
-        this.activeUserId=res[0].id;
-      }
-    )
-      this.cityObj.getVehicles().subscribe(
-        (res)=>{
-          for (const vechicle of res) {
-            console.log(vechicle.label==this.id)
-            if(vechicle.data==this.id)
-            {
-              this.nodes.push(vechicle);
-              console.log(this.nodes);
-            }
-          }
-        }
-      )
-
+    this.cityObj.getcities().subscribe((res) => {
+      this.cityList = res;
+      this.cityList.sort();
+    });
+    this.userObj.getActiveUser().subscribe((res) => {
+      this.activeUserId = res[0].id;
+    });
+    this.vehicleObj.getVehicles(this.id).subscribe((res) => {
+      this.nodes=res;
+      console.log(res);
+    });
   }
 
   setimageLink(link: any) {
-    this.imagelink.setValue(link.largeImageURL)
+    this.imagelink.setValue(link.largeImageURL);
   }
   getImage() {
     fetch(
@@ -119,10 +113,14 @@ export class PostadComponent implements OnInit {
       });
   }
   onSubmission(form: PostAd) {
-    form.brand= this.selectedNodes.label;
-    form.user_id=this.activeUserId;
+    form.brand = this.selectedNodes.label;
+    form.user_id = this.activeUserId;
+    form.date = this.current_date.toLocaleDateString();
     this.postAdObj.postAd(form);
-    this.message.add({severity:'success', summary:'POST AD', detail:'Ad Posted Successfully'});
-    
+    this.message.add({
+      severity: 'success',
+      summary: 'POST AD',
+      detail: 'Ad Posted Successfully',
+    });
   }
 }

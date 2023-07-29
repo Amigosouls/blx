@@ -7,5 +7,6 @@ export interface PostAd{
     price:number,
     city:string,
     imagelink:string,
+    date:string,
     user_id:number
 }
