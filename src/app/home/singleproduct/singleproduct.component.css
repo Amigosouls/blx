@@ -12,9 +12,8 @@
 #like {
     z-index: 3;
     position: absolute;
-    margin-top: -150px;
-    margin-left: 190px;
-    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+    margin-left: 215px;
 }
 
 .heart {
@@ -29,8 +28,4 @@
         transition-duration: 1s;
         background-position: -2800px 0;
     }
-}
-
-.content_img {
-    background-color: #c5cae7;
 }

@@ -1,0 +1,100 @@
+<div class="container-fluid" *ngFor="let item of model" style="margin-top: 100px">
+    <div class="container">
+        <div class="row row1">
+            <div class="col-6">
+                <img class="card-img imgView" src="{{ item.imagelink }}" />
+            </div>
+            <div class="col-6">
+                <div>
+                    <h1>{{ item.brand }}</h1>
+                    <p><b>Product Code:</b>{{ item.adtitle }}</p>
+                    <p><b>Brand:</b> {{ item.brand }}</p>
+                    <p><b>Sold By:</b> {{ item.description }}</p>
+                    <span class="price">
+          {{ item.price | currency : "INR" : "symbol" : "3.0" }}
+        </span>
+                    <br />
+                    <br />
+
+                </div>
+                <hr />
+                <!-- <div>
+                    <span class="offer"> Size Guide </span>
+                    <br />
+                    <br />
+                    <div class="form-group">
+                        <div *ngIf="!item.lengthFlag">
+                            <label class="option-name" style="position: relative; top: 0px !important">
+              <span class="size" required
+                >Size:&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+              >
+            </label>
+
+                            <select [(ngModel)]="cart.size" class="dropdown">
+              <option disabled class="ng-binding" selected="selected">
+                Please Select
+              </option>
+              <option *ngFor="let s of item.size"  value="{{s}}" >
+                {{ s }}
+              </option>
+            </select>
+                        </div>
+                        <div *ngIf="item.lengthFlag">
+                            <label class="option-name" style="position: relative; top: 0px !important">
+              <span class="size"
+                >Length:&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+              >
+            </label>
+
+                            <select class="dropdown">
+              <option value="0">Please Select</option>
+              <option *ngFor="let s of item.length" value="{{ s }}">
+                {{ s }}
+              </option>
+            </select>
+                        </div>
+                        <div *ngIf="item.lengthFlag" class="mt-3">
+                            <label class="option-name" style="position: relative; top: 0px !important">
+              <span class="size"
+                >Waist:&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+              >
+            </label>
+
+                            <select class="dropdown">
+              <option value="0">Please Select</option>
+              <option *ngFor="let s of item.size" value="{{ s }}">
+                {{ s }}
+              </option>
+            </select>
+                        </div>
+                        <hr />
+                        <div>
+                            <label class="option-name" style="position: relative; top: 0px !important">
+              <span class="size"
+                >Quantity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+              >
+            </label>
+                            <input type="number" class="quantity" [(ngModel)]="cart.quantity" min="1" max="25" />
+                        </div>
+                        <br />
+                        <div class="button">
+                            <button class="px-3 btn-dark m-3 bg-black py-2 text-white" (click)="addToCart(item)">
+              Add to Cart
+            </button>
+                            <button class="btn-dark m-0 bg-black px-3 py-2 text-white" (click)="addToCart(item)" routerLink="/cart_details">
+              Buy Now
+            </button>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <h4 class="desc">Description Of Products</h4>
+
+    </div>
+    <div class="row mt-4">
+        <h4 class="desc">Products</h4>
+
+    </div>
+</div>

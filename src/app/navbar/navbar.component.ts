@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { user_details } from 'src/models/user_details';
 import { RegisterationService } from 'src/services/registeration.service';
 import { PostadService } from 'src/services/postad.service';
 import { Router, NavigationEnd } from '@angular/router';
@@ -48,6 +47,7 @@ logoutUser(){
 }
 
 searchTermEmit(event:any){
+  console.log(event.target.value);
   this.postAd.changeSearchTerm(event.target.value);
 
 }

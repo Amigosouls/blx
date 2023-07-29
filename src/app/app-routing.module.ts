@@ -11,6 +11,7 @@ import { FaqComponent } from './helps/faq/faq.component';
 import { LocationsComponent } from './locations/locations.component';
 import { FavouritesComponent } from './favourites/favourites.component';
 // import { ViewProductComponent } from './home/view-product/view-product.component';
+ import { ViewproductComponent } from './home/viewproduct/viewproduct.component';
 //import * as path from 'path';
 const routes: Routes = [
   {
@@ -41,10 +42,10 @@ const routes: Routes = [
     path: 'signin',
     component: SignInComponent,
   },  
-  // {
-  //   path: 'viewProduct/:id',
-  //   component: ViewProductComponent,
-  // },
+  {
+    path: 'viewProduct/:id',
+    component: ViewproductComponent,
+  },
   {
     path:'locations',
     component:LocationsComponent

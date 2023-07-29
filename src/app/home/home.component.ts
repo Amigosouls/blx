@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
     });
     this.ad.searchTerm.subscribe((response)=>{
       this.searchText=response;
-    })
+    });
   }
 
 
