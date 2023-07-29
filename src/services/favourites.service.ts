@@ -20,12 +20,15 @@ export class FavouritesService {
     this.http.post<Favourites>(this.favurl, item).subscribe((data) => {
       console.log(data);
       Swal.fire({
-        icon:'success',
-        title:'Thank You',
-        text:"Your Choice is added to Favourites",
-        showConfirmButton:false,
-        timer:3000
+        icon: 'success',
+        title: 'Thank You',
+        text: "Your Choice is added to Favourites",
+        showConfirmButton: false,
+        timer: 3000
       })
     });
+  }
+  removeFavorite(item: any) {
+    this.http.delete<Favourites>(this.favurl + '/' + item.id).subscribe();
   }
 }
