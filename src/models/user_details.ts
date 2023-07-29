@@ -7,5 +7,6 @@ export interface user_details {
   state: string;
   islogged: boolean;
   user_id:number;
+  answer:string;
   id:number
 }

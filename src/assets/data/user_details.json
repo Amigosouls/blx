@@ -4,10 +4,11 @@
       "firstname": "Sharon",
       "lastname": "D",
       "email": "sadaad@1233",
-      "password": "Bas@123",
-      "confirmpassword": "Bas@123",
+      "password": "saddad12",
+      "confirmpassword": "saddad12",
       "state": "Tamil Nadu",
       "islogged": false,
+      "answer": "hello",
       "id": 1
     },
     {
