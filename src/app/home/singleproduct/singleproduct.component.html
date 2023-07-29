@@ -7,12 +7,12 @@
             <img src="{{products.imagelink}}" alt="blxImg" width="200px" height="150px">
         </div>
         <span id="Feature" class="px-1  fs-6"><i class="fa-solid fa-bolt-lightning me-2 fs-6"></i>Featured</span>
-        <span id="like" class="px-1 float-end"><i class="fa-regular fa-heart"></i></span>
-
+        <span id="like" class="px-1 float-end btn rounded-pill"><i class="fa-regular fa-heart"></i></span>
         <div class="leftborder">
-            <h5 class="card-title mt-4 ms-4">{{products.price }}</h5>
-            <h6 class="card-subtitle mb-2 ms-4 text-muted">Kilometer</h6>
-            <p class="card-text mb-3 ms-4">Description</p>
+            <h6 class="card-text ms-4">{{products.brand}} Brand </h6>
+            <h5 class="card-title mt-4 ms-4">{{products.price|currency:'INR'}}</h5>
+            <h6 class="card-subtitle mb-2 ms-4 text-muted">{{products.year}} model</h6>
+
         </div>
     </div>
 </div>
