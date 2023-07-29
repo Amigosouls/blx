@@ -111,7 +111,6 @@
     }
   ],
   "Ads": [
-    
     {
       "brand": "TVS",
       "year": 2022,
@@ -178,7 +177,6 @@
       "city": "Delhi",
       "id": 10
     },
-
     {
       "brand": "Bajaj",
       "year": 2018,
@@ -213,50 +211,6 @@
       "city": "Coimbatore",
       "imagelink": "https://pixabay.com/get/ge7634fe0838994e086af219b3d3fb3b69195507f0a89a5d43d30f10d147313c776c489b985df94bf927ca6f1e514e7b2712922b38d81cb2b159d8098ad01a526_1280.jpg",
       "id": 1
-    },
-    {
-      "brand": "BAJAJ",
-      "year": 2021,
-      "kmdriven": 11000,
-      "adtitle": "Royal Enfielder",
-      "description": "fwfwefewf",
-      "price": 27000,
-      "city": "Chennai",
-      "imagelink": "https://pixabay.com/get/g95327f7326981576f309842384741a0fcdd42dba7347452c0d35140ed347062c6d69d0a0ac12d67f59db71d2f08ad935f05ec527d5008cd6485179da808e8845_1280.jpg",
-      "id": 2
-    },
-    {
-      "brand": "BAJAJ",
-      "year": 2021,
-      "kmdriven": 11000,
-      "adtitle": "Royal Enfielder",
-      "description": "fwfwefewf",
-      "price": 27000,
-      "city": "Chennai",
-      "imagelink": "https://pixabay.com/get/g95327f7326981576f309842384741a0fcdd42dba7347452c0d35140ed347062c6d69d0a0ac12d67f59db71d2f08ad935f05ec527d5008cd6485179da808e8845_1280.jpg",
-      "id": 3
-    },
-    {
-      "brand": "BAJAJ",
-      "year": 2021,
-      "kmdriven": 11000,
-      "adtitle": "Royal Enfielder",
-      "description": "fwfwefewf",
-      "price": 27000,
-      "city": "Chennai",
-      "imagelink": "https://pixabay.com/get/g95327f7326981576f309842384741a0fcdd42dba7347452c0d35140ed347062c6d69d0a0ac12d67f59db71d2f08ad935f05ec527d5008cd6485179da808e8845_1280.jpg",
-      "id": 4
-    },
-    {
-      "brand": "TVS",
-      "year": 2022,
-      "kmdriven": 23434,
-      "adtitle": "2343",
-      "description": "New Bike",
-      "price": 200000,
-      "city": "Coimbatore",
-      "imagelink": "https://pixabay.com/get/ge7634fe0838994e086af219b3d3fb3b69195507f0a89a5d43d30f10d147313c776c489b985df94bf927ca6f1e514e7b2712922b38d81cb2b159d8098ad01a526_1280.jpg",
-      "id": 5
     },
     {
       "brand": "KTM",
