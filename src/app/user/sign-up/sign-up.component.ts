@@ -38,8 +38,8 @@ export class SignUpComponent implements OnInit {
   constructor(
     private builder: FormBuilder,
     private registeration: RegisterationService,
-    private alert:MessageService,
-    private router:Router
+    private alert: MessageService,
+    private router: Router
   ) {}
 
   signupForm!: FormGroup;
@@ -85,35 +85,6 @@ export class SignUpComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
 
   onSubmit() {
-    const email_check =  this.registeration.signIn().subscribe((response)=>{
-      this.user_details = response
-      this.user_details.find((a:any)=>{
-        console.log(a)
-        if(a.email === this.signupForm.value.email)
-        {
-          console.log()
-          this.alert.add({
-            key: 'tc',
-            severity: 'error',
-            summary: 'E-mail already taken',
-            detail: 'Please choose a different E-mail ID',
-          })
-          return false
-        }
-        return true
-      })
-      if(email_check){
     this.registeration.signUp(this.signupForm.value);
-    this.alert.add({
-      key: 'tc',
-      severity: 'success',
-      summary: 'Success!Registration Successful',
-    });
-    setTimeout(() => {
-     // this.router.navigate(['/signin']);
-    }, 2000);
-  }
-    })
-  
   }
 }

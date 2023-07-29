@@ -34,13 +34,11 @@ signUp(form:user_details){
   return this.http.post<user_details[]>(this.user_details_url, form).subscribe(
    {
     next:()=>{
-      this.alert.add({
-        key: 'tc',
-        severity: 'success',
-        summary: 'Success',
-        detail: 'Registration Successful',
-      });
-
+     
+      setTimeout(() => {
+        this.router.navigate(['/signin']);
+      }, 2000);
+      
       
     },
     error:()=>{
