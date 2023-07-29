@@ -24,7 +24,7 @@
                     </li>
                 </ul>
                 <div class="input-group me-2 ms-4" *ngIf="showSearchBox">
-                    <input type="search"  id="ser" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <input type="search" (keyup)="searchTermEmit($event)"  id="ser" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                 </div>
                 <div class="d-flex"> 
                     <button class="btn btn-outline-light me-2 btns" routerLink="signin" *ngIf="!hide">SignIn</button>

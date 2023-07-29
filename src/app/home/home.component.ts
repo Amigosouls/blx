@@ -15,6 +15,9 @@ export class HomeComponent implements OnInit {
   {
     this.ad.getAd().subscribe((res)=>{
       this.adDetails=res;
+    });
+    this.ad.searchTerm.subscribe((response)=>{
+      this.searchText=response;
     })
   }
 

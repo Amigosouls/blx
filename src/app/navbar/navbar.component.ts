@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { user_details } from 'src/models/user_details';
 import { RegisterationService } from 'src/services/registeration.service';
+import { PostadService } from 'src/services/postad.service';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
@@ -11,7 +12,7 @@ import { Router, NavigationEnd } from '@angular/router';
 
  
 export class NavbarComponent implements OnInit {
-  constructor(private regService:RegisterationService,private router:Router){}
+  constructor(private regService:RegisterationService,private router:Router,private postAd:PostadService){}
   hide!:boolean;
   showSearchBox:boolean=true;
 ngOnInit(): void {
@@ -44,6 +45,11 @@ logoutUser(){
       this.regService.validateAuth(false);
     })
   }
+}
+
+searchTermEmit(event:any){
+  this.postAd.changeSearchTerm(event.target.value);
+
 }
 
 }
