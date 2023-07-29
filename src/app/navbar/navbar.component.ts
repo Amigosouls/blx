@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { user_details } from 'src/models/user_details';
 import { RegisterationService } from 'src/services/registeration.service';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,8 +11,9 @@ import { RegisterationService } from 'src/services/registeration.service';
 
  
 export class NavbarComponent implements OnInit {
-  constructor(private regService:RegisterationService){}
+  constructor(private regService:RegisterationService,private router:Router){}
   hide!:boolean;
+  showSearchBox:boolean=true;
 ngOnInit(): void {
   const token = localStorage.getItem('token')
   if(token){
@@ -24,6 +26,11 @@ ngOnInit(): void {
   this.regService.authSubject.subscribe({
     next:(res)=>{
       this.hide=res;
+    }
+  });
+  this.router.events.subscribe(event => {
+    if (event instanceof NavigationEnd) {
+      this.showSearchBox = event.urlAfterRedirects === '/';
     }
   });
 }

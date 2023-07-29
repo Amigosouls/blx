@@ -34,11 +34,12 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { PostComponent } from './post/post.component';
 import { PostadComponent } from './post/postad/postad.component';
 import { FaqComponent } from './helps/faq/faq.component';
+import { FavouritesComponent } from './favourites/favourites.component';
 import { SingleproductComponent } from './home/singleproduct/singleproduct.component';
 import { LocationsComponent } from './locations/locations.component';
 import { SingleLocationComponent } from './locations/single-location/single-location.component';
 import {MatCardModule} from '@angular/material/card';
-import { FaqPipePipe } from '../shared/faq-pipe.pipe';
+import { SortlocationPipe } from '../shared/sortlocation.pipe';import { FaqPipePipe } from '../shared/faq-pipe.pipe';
 
 
 
@@ -59,9 +60,11 @@ import { FaqPipePipe } from '../shared/faq-pipe.pipe';
     PostComponent,
     PostadComponent,
     FaqComponent,
-    SingleproductComponent,
     LocationsComponent,
     SingleLocationComponent,
+    SingleproductComponent,
+    FavouritesComponent,
+    SortlocationPipe
     FaqPipePipe,
   ],
   imports: [
