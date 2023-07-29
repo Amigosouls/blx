@@ -3,5 +3,6 @@ export const environment = {
     faq:'http://localhost:3000/faq',
     post_Ad:"http://localhost:3000/Ads",
     cities:"http://localhost:3000/Cities",
+    vehicles:"http://localhost:3000/Vehicles",
     userComments:"http://localhost:3000/userComments"
 }
