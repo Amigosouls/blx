@@ -64,8 +64,8 @@ import { SortlocationPipe } from '../shared/sortlocation.pipe';import { FaqPipeP
     SingleLocationComponent,
     SingleproductComponent,
     FavouritesComponent,
-    SortlocationPipe
-    FaqPipePipe,
+    SortlocationPipe,
+    FaqPipePipe
   ],
   imports: [
     BrowserModule,
