@@ -13,6 +13,7 @@ import { user_details } from 'src/models/user_details';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import Swal from 'sweetalert2';
+import { matchValidator } from 'src/shared/confirm-password';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(
@@ -62,13 +63,16 @@ export class SignInComponent implements OnInit {
     });
     this.fmail = new FormControl('', [Validators.required]);
     this.fanswer = new FormControl('', [Validators.required]);
-    this.chpass = new FormControl('', [Validators.required]);
-    this.conchpass = new FormControl('', [Validators.required]);
+    this.chpass = new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{6,}$/),
+    ],);
+    this.conchpass = new FormControl('', [Validators.required, matchValidator('chpass')]);
     this.forgotpassword = new FormGroup({
       fmail: this.fmail,
       fanswer: this.fanswer,
-      chpass:this.chpass,
-      conchpass:this.conchpass,
+      chpass: this.chpass,
+      conchpass: this.conchpass,
     });
   }
   matcher = new MyErrorStateMatcher();
@@ -137,17 +141,16 @@ export class SignInComponent implements OnInit {
       }
     })
   }
-  changePassword(Form:FormGroup)
-  {
+  changePassword(Form: FormGroup) {
     this.registeration.signIn().subscribe((response) => {
       this.user_details = response;
       for (const user of this.user_details) {
         if (
           user.email === Form.value.fmail
-        ){
-          user.password=Form.value.chpass;
-          user.confirmpassword=Form.value.conchpass;
-          this.registeration.putUser(user.id,user);
+        ) {
+          user.password = Form.value.chpass;
+          user.confirmpassword = Form.value.conchpass;
+          this.registeration.putUser(user.id, user);
           Swal.fire({
             icon: 'success',
             title: 'Success',
@@ -155,7 +158,7 @@ export class SignInComponent implements OnInit {
           });
         }
       }
-  })
+    })
   }
 }
 

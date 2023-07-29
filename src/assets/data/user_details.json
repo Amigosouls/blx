@@ -4,8 +4,8 @@
       "firstname": "Sharon",
       "lastname": "D",
       "email": "sadaad@1233",
-      "password": "saddad12",
-      "confirmpassword": "saddad12",
+      "password": "Asde!123",
+      "confirmpassword": "Asde!123",
       "state": "Tamil Nadu",
       "islogged": false,
       "answer": "hello",
@@ -111,7 +111,6 @@
     }
   ],
   "Ads": [
-    
     {
       "brand": "TVS",
       "year": 2022,
@@ -178,7 +177,6 @@
       "city": "Delhi",
       "id": 10
     },
-
     {
       "brand": "Bajaj",
       "year": 2018,
