@@ -3,6 +3,7 @@ import { RegisterationService } from 'src/services/registeration.service';
 import { PostadService } from 'src/services/postad.service';
 import { Router, NavigationEnd } from '@angular/router';
 
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -42,6 +43,7 @@ logoutUser(){
     this.regService.getActiveUser().subscribe((res)=>{
       this.regService.isLoggedOut(res[0],res[0].id);
       this.regService.validateAuth(false);
+      this.router.navigate(["/"]);
     })
   }
 }
