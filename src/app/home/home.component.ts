@@ -9,6 +9,8 @@ import { PostAd } from 'src/models/postad';
 export class HomeComponent implements OnInit {
   constructor(private ad: PostadService) { }
   adDetails: PostAd[] = [];
+  searchText:any;
+
   ngOnInit(): void 
   {
     this.ad.getAd().subscribe((res)=>{

@@ -1,7 +1,10 @@
 <div class="container mb-5 shadow-lg  rounded" id="cardBg">
     <h4 class="mt-4 p-4">Based On your Search</h4>
+    <div class="col-3">
+        <input type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search By Name">
+    </div>
     <div class="row ">
-        <div class="col-2 card ms-4  mt-3 justify-content-between" style="width:16rem;" *ngFor="let item of adDetails">
+        <div class="col-2 card ms-4  mt-3 justify-content-between" style="width:16rem;" *ngFor="let item of adDetails|filter:searchText">
             <app-singleproduct [products]="item"></app-singleproduct>
         </div>
     </div>
