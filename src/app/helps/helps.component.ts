@@ -10,6 +10,7 @@ import { FaqService } from 'src/services/faq.service';
 })
 export class HelpsComponent implements OnInit {
   faqs: faq[] = [];
+  searchTerm:string='';
 
   constructor(private router: Router, private faqService: FaqService) {}
 

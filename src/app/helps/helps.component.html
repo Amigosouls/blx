@@ -13,7 +13,7 @@
         <input
           type="text"
           class="col-8 m-3"
-          placeholder="Search The Help Center"
+          placeholder="Search The Help Center" [(ngModel)]="searchTerm"
         />
       </div>
     </div>
@@ -22,7 +22,7 @@
   <div class="container-fluid" id="layer2">
     <h1 class="text-center">FAQs</h1>
     <div class="row d-flex justify-content-center align-items-center" >
-      <div class="col-lg-3 col-sm-11 card m-2" *ngFor="let question of faqs">
+      <div class="col-lg-3 col-sm-11 card m-2" *ngFor="let question of faqs |faqPipe:searchTerm">
         <div class="card-body text-center" (click)="faqRouting(question.routerLink)">{{question.title}}</div>
       </div>
     </div>

@@ -38,6 +38,7 @@ import { SingleproductComponent } from './home/singleproduct/singleproduct.compo
 import { LocationsComponent } from './locations/locations.component';
 import { SingleLocationComponent } from './locations/single-location/single-location.component';
 import {MatCardModule} from '@angular/material/card';
+import { FaqPipePipe } from '../shared/faq-pipe.pipe';
 
 
 
@@ -61,6 +62,7 @@ import {MatCardModule} from '@angular/material/card';
     SingleproductComponent,
     LocationsComponent,
     SingleLocationComponent,
+    FaqPipePipe,
   ],
   imports: [
     BrowserModule,

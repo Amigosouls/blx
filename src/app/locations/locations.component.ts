@@ -9,7 +9,7 @@ import { PostadService } from 'src/services/postad.service';
   styleUrls: ['./locations.component.css'],
 })
 export class LocationsComponent implements OnInit {
-  citiesData: string[] = ['Coimbatore'];
+  citiesData: string[] = [];
   productData: PostAd[] = [];
 
   constructor(private product: PostadService) {}
@@ -21,9 +21,9 @@ export class LocationsComponent implements OnInit {
      console.log('products data:',this.productData);
 
      for(let i=0;i<response.length;i++){
-      // if(!this.citiesData.includes(response[i].city)){
-      //   this.citiesData.push(response[i].city);
-      // }
+      if(!this.citiesData.includes(response[i].city)){
+        this.citiesData.push(response[i].city);
+      }
      }
      console.log(this.citiesData);
     
