@@ -16,8 +16,9 @@ export class FaqComponent implements OnInit {
   ) {}
 
   onSubmit(form: any) {
-    console.log(form.value);
-    
+    console.log("Form is submitted");
+    this.faqservice.postUserComment(form.value);
+    form.reset();
 
   }
   

@@ -7,12 +7,14 @@ import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { PostadComponent } from './post/postad/postad.component';
 import { FaqComponent } from './helps/faq/faq.component';
-import { authGuardGuard } from 'src/shared/auth-guard.guard';
+ import { authGuardGuard } from 'src/shared/auth-guard.guard';
+import { LocationsComponent } from './locations/locations.component';
+// import { ViewProductComponent } from './home/view-product/view-product.component';
 //import * as path from 'path';
 const routes: Routes = [
   {
     path: 'post',
-    component: PostComponent,canActivate:[authGuardGuard]
+    component: PostComponent//,canActivate:[authGuardGuard]
   },
   {
     path: 'help',
@@ -28,7 +30,7 @@ const routes: Routes = [
   },
   {
     path: 'postad/:id',
-    component: PostadComponent,
+    component: PostadComponent//,canActivate:[authGuardGuard]
   },
   {
     path: 'faq/:id',
@@ -37,7 +39,15 @@ const routes: Routes = [
   {
     path: 'signin',
     component: SignInComponent,
-  },
+  },  
+  // {
+  //   path: 'viewProduct/:id',
+  //   component: ViewProductComponent,
+  // },
+  {
+    path:'locations',
+    component:LocationsComponent
+  }
 ];
 
 @NgModule({

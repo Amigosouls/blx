@@ -6,5 +6,6 @@ export interface user_details {
   confirmpassword: string;
   state: string;
   islogged: boolean;
+  user_id:number;
   id:number
 }

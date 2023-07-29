@@ -63,6 +63,7 @@ export class SignInComponent implements OnInit {
           a.password === this.signinForm.value.password
         ) {
           this.registeration.isLoggedIn(a, a.id);
+          this.registeration.validateAuth(true);
           return true;
         } else {
           return false;

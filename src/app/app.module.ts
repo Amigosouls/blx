@@ -34,6 +34,11 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { PostComponent } from './post/post.component';
 import { PostadComponent } from './post/postad/postad.component';
 import { FaqComponent } from './helps/faq/faq.component';
+import { FavouritesComponent } from './favourites/favourites.component';
+import { SingleproductComponent } from './home/singleproduct/singleproduct.component';
+import { LocationsComponent } from './locations/locations.component';
+import { SingleLocationComponent } from './locations/single-location/single-location.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -53,7 +58,11 @@ import { FaqComponent } from './helps/faq/faq.component';
     HomeComponent,
     PostComponent,
     PostadComponent,
-    FaqComponent
+    FaqComponent,
+    LocationsComponent,
+    SingleLocationComponent,
+    SingleproductComponent,
+    FavouritesComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +81,8 @@ import { FaqComponent } from './helps/faq/faq.component';
     HttpClientModule,
     ToastModule,
     CarouselModule,
-    ButtonModule
+    ButtonModule,
+    MatCardModule
   
   ],
   providers: [MessageService],

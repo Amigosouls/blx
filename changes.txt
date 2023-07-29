@@ -1,0 +1,1 @@
+using @output() receive the city name by the parent component and display the products from that location.

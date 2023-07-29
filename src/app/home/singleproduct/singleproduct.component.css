@@ -1,8 +1,3 @@
-#cardBg {
-    background-color: rgb(228, 228, 228);
-    padding-bottom: 20px;
-}
-
 #Feature {
     z-index: 2;
     position: absolute;
@@ -19,7 +14,8 @@
     z-index: 3;
     position: absolute;
     margin-top: -150px;
-    margin-left: 200px;
+    margin-left: 190px;
+    background-color: rgb(255, 255, 255);
 }
 
 .heart {
@@ -34,15 +30,4 @@
         transition-duration: 1s;
         background-position: -2800px 0;
     }
-}
-
-body {
-    background: #000000;
-}
-
-.placement {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }

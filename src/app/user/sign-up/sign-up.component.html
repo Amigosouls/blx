@@ -105,14 +105,18 @@
                         </mat-form-field>
                     </div>
                     <!-- <div class="col">
-                       
-                        <button type="button" mat-raised-button color="primary" (click)="fileInput.click()">Choose</button>
-                        <input hidden accept="image/*"  (change)="onFileSelected()" #fileInput type="file" id="file">
-                        
+                        <mat-form-field class="example-full-width form-group">
+                            <mat-label>Your Deepest Secret?</mat-label>
+                            <input matInput formControlName="firstname" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="First_Name.hasError('pattern') && !First_Name.hasError('required')">Please
+                                enter a valid First Name</mat-error>
+                            <mat-error *ngIf="First_Name.hasError('required')">
+                                First Name is required</mat-error>
+                        </mat-form-field>
                     </div> -->
                 </div>
                 <div class="col pb-5">
-                    <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/login"
+                    <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/signin"
                             class="text-decoration-none">Already have
                             an account?Login!</a></p>
                     <button mat-raised-button color="primary" type="submit" class="example-full-width">
