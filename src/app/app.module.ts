@@ -41,6 +41,7 @@ import { SingleLocationComponent } from './locations/single-location/single-loca
 import {MatCardModule} from '@angular/material/card';
 import { SortlocationPipe } from '../shared/sortlocation.pipe';
 import { FaqPipePipe } from '../shared/faq-pipe.pipe';
+import { ViewproductComponent } from './home/viewproduct/viewproduct.component';
 
 
 
@@ -67,7 +68,8 @@ import {MatIconModule} from '@angular/material/icon';
     SingleproductComponent,
     FavouritesComponent,
     SortlocationPipe,
-    FaqPipePipe
+    FaqPipePipe,
+    ViewproductComponent
   ],
   imports: [
     BrowserModule,

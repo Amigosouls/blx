@@ -110,17 +110,7 @@
     }
   ],
   "Ads": [
-    {
-      "brand": "BAJAJ",
-      "year": 2021,
-      "kmdriven": 11000,
-      "adtitle": "23322343",
-      "description": "fwfwefewf",
-      "price": 27000,
-      "imagelink": "https://pixabay.com/get/g95327f7326981576f309842384741a0fcdd42dba7347452c0d35140ed347062c6d69d0a0ac12d67f59db71d2f08ad935f05ec527d5008cd6485179da808e8845_1280.jpg",
-      "city": "Chennai",
-      "id": 4
-    },
+    
     {
       "brand": "TVS",
       "year": 2022,
@@ -187,17 +177,7 @@
       "city": "Delhi",
       "id": 10
     },
-    {
-      "brand": "RE",
-      "year": 2018,
-      "kmdriven": 56780,
-      "adtitle": "36521427",
-      "description": "ofodfihf",
-      "price": 50000000,
-      "imagelink": "https://pixabay.com/get/g7f8418cd97ff4a68fee83d57a99819a6d93d2ebb37ae1c500c520df7267c3ae1ca0c0537eee7f62124167662351433343840b47128ad7119480ad3f94d12b4bf_1280.jpg",
-      "city": "Pune",
-      "id": 11
-    },
+
     {
       "brand": "Bajaj",
       "year": 2018,
@@ -219,6 +199,58 @@
       "imagelink": "https://pixabay.com/get/ga43aca52035e972ad34e5fbff0c880834deac2efda28f9ff01b2fc2f80aeb12472ab3750130bb329d86c38cd989c1090d0c843c2c56117cd0d324c86b5be3763_1280.jpg",
       "city": "Lucknow",
       "id": 13
+    },
+    {
+      "brand": "HERO",
+      "year": 2023,
+      "kmdriven": 50000,
+      "adtitle": "Bike in Good Condition",
+      "description": "You will love it once you start to drive",
+      "price": 80000,
+      "imagelink": "https://pixabay.com/get/geeef755b84175e1d78903aafb4cd6926541f979d788542b4dfd1120cad0299d482933f15cf583d3ab99130ad87696111d289c8f291349f2bbc3e7451da5b41fd_1280.jpg",
+      "city": "Nashik",
+      "user_id": 0,
+      "date": "7/29/2023",
+      "id": 14
+    },
+    {
+      "brand": "HERO",
+      "year": 2023,
+      "kmdriven": 50000,
+      "adtitle": "Bike in Good Condition",
+      "description": "You will love it once you start to drive",
+      "price": 80000,
+      "imagelink": "https://pixabay.com/get/geeef755b84175e1d78903aafb4cd6926541f979d788542b4dfd1120cad0299d482933f15cf583d3ab99130ad87696111d289c8f291349f2bbc3e7451da5b41fd_1280.jpg",
+      "city": "Nashik",
+      "user_id": 0,
+      "date": "7/29/2023",
+      "id": 15
+    },
+    {
+      "brand": "HERO",
+      "year": 2023,
+      "kmdriven": 50000,
+      "adtitle": "Bike in Good Condition",
+      "description": "You will love it once you start to drive",
+      "price": 80000,
+      "imagelink": "https://pixabay.com/get/geeef755b84175e1d78903aafb4cd6926541f979d788542b4dfd1120cad0299d482933f15cf583d3ab99130ad87696111d289c8f291349f2bbc3e7451da5b41fd_1280.jpg",
+      "city": "Nashik",
+      "user_id": 0,
+      "date": "7/29/2023",
+      "id": 16
+    },
+    {
+      "brand": "HERO",
+      "year": 2023,
+      "kmdriven": 50000,
+      "adtitle": "Bike in Good Condition",
+      "description": "You will love it once you start to drive",
+      "price": 80000,
+      "imagelink": "https://pixabay.com/get/geeef755b84175e1d78903aafb4cd6926541f979d788542b4dfd1120cad0299d482933f15cf583d3ab99130ad87696111d289c8f291349f2bbc3e7451da5b41fd_1280.jpg",
+      "city": "Nashik",
+      "user_id": 0,
+      "date": "7/29/2023",
+      "id": 17
     }
   ],
   "Favourites": [
@@ -232,6 +264,61 @@
       "city": "Coimbatore",
       "imagelink": "https://pixabay.com/get/ge7634fe0838994e086af219b3d3fb3b69195507f0a89a5d43d30f10d147313c776c489b985df94bf927ca6f1e514e7b2712922b38d81cb2b159d8098ad01a526_1280.jpg",
       "id": 1
+    },
+    {
+      "brand": "BAJAJ",
+      "year": 2021,
+      "kmdriven": 11000,
+      "adtitle": "23322343",
+      "description": "fwfwefewf",
+      "price": 27000,
+      "city": "Chennai",
+      "imagelink": "https://pixabay.com/get/g95327f7326981576f309842384741a0fcdd42dba7347452c0d35140ed347062c6d69d0a0ac12d67f59db71d2f08ad935f05ec527d5008cd6485179da808e8845_1280.jpg",
+      "id": 2
+    },
+    {
+      "brand": "BAJAJ",
+      "year": 2021,
+      "kmdriven": 11000,
+      "adtitle": "23322343",
+      "description": "fwfwefewf",
+      "price": 27000,
+      "city": "Chennai",
+      "imagelink": "https://pixabay.com/get/g95327f7326981576f309842384741a0fcdd42dba7347452c0d35140ed347062c6d69d0a0ac12d67f59db71d2f08ad935f05ec527d5008cd6485179da808e8845_1280.jpg",
+      "id": 3
+    },
+    {
+      "brand": "BAJAJ",
+      "year": 2021,
+      "kmdriven": 11000,
+      "adtitle": "23322343",
+      "description": "fwfwefewf",
+      "price": 27000,
+      "city": "Chennai",
+      "imagelink": "https://pixabay.com/get/g95327f7326981576f309842384741a0fcdd42dba7347452c0d35140ed347062c6d69d0a0ac12d67f59db71d2f08ad935f05ec527d5008cd6485179da808e8845_1280.jpg",
+      "id": 4
+    },
+    {
+      "brand": "TVS",
+      "year": 2022,
+      "kmdriven": 23434,
+      "adtitle": "2343",
+      "description": "ksftdsfw",
+      "price": 200000,
+      "city": "Coimbatore",
+      "imagelink": "https://pixabay.com/get/ge7634fe0838994e086af219b3d3fb3b69195507f0a89a5d43d30f10d147313c776c489b985df94bf927ca6f1e514e7b2712922b38d81cb2b159d8098ad01a526_1280.jpg",
+      "id": 5
+    },
+    {
+      "brand": "KTM",
+      "year": 2019,
+      "kmdriven": 12000,
+      "adtitle": "23324343",
+      "description": "kdsdhuefewf",
+      "price": 4000000,
+      "city": "Madurai",
+      "imagelink": "https://pixabay.com/get/g94b84387d587a7a565679f35b6c19e731eb21da505391af0f4cb247723e177c0c64d1e401f1c501ca61ef5cbd7aa11e78395f102489275c15333f1118bcf7830_1280.jpg",
+      "id": 6
     }
   ],
   "faq": [
