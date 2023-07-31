@@ -17,7 +17,11 @@
                     </mat-form-field>
                     <mat-form-field class="example-full-width form-group">
                         <mat-label>Password</mat-label>
-                        <input type="password" matInput formControlName="password" [errorStateMatcher]="matcher">
+                        <input type="password" matInput [type]="hide ? 'password' : 'text'" formControlName="password" [errorStateMatcher]="matcher">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
                         <mat-error *ngIf="Password.hasError('required')">
                             Password is required</mat-error>
                     </mat-form-field>
@@ -47,7 +51,7 @@
                 <form [formGroup]="forgotpassword" (ngSubmit)="forgotpassword.valid && changePassword(forgotpassword)"
                     novalidate>
                     <input type="email" class="form-control mb-3" placeholder="Email" formControlName="fmail">
-                    <input type="text" placeholder="Your Deep Secret" class="form-control mb-3"
+                    <input type="text" placeholder="Favourite Nickname" class="form-control mb-3"
                         formControlName="fanswer">
                     <div *ngIf="validdetail">
                         <input type="password" class="form-control mb-3" placeholder="enter your Passsword"

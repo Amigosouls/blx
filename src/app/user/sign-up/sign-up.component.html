@@ -106,10 +106,13 @@
                     </div>
                     <div class="col">
                         <mat-form-field class="example-full-width form-group">
-                            <mat-label>Your Deepest Secret?</mat-label>
-                            <input matInput formControlName="secret" [errorStateMatcher]="matcher">
-                            <mat-error *ngIf="Secret.hasError('required')">
-                                Required Field</mat-error>
+                            <mat-label>Your favourite nickname</mat-label>
+                            <mat-hint>It is a security question!</mat-hint>
+                            <input matInput formControlName="answer" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="answer.hasError('pattern') && !answer.hasError('required')">Please
+                                enter a valid Name</mat-error>
+                            <mat-error *ngIf="answer.hasError('required')">
+                               Required Field</mat-error>
                         </mat-form-field>
                     </div>
                 </div>

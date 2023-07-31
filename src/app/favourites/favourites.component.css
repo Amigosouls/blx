@@ -2,21 +2,12 @@
     background-color: aliceblue;
 }
 
-.card{
-    width:350px;
+card{
+    width:0px;
+    border: 2px solid rgb(47, 0, 255);
 }
 
-.card:nth-child(odd){
-    border: 2px solid rgb(255, 38, 0);
-}
-.card:nth-child(even){
-    border: 2px solid rgb(255, 0, 242);
-}
-.unfavorite{
-    z-index: 2;
-    position:absolute;
-    margin-top: -90px;
-    margin-left: 270px;
+i{
     font-size: 30px;
     cursor: pointer;
 }

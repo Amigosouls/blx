@@ -41,6 +41,9 @@ export class SignInComponent implements OnInit {
     private registeration: RegisterationService
   ) { }
 
+    //password hide property
+    hide = true;
+
   signinForm!: FormGroup;
   Email!: FormControl;
   Password!: FormControl;
