@@ -97,7 +97,7 @@ export class PostadComponent implements OnInit {
   }
 
   setimageLink(link: any) {
-    this.imagelink.setValue(link.largeImageURL);
+    this.imagelink.setValue(link.previewURL);
   }
   getImage() {
     fetch(
@@ -110,7 +110,7 @@ export class PostadComponent implements OnInit {
       .then((image) => {
         console.log(image);
         for(var i=0;i<=20;i++){
-          this.bikeList[i]=image.hits[Math.floor(Math.random() * image.totalHits)];
+          this.bikeList[i]=image.hits[Math.floor(Math.random() * 100)];
 
         }
         console.log(this.bikeList)
