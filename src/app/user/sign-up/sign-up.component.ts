@@ -40,7 +40,7 @@ export class SignUpComponent implements OnInit {
     private registeration: RegisterationService,
     private alert: MessageService,
     private router: Router
-  ) {}
+  ) { }
 
   signupForm!: FormGroup;
   First_Name!: FormControl;
@@ -49,6 +49,7 @@ export class SignUpComponent implements OnInit {
   Password!: FormControl;
   State!: FormControl;
   Confirm_Password!: FormControl;
+  answer!: FormControl;
   user_details: user_details[] = [];
 
   ngOnInit(): void {
@@ -72,6 +73,10 @@ export class SignUpComponent implements OnInit {
       matchValidator('password'),
     ]);
     this.State = new FormControl('', [Validators.required]);
+    this.answer = new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^[a-zA-Z]{4,}$/),
+    ]);
     this.signupForm = new FormGroup({
       firstname: this.First_Name,
       lastname: this.Last_Name,
@@ -79,6 +84,7 @@ export class SignUpComponent implements OnInit {
       password: this.Password,
       confirmpassword: this.Confirm_Password,
       state: this.State,
+      answer:this.answer,
       islogged: this.builder.control(false),
     });
   }

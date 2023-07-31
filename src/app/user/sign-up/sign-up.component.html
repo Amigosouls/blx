@@ -104,16 +104,17 @@
                             <mat-error *ngIf="State.hasError('required')">State is Required</mat-error>
                         </mat-form-field>
                     </div>
-                    <!-- <div class="col">
+                    <div class="col">
                         <mat-form-field class="example-full-width form-group">
-                            <mat-label>Your Deepest Secret?</mat-label>
-                            <input matInput formControlName="firstname" [errorStateMatcher]="matcher">
-                            <mat-error *ngIf="First_Name.hasError('pattern') && !First_Name.hasError('required')">Please
-                                enter a valid First Name</mat-error>
-                            <mat-error *ngIf="First_Name.hasError('required')">
-                                First Name is required</mat-error>
+                            <mat-label>your favourite nickname</mat-label>
+                            <mat-hint>It is a security question!</mat-hint>
+                            <input matInput formControlName="answer" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="answer.hasError('pattern') && !answer.hasError('required')">Please
+                                enter a valid Name</mat-error>
+                            <mat-error *ngIf="answer.hasError('required')">
+                               Required Field</mat-error>
                         </mat-form-field>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="col pb-5">
                     <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/signin"

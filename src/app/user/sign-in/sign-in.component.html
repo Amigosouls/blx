@@ -47,7 +47,7 @@
                 <form [formGroup]="forgotpassword" (ngSubmit)="forgotpassword.valid && changePassword(forgotpassword)"
                     novalidate>
                     <input type="email" class="form-control mb-3" placeholder="Email" formControlName="fmail">
-                    <input type="text" placeholder="Your Deep Secret" class="form-control mb-3"
+                    <input type="text" placeholder="Favourite Nickname" class="form-control mb-3"
                         formControlName="fanswer">
                     <div *ngIf="validdetail">
                         <input type="password" class="form-control mb-3" placeholder="enter your Passsword"
