@@ -114,9 +114,7 @@ export class SignInComponent implements OnInit {
       }
     });
   }
-  show() {
-    this.alert.add({ key: 'myKey', severity: 'success', summary: 'Message 1', detail: 'Message Content' });
-  }
+
 
   forgotPassword(form: FormGroup) {
     this.registeration.signIn().subscribe((response) => {
@@ -124,7 +122,7 @@ export class SignInComponent implements OnInit {
       for (const user of this.user_details) {
         if (
           user.email === form.value.fmail &&
-          user.answer === form.value.fanswer
+          user.secret === form.value.fanswer
         ) {
           console.log('success');
           this.validdetail = true;

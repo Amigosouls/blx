@@ -37,7 +37,7 @@ signUp(form:user_details){
      
       setTimeout(() => {
         this.router.navigate(['/signin']);
-      }, 2000);
+      }, 1000);
       
       
     },

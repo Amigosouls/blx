@@ -49,6 +49,7 @@ export class SignUpComponent implements OnInit {
   Password!: FormControl;
   State!: FormControl;
   Confirm_Password!: FormControl;
+  Secret!:FormControl;
   user_details: user_details[] = [];
 
   ngOnInit(): void {
@@ -72,6 +73,7 @@ export class SignUpComponent implements OnInit {
       matchValidator('password'),
     ]);
     this.State = new FormControl('', [Validators.required]);
+    this.Secret = new FormControl('',[Validators.required]);
     this.signupForm = new FormGroup({
       firstname: this.First_Name,
       lastname: this.Last_Name,
@@ -79,6 +81,7 @@ export class SignUpComponent implements OnInit {
       password: this.Password,
       confirmpassword: this.Confirm_Password,
       state: this.State,
+      secret:this.Secret,
       islogged: this.builder.control(false),
     });
   }

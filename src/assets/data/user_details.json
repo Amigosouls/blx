@@ -1,45 +1,15 @@
 {
   "userdetails": [
     {
-      "firstname": "Sharon",
-      "lastname": "D",
-      "email": "sadaad@1233",
-      "password": "Asde!123",
-      "confirmpassword": "Asde!123",
-      "state": "Tamil Nadu",
+      "firstname": "Arun",
+      "lastname": "Joseph",
+      "email": "arun@gmail.com",
+      "password": "Arun@123",
+      "confirmpassword": "Arun@123",
+      "state": "Kerala",
+      "secret": "embedded systems",
       "islogged": false,
-      "answer": "hello",
       "id": 1
-    },
-    {
-      "firstname": "Sharon",
-      "lastname": "D",
-      "email": "sharonantony2408@gmail.com",
-      "password": "Kokki@123",
-      "confirmpassword": "Kokki@123",
-      "state": "Tamil Nadu",
-      "islogged": false,
-      "id": 2
-    },
-    {
-      "firstname": "Srikanth",
-      "lastname": "JeyaPrakash",
-      "email": "sri027.cvb@gmail.com",
-      "password": "ThisOneMeansForever@13",
-      "confirmpassword": "ThisOneMeansForever@13",
-      "state": "Tamil Nadu",
-      "islogged": false,
-      "id": 3
-    },
-    {
-      "firstname": "Sharon",
-      "lastname": "D",
-      "email": "sharon@one.com",
-      "password": "Basket9486!",
-      "confirmpassword": "Basket9486!",
-      "state": "Goa",
-      "islogged": false,
-      "id": 4
     }
   ],
   "Vehicles": [
