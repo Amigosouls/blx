@@ -33,7 +33,7 @@ a{
   }
  
 .btns:hover{
-    background-color: #3f51b5;
+    background-color: #001C30;
     color: rgb(255, 255, 255);
 }
 
@@ -42,7 +42,7 @@ a{
   }
 .form-control:focus{
   box-shadow:none;
-  border-color: #626fb8;
+  border-color: #001C30;
   border-radius: 0%;
   border-width: 3px;
 }
