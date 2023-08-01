@@ -41,7 +41,7 @@ export class SignInComponent implements OnInit {
   ) { }
 
   //password hide property
-  //hide = true;
+  hide = true;
 
   signinForm!: FormGroup;
   Email!: FormControl;
