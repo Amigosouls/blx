@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import {
   FormGroup,
   FormControl,
@@ -41,8 +40,8 @@ export class SignInComponent implements OnInit {
     private registeration: RegisterationService
   ) { }
 
-    //password hide property
-    //hide = true;
+  //password hide property
+  //hide = true;
 
   signinForm!: FormGroup;
   Email!: FormControl;
