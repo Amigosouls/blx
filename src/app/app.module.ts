@@ -36,6 +36,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
+import { AvatarModule } from 'primeng/avatar';
 
 // Mat UI
 import { MatInputModule } from '@angular/material/input';
@@ -89,7 +90,8 @@ import { MatIconModule } from '@angular/material/icon';
     ButtonModule,
     MatCardModule,
     CardModule,
-    MatIconModule
+    MatIconModule,
+    AvatarModule
 
   ],
   providers: [MessageService],

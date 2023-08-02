@@ -41,7 +41,7 @@ export class SignInComponent implements OnInit {
   ) { }
 
   //password hide property
-  hide = true;
+  //hide = true;
 
   signinForm!: FormGroup;
   Email!: FormControl;
@@ -96,7 +96,7 @@ export class SignInComponent implements OnInit {
       });
       if (user) {
         localStorage.setItem('token', Math.random().toString());
-        this.router.navigate(['/post'])
+        setTimeout(()=>{this.router.navigate([''])},2000);
         this.signinForm.reset();
         this.alert.add({
           key: 'tc',
