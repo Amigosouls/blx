@@ -81,4 +81,8 @@ putUser(userId:number,data:user_details){
   this.http.put(environment.user_details+`/${userId}`,data).subscribe();
 }
 
+getUserName(id:number){
+  return this.http.get<user_details>(this.user_details_url+'/'+id);
+}
+
 }

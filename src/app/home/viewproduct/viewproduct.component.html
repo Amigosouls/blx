@@ -9,7 +9,8 @@
                 <div class="card  p-1">
                     <div class="card ps-2">
                         <h1>{{item.adtitle}}({{item.year}})</h1>
-                        <h3><span class="price">{{ item.price | currency : "INR" : "symbol" : "3.0" }}</span></h3><br>
+                        <h3><span class="price">{{ item.price | currency : "INR" : "symbol" : "3.0" }}</span></h3>
+                        <span>Posted By:{{postedUser.firstname}}</span><br>
                         <p><span class="me-2 ms-2"><b>Brand</b>:{{item.brand}}</span> |<span class="me-2 ms-2"> <i class="fa-solid fa-gauge fs-6"></i> {{item.kmdriven}}<b>Km</b></span>|<span class="me-2 ms-2">({{item.year}}) <b>model</b></span><br><br><b>Description </b>:{{item.description}}<br><br></p>
                     </div>
                 </div>
