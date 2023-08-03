@@ -1,53 +1,65 @@
-a{
-    color: black;
-}
-.btn{
-  border:none;
-  color: #0c0c0c;
-}
-.sell {
-    /* Set the desired width and height */
-    width: 150px;
-    height: 40px;
-    
-    /* Set the border radius to create a rounded button */
-    border-radius: 20px;
-    
-    /* Add padding to create space between the text and the border */
-    padding: 5px 10px;
-    
-    /* Set the font size and text color */
-    font-size: 16px;
-    color: #0c0c0c;
-    
-    /* Set the button background color */
-    background-color: transparent;
-    
-    /* Set the default border color */
-    border: 5px solid #FFC107;
-    
-    /* Set the transition for smooth color changes on hover */
-    transition: border-color 0.3s;
-    border-color:#2196F3 #0000ee rgb(245, 245, 9);
-   
-  }
- 
-.btns:hover{
-    background-color: #001C30;
-    color: rgb(255, 255, 255);
+a {
+  color: black;
 }
 
-  .form-control{
-    border-radius: 0%;
-  }
-.form-control:focus{
-  box-shadow:none;
+.btn {
+  border: none;
+  color: #0c0c0c;
+}
+
+.sell {
+  /* Set the desired width and height */
+  width: 150px;
+  height: 40px;
+
+  /* Set the border radius to create a rounded button */
+  border-radius: 20px;
+
+  /* Add padding to create space between the text and the border */
+  padding: 5px 10px;
+
+  /* Set the font size and text color */
+  font-size: 16px;
+  color: #0c0c0c;
+
+  /* Set the button background color */
+  background-color: transparent;
+
+  /* Set the default border color */
+  border: 5px solid #FFC107;
+
+  /* Set the transition for smooth color changes on hover */
+  transition: border-color 0.3s;
+  border-color: #2196F3 #0000ee rgb(245, 245, 9);
+
+}
+
+.btns:hover {
+  background-color: #001C30;
+  color: rgb(255, 255, 255);
+}
+
+.form-control {
+  border-radius: 0%;
+}
+
+.form-control:focus {
+  box-shadow: none;
   border-color: #001C30;
   border-radius: 0%;
   border-width: 3px;
 }
 
-.sell{
-  width:80px;
+.sell {
+  width: 80px;
 }
 
+span {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.p-avatar.p-avatar-imag {
+  width: 10px;
+  height: 10px
+}

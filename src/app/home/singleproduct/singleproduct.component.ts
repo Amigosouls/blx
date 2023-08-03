@@ -13,12 +13,27 @@ import Swal from 'sweetalert2';
 })
 export class SingleproductComponent implements OnInit {
   activeUserId: number = 0;
-  constructor(private router: Router, private favService: FavouritesService,private registerService:RegisterationService) {
-   
-  }
+  constructor(private router: Router, private favService: FavouritesService, private registerService: RegisterationService) {
 
+  }
+  date = new Date();
+  calculateDiff(date: string) {
+    let d2: Date = new Date();
+    let d1 = Date.parse(date); //time in milliseconds
+    var timeDiff = d2.getTime() - d1;
+    var diff = timeDiff / (1000 * 3600 * 24);
+    var x;
+    if (Math.floor(diff) == 0) {
+      return x = "Today"
+    } else if (Math.floor(diff) == 1) {
+      return x = "Yesterday"
+    }
+    else {
+      return x = Math.floor(diff) + " days ago";
+    }
+  }
   ngOnInit(): void {
-   
+
   }
 
 
@@ -51,20 +66,19 @@ export class SingleproductComponent implements OnInit {
   };
 
   addtoFav(products: Favourites) {
-    
+
 
     this.registerService.getActiveUser().subscribe(
-      (response)=>
-      {
-                this.fav.brand = products.brand;
-    this.fav.year = products.year;
-    this.fav.kmdriven = products.kmdriven;
-    this.fav.adtitle = products.adtitle;
-    this.fav.description = products.description;
-    this.fav.price = products.price;
-    this.fav.city = products.city;
-    this.fav.imagelink = products.imagelink;
-    this.fav.user_id = response[0].id;
+      (response) => {
+        this.fav.brand = products.brand;
+        this.fav.year = products.year;
+        this.fav.kmdriven = products.kmdriven;
+        this.fav.adtitle = products.adtitle;
+        this.fav.description = products.description;
+        this.fav.price = products.price;
+        this.fav.city = products.city;
+        this.fav.imagelink = products.imagelink;
+        this.fav.user_id = response[0].id;
         console.log(this.activeUserId);
         const token = localStorage.getItem('token');
         if (token) {
@@ -79,7 +93,7 @@ export class SingleproductComponent implements OnInit {
         }
       }
     )
-  
-   
+
+
   }
 }

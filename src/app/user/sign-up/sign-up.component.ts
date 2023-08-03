@@ -50,13 +50,21 @@ export class SignUpComponent implements OnInit {
   State!: FormControl;
   Confirm_Password!: FormControl;
   answer!: FormControl;
+  avatar!:FormControl;
   user_details: user_details[] = [];
+  characterName:Array<string>=[];
+  avatarList:any[]=[];
+selected_Avatar:string='';
 
   ngOnInit(): void {
     this.First_Name = new FormControl('', [
       Validators.required,
       Validators.pattern(/^[a-zA-Z]{3,}$/),
     ]);
+    this.characterName=["Punk","Asian","Afrohair","Normie female","Older","Firehair","Batman","Wonder","Superman","Aesthetic","Monkey","Hero","Villain","Happy","Romeo","Cute","Cool","Angry","Crazy"];
+    for (const charname of this.characterName) {
+      this.avatarList.push("https://api.multiavatar.com/"+charname+".png?apikey=2PhfABEQ49tC1k");
+    }
     this.Last_Name = new FormControl('', [
       Validators.required,
       Validators.pattern(/^[a-zA-Z]{1,}$/),
@@ -77,6 +85,7 @@ export class SignUpComponent implements OnInit {
       Validators.required,
       Validators.pattern(/^[a-zA-Z]{4,}$/),
     ]);
+    this.avatar = new FormControl('',[Validators.required]);
     this.signupForm = new FormGroup({
       firstname: this.First_Name,
       lastname: this.Last_Name,
@@ -85,12 +94,15 @@ export class SignUpComponent implements OnInit {
       confirmpassword: this.Confirm_Password,
       state: this.State,
      answer: this.answer,
+     avatar: this.avatar,
       islogged: this.builder.control(false),
     });
   }
   matcher = new MyErrorStateMatcher();
-
-  onSubmit() {
+onSubmit() {
     this.registeration.signUp(this.signupForm.value);
   }
+  avatar_click(img:string){
+    this.selected_Avatar=img;
+    }
 }

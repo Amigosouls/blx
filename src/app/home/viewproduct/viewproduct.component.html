@@ -5,11 +5,18 @@
                 <img class="card-img imgView" src="{{ item.imagelink }}" />
             </div>
 
+
             <div class="col-6">
                 <div class="card  p-1">
                     <div class="card ps-2">
-                        <h1>{{item.adtitle}}({{item.year}})</h1>
-                        <h3><span class="price">{{ item.price | currency : "INR" : "symbol" : "3.0" }}</span></h3><br>
+                        <h1>{{item.adtitle}}({{item.year}}) <span id="like" (click)="addtoFav(item)" class="px-1 float-end btn rounded-pill"><i class="fa-regular fa-heart"></i></span>
+                        </h1>
+                        <h3><span class="price">{{ item.price | currency : "INR" : "symbol" : "3.0" }}</span><span class="fs-6 float-end me-3">PostedBy:{{postedUser.firstname}}
+                
+                   
+                            <span><i class="ms-2 fa-brands fa-rocketchat fs-6"></i></span>
+                            </span>
+                        </h3><br>
                         <p><span class="me-2 ms-2"><b>Brand</b>:{{item.brand}}</span> |<span class="me-2 ms-2"> <i class="fa-solid fa-gauge fs-6"></i> {{item.kmdriven}}<b>Km</b></span>|<span class="me-2 ms-2">({{item.year}}) <b>model</b></span><br><br><b>Description </b>:{{item.description}}<br><br></p>
                     </div>
                 </div>
