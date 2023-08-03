@@ -19,7 +19,7 @@
       "confirmpassword": "Kokki@123",
       "state": "Tamil Nadu",
       "answer": "Kokki",
-      "islogged": true,
+      "islogged": false,
       "id": 2
     },
     {
@@ -30,7 +30,7 @@
       "confirmpassword": "ThisOneMeansForever@13",
       "state": "Tamil Nadu",
       "answer": "Satish",
-      "islogged": true,
+      "islogged": false,
       "id": 3
     },
     {
@@ -64,7 +64,7 @@
       "state": "Assam",
       "answer": "Nath",
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
-      "islogged": false,
+      "islogged": true,
       "id": 6
     }
   ],
