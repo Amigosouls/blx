@@ -30,6 +30,7 @@ export class ViewproductComponent implements OnInit {
     islogged: false,
     user_id: 0,
     secret: '',
+    avatar:'',
     id: 0
   }
 

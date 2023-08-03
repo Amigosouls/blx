@@ -96,7 +96,7 @@ export class SignInComponent implements OnInit {
       });
       if (user) {
         localStorage.setItem('token', Math.random().toString());
-        setTimeout(()=>{this.router.navigate(['/home'])
+        setTimeout(()=>{this.router.navigate(['/'])
         this.alert.add({
           key: 'tc',
           severity: 'success',

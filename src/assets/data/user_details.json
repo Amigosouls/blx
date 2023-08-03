@@ -1,61 +1,6 @@
 {
   "userdetails": [
     {
-      "firstname": "Sharon",
-      "lastname": "D",
-      "email": "sadaad@1233",
-      "password": "Asde!123",
-      "confirmpassword": "Asde!123",
-      "state": "Tamil Nadu",
-      "answer": "tappas",
-      "islogged": false,
-      "id": 1
-    },
-    {
-      "firstname": "Sharon",
-      "lastname": "D",
-      "email": "sharonantony2408@gmail.com",
-      "password": "Kokki@123",
-      "confirmpassword": "Kokki@123",
-      "state": "Tamil Nadu",
-      "answer": "Kokki",
-      "islogged": false,
-      "id": 2
-    },
-    {
-      "firstname": "Srikanth",
-      "lastname": "JeyaPrakash",
-      "email": "sri027.cvb@gmail.com",
-      "password": "ThisOneMeansForever@13",
-      "confirmpassword": "ThisOneMeansForever@13",
-      "state": "Tamil Nadu",
-      "answer": "Satish",
-      "islogged": false,
-      "id": 3
-    },
-    {
-      "firstname": "Sharon",
-      "lastname": "D",
-      "email": "sharon@one.com",
-      "password": "Basket9486!",
-      "confirmpassword": "Basket9486!",
-      "state": "Goa",
-      "answer": "spring",
-      "islogged": false,
-      "id": 4
-    },
-    {
-      "firstname": "Vicky",
-      "lastname": "Ram",
-      "email": "vicky@gmail.com",
-      "password": "Vicky@123",
-      "confirmpassword": "Vicky@123",
-      "state": "Tamil Nadu",
-      "answer": "vichu",
-      "islogged": false,
-      "id": 5
-    },
-    {
       "firstname": "Nathan",
       "lastname": "S",
       "email": "nath@gmail.com",
