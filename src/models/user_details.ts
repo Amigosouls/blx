@@ -8,5 +8,6 @@ export interface user_details {
   islogged: boolean;
   user_id: number;
   secret: string;
+  avatar:string;
   id: number;
 }

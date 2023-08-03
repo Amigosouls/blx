@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row d-flex">
             <div class="col-6">
-                <img class="card-img imgView" src="{{ item.imagelink }}" />
+                <img class="card-img imgView" src="{{ item.imagelink }}" width="200px" height="400px" />
             </div>
 
 
@@ -11,13 +11,19 @@
                     <div class="card ps-2">
                         <h1>{{item.adtitle}}({{item.year}}) <span id="like" (click)="addtoFav(item)" class="px-1 float-end btn rounded-pill"><i class="fa-regular fa-heart"></i></span>
                         </h1>
-                        <h3><span class="price">{{ item.price | currency : "INR" : "symbol" : "3.0" }}</span><span class="fs-6 float-end me-3">PostedBy:{{postedUser.firstname}}
-                
-                   
-                            <span><i class="ms-2 fa-brands fa-rocketchat fs-6"></i></span>
+                        <h3><span class="price">{{ item.price | currency : "INR" : "symbol" : "3.0" }}</span><span class="fs-6 float-end me-3"><b class="ms-1">PostedBy:</b>{{postedUser.firstname}}
+                                <span><button type="button" class="btn " data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" data-toggle="tooltip" data-placement="bottom"
+                                        title="Chat with seller">
+                                        <i class="fa-brands fa-rocketchat fs-6"></i>
+                                    </button>
+                                 
+                                </span>
                             </span>
                         </h3><br>
-                        <p><span class="me-2 ms-2"><b>Brand</b>:{{item.brand}}</span> |<span class="me-2 ms-2"> <i class="fa-solid fa-gauge fs-6"></i> {{item.kmdriven}}<b>Km</b></span>|<span class="me-2 ms-2">({{item.year}}) <b>model</b></span><br><br><b>Description </b>:{{item.description}}<br><br></p>
+                        <p><span class="me-2 ms-2"><b>Brand</b>:{{item.brand}}</span> |<span class="me-2 ms-2"> <i
+                                    class="fa-solid fa-gauge fs-6"></i> {{item.kmdriven}}<b>Km</b></span>|<span class="me-2 ms-2">({{item.year}}) <b>model</b></span><br><br><b>Description
+                            </b>:{{item.description}}<br><br></p>
                     </div>
                 </div>
                 <div class="card  p-1 mt-2 ">
@@ -40,6 +46,35 @@
 
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content justify-content-center">
+            <div class="modal-header">
+                <img class="text-center" src={{postedUser.avatar}} alt="avatar" width="10px" height="20px">
+                <img class="text-center" src={{postedUser.avatar}} alt="avatar" width="10px" height="20px">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="postChat">
+                    <div class="justify-content-center">
+                        <h4>Write a message to {{postedUser.firstname}}</h4>
+                        <div class="row d-flex">
+                            <input type="text" class="form-control" formControlName="chatPost" [(ngModel)]="userChat.chatPost">
+
+                        </div>
+                        <div class="row d-flex">
+                            <div class="btn bg-secondary" (click)="postTask()">post</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
