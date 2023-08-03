@@ -10,13 +10,12 @@ import { FaqComponent } from './helps/faq/faq.component';
  import { authGuardGuard } from 'src/shared/auth-guard.guard';
 import { LocationsComponent } from './locations/locations.component';
 import { FavouritesComponent } from './favourites/favourites.component';
-// import { ViewProductComponent } from './home/view-product/view-product.component';
- import { ViewproductComponent } from './home/viewproduct/viewproduct.component';
-//import * as path from 'path';
+import { ViewproductComponent } from './home/viewproduct/viewproduct.component';
+
 const routes: Routes = [
   {
     path: 'post',
-    component: PostComponent//,canActivate:[authGuardGuard]
+    component: PostComponent,canActivate:[authGuardGuard]
   },
   {
     path: 'help',
@@ -32,7 +31,7 @@ const routes: Routes = [
   },
   {
     path: 'postad/:id',
-    component: PostadComponent//,canActivate:[authGuardGuard]
+    component: PostadComponent,canActivate:[authGuardGuard]
   },
   {
     path: 'faq/:id',
