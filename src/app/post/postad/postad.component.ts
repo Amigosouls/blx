@@ -110,7 +110,7 @@ export class PostadComponent implements OnInit {
       .then((image) => {
         console.log(image);
         for(var i=0;i<=20;i++){
-          this.bikeList[i]=image.hits[Math.floor(Math.random() * 100)];
+          this.bikeList[i]=image.hits[Math.floor(Math.random() * image.totalHits)];
 
         }
         console.log(this.bikeList)
