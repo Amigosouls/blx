@@ -37,6 +37,7 @@ import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { AvatarModule } from 'primeng/avatar';
+import { SidebarModule } from 'primeng/sidebar';
 
 // Mat UI
 import { MatInputModule } from '@angular/material/input';
@@ -93,7 +94,8 @@ import { BackbtnDirective } from '../services/backbtn.directive';
     MatCardModule,
     CardModule,
     MatIconModule,
-    AvatarModule
+    AvatarModule,
+    SidebarModule
 
   ],
   providers: [MessageService],

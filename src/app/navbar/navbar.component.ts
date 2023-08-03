@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { RegisterationService } from 'src/services/registeration.service';
 import { PostadService } from 'src/services/postad.service';
 import { Router, NavigationEnd } from '@angular/router';
+import { ChatService } from 'src/services/chat.service';
+import { user_details } from 'src/models/user_details';
 
 
 @Component({
@@ -12,11 +14,27 @@ import { Router, NavigationEnd } from '@angular/router';
 
 
 export class NavbarComponent implements OnInit {
-  constructor(private regService: RegisterationService, private router: Router, private postAd: PostadService) { }
+  constructor(private regService: RegisterationService, private router: Router, private postAd: PostadService,private chat:ChatService) { }
   hide!: boolean;
   showSearchBox: boolean = true;
+  notifications:boolean=false;
 
   userlist: any[] = [];
+  receiverId:number=0;
+
+  activeUserData:user_details={
+    firstname: '',
+    lastname: '',
+    email: '',
+    password: '',
+    confirmpassword: '',
+    state: '',
+    islogged: false,
+    user_id: 0,
+    secret: '',
+    avatar: '',
+    id: 0
+  }
 
   ngOnInit(): void {
     const token = localStorage.getItem('token')
@@ -54,6 +72,24 @@ export class NavbarComponent implements OnInit {
       }
     )
     
+  
+
+
+    // this.chat.getReceiver().subscribe((res)=>{
+    
+    //   this.activeUserData=res;
+  
+    // })
+
+    //     // //chat
+    //     this.chat.receiveChatMessage(this.activeUserData.user_id).subscribe((res)=>{
+  
+  
+    
+    //     });
+
+
+    //     console.log(this.activeUserData.user_id);
   }
 
   logoutUser() {
