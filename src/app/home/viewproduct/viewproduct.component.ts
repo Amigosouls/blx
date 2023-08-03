@@ -34,8 +34,7 @@ export class ViewproductComponent implements OnInit {
     state: '',
     islogged: false,
     user_id: 0,
-    secret: '',
-    avatar:'',
+    secret: '',   
     id: 0
   }
   postChat!: FormGroup;
