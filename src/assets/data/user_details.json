@@ -8,7 +8,6 @@
             "state": "Tamil Nadu",
             "answer": "tappas",
             "islogged": false,
-            "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
             "id": 1
         },
         {
@@ -19,7 +18,6 @@
             "confirmpassword": "Kokki@123",
             "state": "Tamil Nadu",
             "answer": "Kokki",
-            "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
             "islogged": false,
             "id": 2
         },
@@ -31,7 +29,6 @@
             "confirmpassword": "ThisOneMeansForever@13",
             "state": "Tamil Nadu",
             "answer": "Satish",
-            "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
             "islogged": false,
             "id": 3
         },
@@ -43,7 +40,6 @@
             "confirmpassword": "Basket9486!",
             "state": "Goa",
             "answer": "spring",
-            "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
             "islogged": false,
             "id": 4
         },
@@ -55,7 +51,6 @@
             "confirmpassword": "Vicky@123",
             "state": "Tamil Nadu",
             "answer": "vichu",
-            "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
             "islogged": false,
             "id": 5
         },
@@ -70,29 +65,8 @@
             "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
             "islogged": false,
             "id": 6
-        },
-        {
-            "firstname": "Darshan",
-            "lastname": "David",
-            "email": "darshan@gmail.com",
-            "password": "Darshan!23",
-            "confirmpassword": "Darshan!23",
-            "state": "Andhra Pradesh",
-            "answer": "Batman",
-            "avatar": "https://api.multiavatar.com/Firehair.png?apikey=2PhfABEQ49tC1k",
-            "islogged": true,
-            "id": 7
         }
     ],
-    "chat": [{
-        "senderId": 1,
-        "reciverId": 3,
-        "postedDate": "8/3/2023",
-        "senderName": "Sharon",
-        "reciverName": "Srikanth",
-        "chatPost": "hggh",
-        "id": 1
-    }],
     "Vehicles": [{
             "key": "2",
             "label": "HERO",
@@ -256,7 +230,6 @@
             "imagelink": "https://cdn.pixabay.com/photo/2021/04/25/11/36/bike-6206212_1280.jpg",
             "city": "Coimbatore",
             "date": "7/20/2023",
-            "user_id": 4,
             "id": 5
         },
         {
@@ -269,7 +242,6 @@
             "imagelink": "https://cdn.pixabay.com/photo/2017/11/21/12/36/ktm-2968097_1280.jpg",
             "city": "Madurai",
             "date": "7/11 /2023",
-            "user_id": 4,
             "id": 6
         },
         {
@@ -282,7 +254,6 @@
             "imagelink": "https://cdn.pixabay.com/photo/2017/01/02/18/58/bullet-1947670_1280.jpg",
             "city": "Hyderabad",
             "date": "8/1/2023",
-            "user_id": 2,
             "id": 7
         },
         {
@@ -295,7 +266,6 @@
             "imagelink": "https://cdn.pixabay.com/photo/2022/08/23/05/59/motorcycle-7405084_1280.jpg",
             "city": "Bangalore",
             "date": "7/27/2023",
-            "user_id": 3,
             "id": 8
         },
         {
@@ -308,7 +278,6 @@
             "imagelink": "https://cdn.pixabay.com/photo/2017/12/29/05/58/sport-3046819_1280.jpg",
             "city": "Mumbai",
             "date": "7/21/2023",
-            "user_id": 3,
             "id": 9
         },
         {
@@ -321,7 +290,6 @@
             "imagelink": "https://cdn.pixabay.com/photo/2019/11/19/21/06/motorcycle-4638499_1280.jpg",
             "city": "Delhi",
             "date": "7/31/2023",
-            "user_id": 5,
             "id": 10
         },
         {
@@ -334,7 +302,6 @@
             "imagelink": "https://cdn.pixabay.com/photo/2016/07/25/06/16/bajaj-pulsur-1539973_1280.jpg",
             "city": "Gujarat",
             "date": "7/21/2023",
-            "user_id": 6,
             "id": 12
         },
         {
@@ -347,7 +314,6 @@
             "imagelink": "https://cdn.pixabay.com/photo/2013/02/21/19/08/red-84593_960_720.jpg",
             "city": "Lucknow",
             "date": "8/1/2023",
-            "user_id": 6,
             "id": 13
         },
         {

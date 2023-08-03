@@ -47,6 +47,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { BackbtnDirective } from '../services/backbtn.directive';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { MatIconModule } from '@angular/material/icon';
     FavouritesComponent,
     SortlocationPipe,
     FaqPipePipe,
-    ViewproductComponent
+    ViewproductComponent,
+    BackbtnDirective
   ],
   imports: [
     BrowserModule,

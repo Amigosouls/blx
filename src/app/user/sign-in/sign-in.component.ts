@@ -96,14 +96,15 @@ export class SignInComponent implements OnInit {
       });
       if (user) {
         localStorage.setItem('token', Math.random().toString());
-        setTimeout(()=>{this.router.navigate([''])},2000);
-        this.signinForm.reset();
+        setTimeout(()=>{this.router.navigate(['/'])
         this.alert.add({
           key: 'tc',
           severity: 'success',
           summary: 'success',
           detail: 'Login Successful',
         });
+      },2000);
+      this.signinForm.reset();
       }
       else {
         this.alert.add({
