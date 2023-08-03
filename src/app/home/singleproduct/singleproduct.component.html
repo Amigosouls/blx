@@ -9,11 +9,11 @@
         <div class="leftborder">
             <h6 class="card-text mt-4  ms-4">{{products.adtitle}} </h6>
             <h5 class="card-title ms-4">{{products.price|currency:"INR"}} </h5>
-            <p class="card-subtitle mb-2 ms-4 text-muted ">{{products.year}} model-
-                <span class="fs-6">{{products.kmdriven}} km</span>
+            <p class="card-subtitle mb-2 ms-4 text-muted">{{products.year}} model-
+                <span class="card-subtitle ">{{products.kmdriven}} km</span>
             </p>
             <p class="card-subtitle mb-2 ms-4 text-muted ">{{products.city}}
-                <span class="fs-6 float-end">{{products.kmdriven}} </span>
+                <span class="fs-6 float-end">{{calculateDiff(products.date)}}</span>
             </p>
 
         </div>

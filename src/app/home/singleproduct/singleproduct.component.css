@@ -3,7 +3,7 @@
     position: absolute;
     margin-top: -150px;
     background-color: #001C30;
-    color:rgb(218, 255, 251) ;
+    color: rgb(218, 255, 251);
 }
 
 .leftborder {
@@ -29,4 +29,8 @@
         transition-duration: 1s;
         background-position: -2800px 0;
     }
+}
+
+.card-subtitle {
+    font-size: small;
 }
