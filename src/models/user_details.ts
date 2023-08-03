@@ -6,7 +6,7 @@ export interface user_details {
   confirmpassword: string;
   state: string;
   islogged: boolean;
-  user_id:number;
-  secret:string;
-  id:number
+  user_id: number;
+  secret: string;
+  id: number;
 }

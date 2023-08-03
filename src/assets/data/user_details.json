@@ -54,6 +54,18 @@
       "answer": "vichu",
       "islogged": false,
       "id": 5
+    },
+    {
+      "firstname": "Nathan",
+      "lastname": "S",
+      "email": "nath@gmail.com",
+      "password": "Nath@123",
+      "confirmpassword": "Nath@123",
+      "state": "Assam",
+      "answer": "Nath",
+      "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
+      "islogged": false,
+      "id": 6
     }
   ],
   "Vehicles": [
