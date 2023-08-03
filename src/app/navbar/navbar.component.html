@@ -34,6 +34,7 @@
                     <button class="btn btn-outline-light me-2 btns" routerLink="signup" *ngIf="!hide">SignUp</button>
                     <a class="nav-link me-2 mt-2 heart" *ngIf="hide" routerLink="favourites"><i
                             class="fa-solid fa-heart fa-xl"></i></a>
+                    <i class="fa-regular fa-comments fs-3 mt-2 mx-3" *ngIf="hide"></i>
                     <button class="btn btn-outline-light text text-dark me-2 ms-2 d-flex" *ngFor="let user of userlist">
                         <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
                             styleClass="mr-2" shape="circle"></p-avatar><span>{{user.firstname}}</span></button>
