@@ -8,7 +8,7 @@
       "confirmpassword": "Asde!123",
       "state": "Tamil Nadu",
       "answer": "tappas",
-      "islogged": true,
+      "islogged": false,
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
       "id": 1
     },
@@ -33,7 +33,7 @@
       "state": "Tamil Nadu",
       "answer": "Satish",
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
-      "islogged": false,
+      "islogged": true,
       "id": 3
     },
     {
@@ -92,7 +92,7 @@
       "postedDate": "8/3/2023",
       "senderName": "Sharon",
       "receiverName": "Srikanth",
-      "chatPost": "hggh",
+      "chatPost": "I am Really Interested in your bike",
       "id": 1
     },
     {

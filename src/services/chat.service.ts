@@ -11,6 +11,7 @@ import { user_details } from 'src/models/user_details';
 })
 export class ChatService {
     user_details_url = environment.user_details;
+    chatUrl=environment.chat;
 
     constructor(private httpObj: HttpClient,private Regservice:RegisterationService) { }
 
@@ -31,15 +32,18 @@ export class ChatService {
     }
 
 
-    receiveChatMessage(id:number){
-        return this.httpObj.get<chatdetails>(environment.chat+"/?reciverId="+id);
-    
- 
+
+
+      
+
+    receiveChatMessage(receiverId:number){
+       
+        return this.httpObj.get<chatdetails[]>(this.chatUrl+"/?receiverId="+receiverId);
+
+
 
     }
 
-    getReceiver() {
-        return this.httpObj.get<user_details>(this.user_details_url + '/?islogged_like=true');
-      }
+ 
 
 }

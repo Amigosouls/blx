@@ -7,6 +7,7 @@ import { ChatService } from 'src/services/chat.service';
 
 
 import { user_details } from 'src/models/user_details';
+import { chatdetails } from 'src/models/chat';
 
 
 @Component({
@@ -26,19 +27,9 @@ export class NavbarComponent implements OnInit {
   userlist: user_details[] = [];
   receiverId:number=0;
 
-  activeUserData:user_details={
-    firstname: '',
-    lastname: '',
-    email: '',
-    password: '',
-    confirmpassword: '',
-    state: '',
-    islogged: false,
-    user_id: 0,
-    secret: '',
-    avatar: '',
-    id: 0
-  }
+  Messages:chatdetails[]=[]
+
+
 
 
 
@@ -71,8 +62,17 @@ export class NavbarComponent implements OnInit {
         }
       });
     }
-     )
-     
+     );
+
+
+     //for getting the messages of active user 
+     this.regService.getActiveUser().subscribe((activeUser)=>{
+      this.receiverId=activeUser[0].id;     
+      this.chat.receiveChatMessage(this.receiverId).subscribe((response)=>{
+      this.Messages=response;
+      console.log(this.Messages);
+      });
+     });
   }
 
   logoutUser() {
@@ -92,8 +92,11 @@ export class NavbarComponent implements OnInit {
   searchTermEmit(event: any) {
     console.log(event.target.value);
     this.postAd.changeSearchTerm(event.target.value);
-
   }
+
+
+
+ 
 
 }
 
