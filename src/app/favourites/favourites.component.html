@@ -11,7 +11,7 @@
     </div>
     <ng-template #favours>
         <div class="container mb-5">
-            <div class="row">
+            <div class="row ms-5">
                 <div class="col-12 col-sm-7 col-md-6 col-lg-4 mb-3" *ngFor="let fav of favourites">
                     <div class="card" style="width: 18rem;">
                         <img src="{{fav.imagelink}}" class="card-img-top" height="200px" alt="product">
@@ -19,7 +19,7 @@
                             <h5 class="card-title">
                                 <div class="row">
                                     <div class="col-10">
-                                        <strong>Brand : {{fav.brand}} <br></strong> 
+                                        <strong>Brand : {{fav.brand}} <br></strong>
                                         Model : {{fav.adtitle}}
                                     </div>
                                     <div class="col-2">

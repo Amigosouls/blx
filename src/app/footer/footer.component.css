@@ -19,13 +19,13 @@ img {
 }
 
 .sect1 {
-    background-color: #acb6eb;
-    color:#000000;
+    background-color: #64CCC5;
+    color: #000000;
     font-weight: 400;
 }
 
 .sect2 {
-    background-color: #626fb8;
+    background-color: #176B87;
     color: #000000;
     font-weight: 500;
 }
@@ -40,6 +40,5 @@ img {
 
 .accordion-button:focus {
     box-shadow: none;
-    border-color: rgba(0,0,0,.125);
+    border-color: rgba(0, 0, 0, .125);
 }
-
