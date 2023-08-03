@@ -26,3 +26,14 @@ body {
 div {
     font-family: 'Kanit', sans-serif;
 }
+
+#backbtn{
+    font-size: 18px;
+}
+#backbtn:hover{
+    border-bottom: 2px dotted black ;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+
+}
