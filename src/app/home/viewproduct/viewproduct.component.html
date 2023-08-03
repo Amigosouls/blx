@@ -1,7 +1,7 @@
 <div class="container-fluid mb-5 mt-5" *ngFor="let item of model" style="margin-top: 100px ">
     <button appBackbtn id="backbtn" class="btn"><- Go Back </button>
     <div class="container">
-        
+
         <div class="row d-flex">
             <div class="col-6">
                 <img class="card-img imgView" src="{{ item.imagelink }}" width="200px" height="400px" />
@@ -19,7 +19,7 @@
                                         title="Chat with seller">
                                         <i class="fa-brands fa-rocketchat fs-6"></i>
                                     </button>
-                                 
+
                                 </span>
                             </span>
                         </h3><br>
@@ -52,6 +52,7 @@
         </div>
     </div>
 </div>
+
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content justify-content-center">
@@ -61,15 +62,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form [formGroup]="postChat">
+                <form [formGroup]="postChat" (ngSubmit)="postChat.valid&&postChatDetails()">
                     <div class="justify-content-center">
+
                         <h4>Write a message to {{postedUser.firstname}}</h4>
                         <div class="row d-flex">
-                            <input type="text" class="form-control" formControlName="chatPost" [(ngModel)]="userChat.chatPost">
+                            <input type="text" class="form-control" formControlName="receiverId" hidden>
+                            <input type="text" class="form-control" formControlName="receiverName" hidden>
+                            <input type="text" class="form-control" formControlName="chatPost">
 
                         </div>
                         <div class="row d-flex">
-                            <div class="btn bg-secondary" (click)="postTask()">post</div>
+                            <div class="btn bg-secondary" type="submit" (click)="postChatDetails()">post</div>
                         </div>
                     </div>
                 </form>

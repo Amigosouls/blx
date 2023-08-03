@@ -69,7 +69,7 @@
       "state": "Assam",
       "answer": "Nath",
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
-      "islogged": true,
+      "islogged": false,
       "id": 6
     },
     {
@@ -81,19 +81,43 @@
       "state": "Andhra Pradesh",
       "answer": "Batman",
       "avatar": "https://api.multiavatar.com/Firehair.png?apikey=2PhfABEQ49tC1k",
-      "islogged": false,
+      "islogged": true,
       "id": 7
     }
   ],
   "chat": [
     {
       "senderId": 1,
-      "reciverId": 3,
+      "receiverId": 3,
       "postedDate": "8/3/2023",
       "senderName": "Sharon",
-      "reciverName": "Srikanth",
+      "receiverName": "Srikanth",
       "chatPost": "hggh",
       "id": 1
+    },
+    {
+      "chatPost": "adfds",
+      "receiverId": 2,
+      "receiverName": "Sharon",
+      "senderId": 7,
+      "senderName": "Darshan",
+      "id": 2
+    },
+    {
+      "chatPost": "fgdg",
+      "receiverId": 2,
+      "receiverName": "Sharon",
+      "senderId": 6,
+      "senderName": "Nathan",
+      "id": 3
+    },
+    {
+      "chatPost": "fgdg",
+      "receiverId": 2,
+      "receiverName": "Sharon",
+      "senderId": 6,
+      "senderName": "Nathan",
+      "id": 4
     }
   ],
   "Vehicles": [

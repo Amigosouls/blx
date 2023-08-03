@@ -23,7 +23,7 @@ export class ViewproductComponent implements OnInit {
   productId!: number;
   userId!: number;
   model: PostAd[] = [];
-  userInfo!: user_details;
+  activeUser:user_details[]=[];
   postedUser: user_details = {
     firstname: '',
     lastname: '',
@@ -39,33 +39,49 @@ export class ViewproductComponent implements OnInit {
   }
   postChat!: FormGroup;
   chatPost!: FormControl;
+  receiverName!:FormControl;
+  receiverId!:FormControl;
   userChat: chatdetails = {
     senderId: 0,
-    reciverId: 0,
+    receiverId:0,
     postedDate: new Date().toLocaleDateString(),
     senderName: '',
-    reciverName: '',
+    receiverName: '',
     chatPost: ''
   };
 
-  postTask() {
-    this.chat.postChatMsg(this.userChat);
+  postChatDetails() {
+    this.postChat.value.senderId=this.activeUser[0].id;
+    this.postChat.value.senderName=this.activeUser[0].firstname;
+    this.chat.postChatMsg(this.postChat.value);
   }
   name: string = "";
   ngOnInit() {
     this.productId = this.actRoute.snapshot.params['id'];
-
+    this.registerService.getActiveUser().subscribe(
+      (res)=>{
+        this.activeUser=res;
+      }
+      );
     this.postAd.getProductById(this.productId).subscribe((res) => {
       this.model = res;
       this.activeUserId = this.model[0].user_id;
       console.log(this.activeUserId);
       this.registerService.getUserName(this.activeUserId).subscribe((res) => {
         this.postedUser = res;
+        this.receiverId.setValue(this.postedUser.id);
+        this.receiverName.setValue(this.postedUser.firstname);
       })
     });
+  
     this.chatPost = new FormControl('', [Validators.required]);
+    this.receiverName = new FormControl('', [Validators.required]);
+    this.receiverId = new FormControl('', [Validators.required]);
     this.postChat = new FormGroup({
-      chatPost: this.chatPost
+      chatPost: this.chatPost,
+      receiverId:this.receiverId,
+      receiverName:this.receiverName
+
     })
   }
 

@@ -1,8 +1,8 @@
 export interface chatdetails{
     senderId: number;
-    reciverId:number;
+    receiverId:number;
     postedDate:string;
     senderName:string;
-    reciverName:string;
+    receiverName:string;
     chatPost:string;
 }
