@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { RegisterationService } from 'src/services/registeration.service';
 import { PostadService } from 'src/services/postad.service';
 import { Router, NavigationEnd } from '@angular/router';
+
 import { ChatService } from 'src/services/chat.service';
+
+
 import { user_details } from 'src/models/user_details';
 
 
@@ -19,7 +22,8 @@ export class NavbarComponent implements OnInit {
   showSearchBox: boolean = true;
   notifications:boolean=false;
 
-  userlist: any[] = [];
+
+  userlist: user_details[] = [];
   receiverId:number=0;
 
   activeUserData:user_details={
@@ -35,6 +39,9 @@ export class NavbarComponent implements OnInit {
     avatar: '',
     id: 0
   }
+
+
+
 
   ngOnInit(): void {
     const token = localStorage.getItem('token')
@@ -55,41 +62,17 @@ export class NavbarComponent implements OnInit {
         this.showSearchBox = event.urlAfterRedirects === '/';
       }
     });
-    this.regService.authSubject.subscribe(
-      (res)=>{
-        if(res==true){
-          this.regService.getActiveUser().subscribe(
-            (users)=>{
-              this.userlist=users;
-              console.log(this.userlist);
-              this.ngOnInit();
-              console.log(res);
-
-            }
-          )    
-        }    
-        //this.ngOnInit();
-      }
-    )
-    
-  
-
-
-    // this.chat.getReceiver().subscribe((res)=>{
-    
-    //   this.activeUserData=res;
-  
-    // })
-
-    //     // //chat
-    //     this.chat.receiveChatMessage(this.activeUserData.user_id).subscribe((res)=>{
-  
-  
-    
-    //     });
-
-
-    //     console.log(this.activeUserData.user_id);
+     this.regService.signIn().subscribe((res)=>{ 
+      this.userlist=res;
+      this.regService.authSubject.subscribe({
+        next: (res) => {
+          this.hide = res;
+         
+        }
+      });
+    }
+     )
+     
   }
 
   logoutUser() {
@@ -113,3 +96,4 @@ export class NavbarComponent implements OnInit {
   }
 
 }
+

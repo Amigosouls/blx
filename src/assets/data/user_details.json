@@ -8,7 +8,7 @@
       "confirmpassword": "Asde!123",
       "state": "Tamil Nadu",
       "answer": "tappas",
-      "islogged": false,
+      "islogged": true,
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
       "id": 1
     },
@@ -81,7 +81,7 @@
       "state": "Andhra Pradesh",
       "answer": "Batman",
       "avatar": "https://api.multiavatar.com/Firehair.png?apikey=2PhfABEQ49tC1k",
-      "islogged": true,
+      "islogged": false,
       "id": 7
     }
   ],
