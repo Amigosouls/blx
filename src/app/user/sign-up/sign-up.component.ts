@@ -49,19 +49,20 @@ export class SignUpComponent implements OnInit {
   Password!: FormControl;
   State!: FormControl;
   Confirm_Password!: FormControl;
-  answer!: FormControl;
+  secret!: FormControl;
   avatar!:FormControl;
   user_details: user_details[] = [];
   characterName:Array<string>=[];
   avatarList:any[]=[];
 selected_Avatar:string='';
-
+hide = true;
+c_hide = true;
   ngOnInit(): void {
     this.First_Name = new FormControl('', [
       Validators.required,
       Validators.pattern(/^[a-zA-Z]{3,}$/),
     ]);
-    this.characterName=["Punk","Asian","Afrohair","Normie female","Older","Firehair","Batman","Wonder","Superman","Aesthetic","Monkey","Hero","Villain","Happy","Romeo","Cute","Cool","Angry","Crazy"];
+    this.characterName=["Punk","Asian","Afrohair","Normiefemale","Older","Firehair","Batman","Wonder","Superman","Aesthetic","Monkey","Hero","Villain","Happy","Romeo","Cute","Cool","Angry","Crazy"];
     for (const charname of this.characterName) {
       this.avatarList.push("https://api.multiavatar.com/"+charname+".png?apikey=2PhfABEQ49tC1k");
     }
@@ -81,7 +82,7 @@ selected_Avatar:string='';
       matchValidator('password'),
     ]);
     this.State = new FormControl('', [Validators.required]);
-    this.answer = new FormControl('', [
+    this.secret = new FormControl('', [
       Validators.required,
       Validators.pattern(/^[a-zA-Z]{4,}$/),
     ]);
@@ -93,7 +94,7 @@ selected_Avatar:string='';
       password: this.Password,
       confirmpassword: this.Confirm_Password,
       state: this.State,
-     answer: this.answer,
+     secret: this.secret,
      avatar: this.avatar,
       islogged: this.builder.control(false),
     });
@@ -104,5 +105,17 @@ onSubmit() {
   }
   avatar_click(img:string){
     this.selected_Avatar=img;
+    }
+    toggleVisibility(inp:string){
+     if(inp=='password'){
+      var passwordField=document.getElementById("password");
+   const fieldType=passwordField?.getAttribute("type")==="password"?"text":"password";
+  passwordField?.setAttribute("type",fieldType);
+     }
+    else if(inp=='confpass'){
+      var passwordField=document.getElementById("confirmpass");
+   const fieldType=passwordField?.getAttribute("type")==="password"?"text":"password";
+  passwordField?.setAttribute("type",fieldType);
+    }
     }
 }

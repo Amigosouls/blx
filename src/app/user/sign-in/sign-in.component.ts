@@ -41,7 +41,7 @@ export class SignInComponent implements OnInit {
   ) { }
 
   //password hide property
-  //hide = true;
+  hide = true;
 
   signinForm!: FormGroup;
   Email!: FormControl;
@@ -78,12 +78,6 @@ export class SignInComponent implements OnInit {
     });
   }
   matcher = new MyErrorStateMatcher();
-
-  toggleVisibility(){
-    var passwordField=document.getElementById("password");
- const fieldType=passwordField?.getAttribute("type")==="password"?"text":"password";
-passwordField?.setAttribute("type",fieldType);
-  }
 
   onSubmit() {
     this.registeration.signIn().subscribe((response) => {
