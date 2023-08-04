@@ -383,6 +383,18 @@
       "imagelink": "https://cdn.pixabay.com/photo/2022/08/23/05/59/motorcycle-7405084_1280.jpg",
       "user_id": 5,
       "id": 4
+    },
+    {
+      "brand": "TVS",
+      "year": 2022,
+      "kmdriven": 23434,
+      "adtitle": "Ford GT40",
+      "description": "The Ford GT40 is a high-performance endurance racing car designed and built by the Ford Motor Company.",
+      "price": 200000,
+      "city": "Coimbatore",
+      "imagelink": "https://cdn.pixabay.com/photo/2021/04/25/11/36/bike-6206212_1280.jpg",
+      "user_id": 5,
+      "id": 5
     }
   ],
   "faq": [
