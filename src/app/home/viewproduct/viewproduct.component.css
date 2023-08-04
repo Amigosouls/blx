@@ -11,3 +11,49 @@
 i {
     font-size: xx-large;
 }
+
+#font-style {
+    font-size: smaller;
+    border: solid 1px black;
+    padding: .8em;
+    border-radius: 20px;
+}
+
+#chat {
+    border-radius: 20px;
+    border: solid 1px black;
+    width: 200px;
+    /* margin-left: 14.4em; */
+    height: 40px;
+}
+
+#post {
+    margin-top: 2em;
+    width: 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+.chat-txt {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    z-index: 0;
+}
+
+#icon {
+    width: 2em !important;
+    margin-left: -7px;
+    margin-top: -20px;
+    border: solid 2px black;
+    padding: 8px 8px 8px 6px;
+    border-radius: 20px
+}
+
+#aval {
+    z-index: 1;
+    position: absolute;
+    margin-right: 14.2em;
+    margin-bottom: -5em;
+    padding-top: 17px;
+}

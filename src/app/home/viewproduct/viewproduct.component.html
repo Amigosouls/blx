@@ -3,29 +3,32 @@
     <div class="container">
 
         <div class="row d-flex">
-            <div class="col-6">
+            <div class="col-md-6">
                 <img class="card-img imgView" src="{{ item.imagelink }}" width="200px" height="400px" />
             </div>
 
 
-            <div class="col-6">
+            <div class="col-md-6 mt-5 mt-md-0">
                 <div class="card  p-1">
                     <div class="card ps-2">
-                        <h1>{{item.adtitle}}({{item.year}}) <span id="like" (click)="addtoFav(item)" class="px-1 float-end btn rounded-pill"><i class="fa-regular fa-heart"></i></span>
+                        <h1>{{item.adtitle}}({{item.year}}) <span id="like" (click)="addtoFav(item)" class="px-1 float-end btn rounded-pill"><i
+                                            class="fa-regular fa-heart fs-5"></i></span>
                         </h1>
-                        <h3><span class="price">{{ item.price | currency : "INR" : "symbol" : "3.0" }}</span><span class="fs-6 float-end me-3"><b class="ms-1">PostedBy:</b>{{postedUser.firstname}}
-                                <span><button type="button" class="btn " data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal" data-toggle="tooltip" data-placement="bottom"
-                                        title="Chat with seller">
-                                        <i class="fa-brands fa-rocketchat fs-6"></i>
-                                    </button>
+                        <h3><span class="price">{{ item.price | currency : "INR" : "symbol" : "3.0"
+                                        }}</span><span class="fs-6 float-end me-0 me-lg-3"><b
+                                            class="ms-1">PostedBy:</b>{{postedUser.firstname}}
+                                        <span><button type="button" class="btn " data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal" data-toggle="tooltip"
+                                                data-placement="bottom" title="Chat with seller">
+                                                <i class="fa-brands fa-rocketchat fs-6"></i>
+                                            </button>
 
-                                </span>
+                                        </span>
                             </span>
                         </h3><br>
-                        <p><span class="me-2 ms-2"><b>Brand</b>:{{item.brand}}</span> |<span class="me-2 ms-2"> <i
-                                    class="fa-solid fa-gauge fs-6"></i> {{item.kmdriven}}<b>Km</b></span>|<span class="me-2 ms-2">({{item.year}}) <b>model</b></span><br><br><b>Description
-                            </b>:{{item.description}}<br><br></p>
+                        <p><span class="me-2 ms-2"><b>Brand</b>:{{item.brand}}</span> |<span class="me-2 ms-2">
+                                        <i class="fa-solid fa-gauge fs-6"></i> {{item.kmdriven}}<b>Km</b></span>|<span class="me-2 ms-2">({{item.year}}) <b>model</b></span><br><br><b>Description
+                                    </b>:{{item.description}}<br><br></p>
                     </div>
                 </div>
                 <div class="card  p-1 mt-2 ">
@@ -57,31 +60,32 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content justify-content-center">
             <div class="modal-header">
-                <img class="text-center" src={{postedUser.avatar}} alt="avatar" width="10px" height="20px">
-                <img class="text-center" src={{postedUser.avatar}} alt="avatar" width="10px" height="20px">
+                <div class="">
+                    <h5>Chat</h5>
+                </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form [formGroup]="postChat" (ngSubmit)="postChat.valid&&postChatDetails()">
                     <div class="justify-content-center">
 
-                        <h4>Write a message to {{postedUser.firstname}}</h4>
-                        <div class="row d-flex">
+
+                        <h4 class="float-start" id="font-style">Write a message to {{postedUser.firstname}}</h4> <img src={{postedUser.avatar}} class="mt-1 ms-1" alt="avatar" width="32px"><br><br>
+                        <div class="row">
                             <input type="text" class="form-control" formControlName="receiverId" hidden>
                             <input type="text" class="form-control" formControlName="receiverName" hidden>
-                            <input type="text" class="form-control" formControlName="chatPost">
+                            <div class="chat-txt justify-content-end">
+                                <img src={{activeUser[0].avatar}} alt="avatar" id="aval" class="mt-3" width="32px">
+                                <input type="text" class="form-control" placeholder="Type here..." id="chat" formControlName="chatPost" [ngClass]="{ 'is-invalid':chatPost.errors&&(chatPost.touched||chatPost.dirty), 'is-valid':chatPost.valid}"><br>
+                                <button class="btn mb-4" id="post" type="submit" data-bs-dismiss="modal" [disabled]="!postChat.valid"><i class="fs-6 fa-solid fa-paper-plane " id="icon"  (click)="postChatDetails()"></i></button>
+                            </div>
 
-                        </div>
-                        <div class="row d-flex">
-                            <div class="btn bg-secondary" type="submit" (click)="postChatDetails()">post</div>
+
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+
         </div>
     </div>
 </div>

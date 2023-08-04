@@ -23,7 +23,8 @@ export class ViewproductComponent implements OnInit {
   productId!: number;
   userId!: number;
   model: PostAd[] = [];
-  activeUser:user_details[]=[];
+  activeUser: user_details[] = [];
+
   postedUser: user_details = {
     firstname: '',
     lastname: '',
@@ -34,35 +35,55 @@ export class ViewproductComponent implements OnInit {
     state: '',
     islogged: false,
     user_id: 0,
-    secret: '',   
+    secret: '',
     id: 0
   }
   postChat!: FormGroup;
   chatPost!: FormControl;
-  receiverName!:FormControl;
-  receiverId!:FormControl;
+  receiverName!: FormControl;
+  receiverId!: FormControl;
   userChat: chatdetails = {
     senderId: 0,
-    receiverId:0,
+    receiverId: 0,
     postedDate: new Date().toLocaleDateString(),
     senderName: '',
     receiverName: '',
     chatPost: ''
   };
 
+
+  token = localStorage.getItem('token');
   postChatDetails() {
-    this.postChat.value.senderId=this.activeUser[0].id;
-    this.postChat.value.senderName=this.activeUser[0].firstname;
-    this.chat.postChatMsg(this.postChat.value);
+    if (this.token) {
+      this.postChat.value.senderId = this.activeUser[0].id;
+      this.postChat.value.senderName = this.activeUser[0].firstname;
+      this.chat.postChatMsg(this.postChat.value);
+    }
+    else {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+    })
+    Toast.fire({
+        icon: 'warning',
+        title: 'Login First',
+        text:'Please login to send the message'
+    })
+      this.router.navigate(['/signin']);
+    }
+    this.postChat.reset();
   }
   name: string = "";
   ngOnInit() {
     this.productId = this.actRoute.snapshot.params['id'];
     this.registerService.getActiveUser().subscribe(
-      (res)=>{
-        this.activeUser=res;
+      (res) => {
+        this.activeUser = res;
       }
-      );
+    );
     this.postAd.getProductById(this.productId).subscribe((res) => {
       this.model = res;
       this.activeUserId = this.model[0].user_id;
@@ -73,14 +94,14 @@ export class ViewproductComponent implements OnInit {
         this.receiverName.setValue(this.postedUser.firstname);
       })
     });
-  
+
     this.chatPost = new FormControl('', [Validators.required]);
     this.receiverName = new FormControl('', [Validators.required]);
     this.receiverId = new FormControl('', [Validators.required]);
     this.postChat = new FormGroup({
       chatPost: this.chatPost,
-      receiverId:this.receiverId,
-      receiverName:this.receiverName
+      receiverId: this.receiverId,
+      receiverName: this.receiverName
 
     })
   }
@@ -117,11 +138,19 @@ export class ViewproductComponent implements OnInit {
         if (token) {
           this.favService.addtoFav(this.fav);
         } else {
-          Swal.fire({
-            icon: 'error',
+        
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+        })
+        Toast.fire({
+            icon: 'warning',
             title: 'Please login to continue',
-            text: 'You need an account for adding favourite list',
-          });
+            text: 'You need an account for adding favourite list'
+        })
           this.router.navigate(['/signin']);
         }
       }

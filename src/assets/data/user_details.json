@@ -81,7 +81,7 @@
       "state": "Andhra Pradesh",
       "secret": "Batman",
       "avatar": "https://api.multiavatar.com/Firehair.png?apikey=2PhfABEQ49tC1k",
-      "islogged": false,
+      "islogged": true,
       "id": 7
     },
     {
@@ -108,28 +108,12 @@
       "id": 1
     },
     {
-      "chatPost": "adfds",
-      "receiverId": 2,
-      "receiverName": "Sharon",
+      "chatPost": "sdfcsx",
+      "receiverId": 3,
+      "receiverName": "Srikanth",
       "senderId": 7,
       "senderName": "Darshan",
       "id": 2
-    },
-    {
-      "chatPost": "fgdg",
-      "receiverId": 2,
-      "receiverName": "Sharon",
-      "senderId": 6,
-      "senderName": "Nathan",
-      "id": 3
-    },
-    {
-      "chatPost": "fgdg",
-      "receiverId": 2,
-      "receiverName": "Sharon",
-      "senderId": 6,
-      "senderName": "Nathan",
-      "id": 4
     }
   ],
   "Vehicles": [
@@ -349,7 +333,7 @@
       "brand": "HONDA Activa",
       "year": 2022,
       "kmdriven": 232334,
-      "adtitle": "Honda Scooty for sale",
+      "adtitle": "Honda Scooty",
       "description": "Very less driven, Nice mileage and in very good condition",
       "price": 43244,
       "imagelink": "https://cdn.pixabay.com/photo/2023/07/13/09/02/vespa-8124255_150.jpg",
