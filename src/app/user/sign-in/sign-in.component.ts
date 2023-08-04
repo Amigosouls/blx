@@ -79,6 +79,12 @@ export class SignInComponent implements OnInit {
   }
   matcher = new MyErrorStateMatcher();
 
+  toggleVisibility(){
+    var passwordField=document.getElementById("password");
+ const fieldType=passwordField?.getAttribute("type")==="password"?"text":"password";
+passwordField?.setAttribute("type",fieldType);
+  }
+
   onSubmit() {
     this.registeration.signIn().subscribe((response) => {
       this.user_details = response;

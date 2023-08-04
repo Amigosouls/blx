@@ -17,11 +17,14 @@
                     </mat-form-field>
                     <mat-form-field class="example-full-width form-group">
                         <mat-label>Password</mat-label>
-                        <input type="password" matInput formControlName="password" [errorStateMatcher]="matcher">
+                        <input id="password" type="password" matInput formControlName="password" [errorStateMatcher]="matcher">
+                        <a class="float-end"  (click)="toggleVisibility()"><i id="eye-icon" class="fa-solid fa-eye"></i></a>
                         <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                             [attr.aria-pressed]="hide">
                             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                         </button> -->
+
+                        
                         <mat-error *ngIf="Password.hasError('required')">
                             Password is required</mat-error>
                     </mat-form-field>
