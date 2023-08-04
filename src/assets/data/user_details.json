@@ -395,6 +395,30 @@
       "imagelink": "https://cdn.pixabay.com/photo/2021/04/25/11/36/bike-6206212_1280.jpg",
       "user_id": 5,
       "id": 5
+    },
+    {
+      "brand": "KTM",
+      "year": 2019,
+      "kmdriven": 12000,
+      "adtitle": "Ferrari Enzo",
+      "description": "The Ferrari Enzo (Type F140), marketed as Enzo Ferrari, is a mid-engine sports car manufactured by Italian automobile manufacturer Ferrari and named after the company's founder, Enzo Ferrari.",
+      "price": 4000000,
+      "city": "Madurai",
+      "imagelink": "https://cdn.pixabay.com/photo/2017/11/21/12/36/ktm-2968097_1280.jpg",
+      "user_id": 1,
+      "id": 6
+    },
+    {
+      "brand": "AUDI",
+      "year": 2019,
+      "kmdriven": 134000,
+      "adtitle": "Ford GT40",
+      "description": "nice",
+      "price": 2000000,
+      "city": "Delhi",
+      "imagelink": "https://cdn.pixabay.com/photo/2019/09/30/13/28/wallpaper-4515761_150.jpg",
+      "user_id": 1,
+      "id": 7
     }
   ],
   "faq": [
