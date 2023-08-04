@@ -132,3 +132,23 @@ span {
   color: #FFFFFF;
   border: 2px solid #FFF;
 }
+/* Add a media query for tablet view */
+@media (max-width: 768px) {
+  /* Reset the flex properties for the parent container */
+  .d-flex {
+    flex-direction: column;
+    align-items: center; /* Align items to the center vertically */
+  }
+
+  /* Reset the width of the sell button */
+  .sell {
+    width: auto;
+    margin-left: -410px;
+  }
+
+  /* Increase the margin between the buttons */
+  .btns {
+    margin-bottom: 10px;
+    margin-left: -430px;
+  }
+}
