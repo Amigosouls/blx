@@ -107,16 +107,28 @@ span {
   display: block;
 }
 
-.mes-card {
+.card {
   background-color: #176B87;
-  color: #64CCC5;
+  color:black;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card-body{
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .noti {
-  color: #FFFFFF;
+  font-family: Cambria;
+  color: rgb(46, 45, 45);
+  font-weight: 400;
 }
 
-.mes-card:hover {
+.card:hover {
   color: #FFFFFF;
   border: 2px solid #FFF;
 }
