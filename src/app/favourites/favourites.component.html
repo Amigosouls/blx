@@ -1,13 +1,12 @@
 <section>
     <div class="container">
         <button appBackbtn id="backbtn" class="btn"><- Go Back </button>
-        <h1 class="text-center">`Your Favourites`</h1>
     </div>
-    <hr>
+    
     <div class="container" *ngIf="favourites.length==0; else favours" style="padding-bottom: 400px;">
-        <div class="row">
-            <h3 class="empty">Your shopping cart is empty!</h3>
-            <button mat-raised-button color="primary" routerLink=''>Add Favourites</button>
+        <div class="row text-center p-5">
+            <h3 class="empty">No Favorites :(</h3>
+            <button mat-raised-button color="primary" class="col-lg-4 mx-auto" routerLink=''>Add Favourites</button>
         </div>
     </div>
     <ng-template #favours>

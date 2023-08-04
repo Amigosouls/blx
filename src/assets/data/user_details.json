@@ -7,7 +7,7 @@
       "password": "Asde!123",
       "confirmpassword": "Asde!123",
       "state": "Tamil Nadu",
-      "answer": "tappas",
+      "secret": "tappas",
       "islogged": false,
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
       "id": 1
@@ -19,7 +19,7 @@
       "password": "Kokki@123",
       "confirmpassword": "Kokki@123",
       "state": "Tamil Nadu",
-      "answer": "Kokki",
+      "secret": "Kokki",
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
       "islogged": false,
       "id": 2
@@ -31,9 +31,9 @@
       "password": "ThisOneMeansForever@13",
       "confirmpassword": "ThisOneMeansForever@13",
       "state": "Tamil Nadu",
-      "answer": "Satish",
+      "secret": "Satish",
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
-      "islogged": false,
+      "islogged": true,
       "id": 3
     },
     {
@@ -43,7 +43,7 @@
       "password": "Basket9486!",
       "confirmpassword": "Basket9486!",
       "state": "Goa",
-      "answer": "spring",
+      "secret": "spring",
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
       "islogged": false,
       "id": 4
@@ -55,7 +55,7 @@
       "password": "Vicky@123",
       "confirmpassword": "Vicky@123",
       "state": "Tamil Nadu",
-      "answer": "vichu",
+      "secret": "vichu",
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
       "islogged": false,
       "id": 5
@@ -67,7 +67,7 @@
       "password": "Nath@123",
       "confirmpassword": "Nath@123",
       "state": "Assam",
-      "answer": "Nath",
+      "secret": "Nath",
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
       "islogged": false,
       "id": 6
@@ -79,10 +79,22 @@
       "password": "Darshan!23",
       "confirmpassword": "Darshan!23",
       "state": "Andhra Pradesh",
-      "answer": "Batman",
+      "secret": "Batman",
       "avatar": "https://api.multiavatar.com/Firehair.png?apikey=2PhfABEQ49tC1k",
       "islogged": false,
       "id": 7
+    },
+    {
+      "firstname": "Harshan",
+      "lastname": "A",
+      "email": "harshan@123.com",
+      "password": "Harshan@69",
+      "confirmpassword": "Harshan@69",
+      "state": "Uttar Pradesh",
+      "secret": "Designer",
+      "avatar": "https://api.multiavatar.com/Normiefemale.png?apikey=2PhfABEQ49tC1k",
+      "islogged": false,
+      "id": 8
     }
   ],
   "chat": [
@@ -419,6 +431,18 @@
       "imagelink": "https://cdn.pixabay.com/photo/2019/09/30/13/28/wallpaper-4515761_150.jpg",
       "user_id": 1,
       "id": 7
+    },
+    {
+      "brand": "TVS",
+      "year": 2022,
+      "kmdriven": 23434,
+      "adtitle": "Ford GT40",
+      "description": "The Ford GT40 is a high-performance endurance racing car designed and built by the Ford Motor Company.",
+      "price": 200000,
+      "city": "Coimbatore",
+      "imagelink": "https://cdn.pixabay.com/photo/2021/04/25/11/36/bike-6206212_1280.jpg",
+      "user_id": 3,
+      "id": 8
     }
   ],
   "faq": [

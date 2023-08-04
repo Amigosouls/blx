@@ -38,24 +38,32 @@
                         </mat-form-field>
                     </div>
                 </div>
-                <div class="row d-flex">
+                <div class="row d-flex mb-5">
                     <div class="col">
                         <mat-form-field class="example-full-width form-group">
                             <mat-label>Password</mat-label>
-                            <input type="password" matInput formControlName="password" [errorStateMatcher]="matcher">
+                            <input type="password" id="password" matInput formControlName="password" [errorStateMatcher]="matcher" [type]="hide ? 'password' : 'text'">
                             <mat-hint *ngIf="Password.valid">Looks Strong Like You!</mat-hint>
                             <mat-error *ngIf="Password.hasError('pattern') && !Password.hasError('required')">Password
                                 must include 1 uppercase, 1 special symbol and 1 number</mat-error>
                             <mat-error *ngIf="Password.hasError('required')">
                                 Password is required</mat-error>
+                                <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </a>
                         </mat-form-field>
                     </div>
                     <div class="col">
                         <mat-form-field class="example-full-width form-group">
                             <mat-label>Confirm Password</mat-label>
-                            <input type="password" matInput  formControlName="confirmpassword" [errorStateMatcher]="matcher" >
+                            <input type="password" matInput  formControlName="confirmpassword" [errorStateMatcher]="matcher" [type]="c_hide ? 'password' : 'text'" >
                             <mat-error *ngIf="Confirm_Password.hasError('required')">Required Field</mat-error>
                             <mat-error *ngIf="Confirm_Password.hasError('matching')">Passwords not matched</mat-error>
+                            <a mat-icon-button matSuffix (click)="c_hide = !c_hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{c_hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </a>
                         </mat-form-field>
                     </div>
                 </div>
@@ -108,10 +116,10 @@
                         <mat-form-field class="example-full-width form-group">
                             <mat-label>Your favourite nickname</mat-label>
                             <mat-hint>It is a security question!</mat-hint>
-                            <input matInput formControlName="answer" [errorStateMatcher]="matcher">
-                            <mat-error *ngIf="answer.hasError('pattern') && !answer.hasError('required')">Please
+                            <input matInput formControlName="secret" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="secret.hasError('pattern') && !secret.hasError('required')">Please
                                 enter a valid Name</mat-error>
-                            <mat-error *ngIf="answer.hasError('required')">
+                            <mat-error *ngIf="secret.hasError('required')">
                                Required Field</mat-error>
                         </mat-form-field>
                     </div>
