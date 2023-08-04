@@ -33,7 +33,7 @@
       "state": "Tamil Nadu",
       "secret": "Satish",
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
-      "islogged": true,
+      "islogged": false,
       "id": 3
     },
     {
@@ -433,16 +433,28 @@
       "id": 7
     },
     {
-      "brand": "TVS",
-      "year": 2022,
-      "kmdriven": 23434,
-      "adtitle": "Ford GT40",
-      "description": "The Ford GT40 is a high-performance endurance racing car designed and built by the Ford Motor Company.",
-      "price": 200000,
-      "city": "Coimbatore",
-      "imagelink": "https://cdn.pixabay.com/photo/2021/04/25/11/36/bike-6206212_1280.jpg",
+      "brand": "BAJAJ",
+      "year": 2020,
+      "kmdriven": 90003,
+      "adtitle": "Royal Enfielder",
+      "description": "Royal Enfield was a brand name under which The Enfield Cycle Company Limited of Redditch, Worcestershire sold motorcycles, bicycles, lawnmowers and stationary engines which they had manufactured.",
+      "price": 300000,
+      "city": "Bangalore",
+      "imagelink": "https://cdn.pixabay.com/photo/2022/08/23/05/59/motorcycle-7405084_1280.jpg",
       "user_id": 3,
       "id": 8
+    },
+    {
+      "brand": "TVS",
+      "year": 2021,
+      "kmdriven": 98567,
+      "adtitle": "Tata Nano",
+      "description": "The Tata Nano is a discontinued city car produced by Indian automaker Tata Motors over a single generation, primarily in India",
+      "price": 20000000,
+      "city": "Mumbai",
+      "imagelink": "https://cdn.pixabay.com/photo/2017/12/29/05/58/sport-3046819_1280.jpg",
+      "user_id": 3,
+      "id": 9
     }
   ],
   "faq": [
