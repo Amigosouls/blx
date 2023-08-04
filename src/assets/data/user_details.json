@@ -33,7 +33,7 @@
       "state": "Tamil Nadu",
       "answer": "Satish",
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
-      "islogged": true,
+      "islogged": false,
       "id": 3
     },
     {
@@ -57,7 +57,7 @@
       "state": "Tamil Nadu",
       "answer": "vichu",
       "avatar": "https://api.multiavatar.com/Batman.png?apikey=2PhfABEQ49tC1k",
-      "islogged": false,
+      "islogged": true,
       "id": 5
     },
     {
