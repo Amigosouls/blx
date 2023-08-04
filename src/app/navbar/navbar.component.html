@@ -31,18 +31,19 @@
                     <div class="dropdown bg-none">
                         <ng-container *ngFor="let user of userlist">
                             <ng-container *ngIf="user.islogged">
-                            <button *ngIf="hide" class="dropbtn"><button
-                                    class="btn btn-outline-light text-dark me-2 ms-2 d-flex">
-                                    <p-avatar image="{{user.avatar}}" styleClass="mr-2"
-                                        shape="circle"></p-avatar><span>{{user.firstname}}</span>
+                                <button *ngIf="hide" class="dropbtn"><button
+                                        class="btn btn-outline-light text-dark me-2 ms-2 d-flex">
+                                        <p-avatar image="{{user.avatar}}" styleClass="mr-2"
+                                            shape="circle"></p-avatar><span>{{user.firstname}}</span>
+                                    </button>
                                 </button>
-                            </button>
-                        </ng-container>
+                            </ng-container>
                         </ng-container>
                         <div class="dropdown-content">
                             <a href="#"> <a class="nav-link me-2 mt-2 heart" *ngIf="hide" routerLink="favourites"><i
                                         class="fa-solid fa-heart fa-xl"></i></a></a>
-                            <a href="#"><i class="fa-regular fa-comments fs-3 mt-2 mx-3" (click)="notifications=true" *ngIf="hide"></i></a>
+                            <a href="#"><i class="fa-regular fa-comments fs-3 mt-2 mx-3" (click)="notifications=true"
+                                    *ngIf="hide"></i></a>
                             <a href="#"><button class="btn btn-outline-light me-2 btns" (click)="logoutUser()"
                                     *ngIf="hide">Logout</button></a>
                         </div>
@@ -54,18 +55,14 @@
     </nav>
 </section>
 
-<p-sidebar [(visible)]="notifications" position="right">
-    <h3>Notifications</h3>
-
-    <div class="card" *ngFor="let m of Messages">
-        <div class="card-title p-2">
-            Message From {{m.senderName}}
+    <p-sidebar [(visible)]="notifications" position="right" [style]="{background: '#64CCC5'}">
+        <h3 class="noti">Notifications</h3>
+        <div class="card mes-card" *ngFor="let m of Messages">
+            <div class="card-title p-2">
+                Message From {{m.senderName}}
+            </div>
+            <div class="card-body">
+                {{m.chatPost}}
+            </div>
         </div>
-
-        <div class="card-body">
-            {{m.chatPost}}
-
-        </div>
-    </div>
-    
-</p-sidebar>
+    </p-sidebar>
