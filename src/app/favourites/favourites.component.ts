@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Favourites } from 'src/models/favourites';
 import { FavouritesService } from 'src/services/favourites.service';
+import { RegisterationService } from 'src/services/registeration.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -10,7 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class FavouritesComponent implements OnInit {
 
-  constructor(private favService: FavouritesService) { }
+  constructor(private favService: FavouritesService,private registrationService:RegisterationService) { }
 
   fav: Favourites = {
     brand: '',
@@ -27,6 +28,8 @@ export class FavouritesComponent implements OnInit {
   favData: any = [];
 
   favourites: Favourites[] = [];
+
+  activeUserId:number=0;
 
 
   removeFav(deleteItem: Favourites) {
@@ -48,10 +51,22 @@ export class FavouritesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.favService.getFavourites().subscribe(
-      (res) => {
-        this.favourites = res;
-        console.log(this.favourites);
-      });
+    this.registrationService.getActiveUser().subscribe((res)=>{
+      this.activeUserId=res[0].id;
+      this.favService.getFavourites(this.activeUserId).subscribe(
+        (res) => {
+          this.favourites = res;
+          console.log(this.favourites);
+        });
+    });
+
+
+
+
+ 
+
+
+
+   
   }
 }
