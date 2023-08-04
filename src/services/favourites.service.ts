@@ -12,9 +12,11 @@ export class FavouritesService {
   constructor(private http: HttpClient) { }
   favurl = environment.favourites;
 
-  getFavourites() {
-    return this.http.get<Favourites[]>(this.favurl);
+  getFavourites(id:number) {
+    return this.http.get<Favourites[]>(this.favurl+"/?user_id="+id);
   }
+
+  
 
   addtoFav(item: Favourites) {
     this.http.post<Favourites>(this.favurl, item).subscribe((data) => {
