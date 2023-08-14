@@ -15,7 +15,6 @@ export class FavouritesService {
   getFavourites(id:number) {
     return this.http.get<Favourites[]>(this.favurl+"/?user_id="+id);
   }
-
   
 
   addtoFav(item: Favourites) {
