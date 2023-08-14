@@ -13,6 +13,8 @@ import { RegisterationService } from 'src/services/registeration.service';
 import { MessageService } from 'primeng/api';
 import { Router } from '@angular/router';
 import { user_details } from 'src/models/user_details';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 // For Validation Messages
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -39,6 +41,7 @@ export class SignUpComponent implements OnInit {
     private builder: FormBuilder,
     private registeration: RegisterationService,
     private alert: MessageService,
+    private http:HttpClient,
     private router: Router
   ) { }
 
@@ -51,12 +54,13 @@ export class SignUpComponent implements OnInit {
   Confirm_Password!: FormControl;
   secret!: FormControl;
   avatar!:FormControl;
-  user_details: user_details[] = [];
+  user_details: user_details[] =[] ;
   characterName:Array<string>=[];
   avatarList:any[]=[];
 selected_Avatar:string='';
 hide = true;
 c_hide = true;
+emailExist:boolean=false;
   ngOnInit(): void {
     this.First_Name = new FormControl('', [
       Validators.required,
@@ -70,7 +74,8 @@ c_hide = true;
       Validators.required,
       Validators.pattern(/^[a-zA-Z]{1,}$/),
     ]);
-    this.Email = new FormControl('', [Validators.required, Validators.email]);
+    this.Email = new FormControl('', [Validators.required, Validators.email,Validators.pattern("^[A-Za-z0-9._%+-]+@gmail\.com$"
+      )]);
     this.Password = new FormControl('', [
       Validators.required,
       Validators.pattern(
@@ -98,6 +103,12 @@ c_hide = true;
      avatar: this.avatar,
       islogged: this.builder.control(false),
     });
+
+    this.http.get<user_details[]>(environment.user_details).subscribe({
+      next:(res)=>{
+        this.user_details=res;
+      }
+    })
   }
   matcher = new MyErrorStateMatcher();
 onSubmit() {
@@ -117,5 +128,18 @@ onSubmit() {
    const fieldType=passwordField?.getAttribute("type")==="password"?"text":"password";
   passwordField?.setAttribute("type",fieldType);
     }
+    }
+
+    emailCheck(event:any):void {
+      this.emailExist=false;
+    this.user_details.forEach(element => {
+      if(element.email===event.target.value){
+       this.emailExist=true;
+       console.log(this.emailExist);
+   
+      }
+    
+
+    });
     }
 }

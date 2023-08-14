@@ -30,11 +30,11 @@
                     <div class="col">
                         <mat-form-field class="example-full-width form-group">
                             <mat-label>Email</mat-label>
-                            <input matInput formControlName="email" [errorStateMatcher]="matcher">
-                            <mat-error *ngIf="Email.hasError('email') && !Email.hasError('required')">Please enter a
-                                valid email address</mat-error>
-                            <mat-error *ngIf="Email.hasError('required')">
-                                Email is required</mat-error>
+                            <input matInput formControlName="email" (keyup)="emailCheck($event)" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="Email.hasError('required')">Email Is Required</mat-error>
+                            <mat-error *ngIf="Email.hasError('pattern')">
+                                Email Should end with @gmail.com</mat-error>
+                                <label style="color: red;font-size: 10px;" *ngIf="emailExist">Email Already Exists</label>
                         </mat-form-field>
                     </div>
                 </div>
