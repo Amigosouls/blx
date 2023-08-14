@@ -100,13 +100,14 @@ export class PostadComponent implements OnInit {
   }
   getImage() {
     fetch(
-      `https://pixabay.com/api/?key=36007746-b36ae27c3528436e0e7b2219a&q=${this.id}+image+full+vehicle&image_type=photo&min_width=300&per_page=100&min_height=400&order=latest`,
+      `https://pixabay.com/api/?key=36007746-b36ae27c3528436e0e7b2219a&q=${this.id}+full&image_type=photo&min_width=300&per_page=100&min_height=400&order=latest`,
       {
         method: 'GET', //api link from pixaby
       }
     )
       .then((res) => res.json())
       .then((image) => {
+        console.log(image);
         for(var i=0;i<=20;i++){
           this.bikeList[i]=image.hits[Math.floor(Math.random() *20)];
      

@@ -6,3 +6,27 @@
         </div>
     </div>
 </div>
+
+<div class="container mt-5 mb-5 shadow-lg rounder">
+    <h3 class="justify-content-center align-item-center text-center ">
+        Testimonial
+    </h3> 
+    <div class="container-fluid">
+        <p-carousel [value]="commentsList" [numVisible]="3" [numScroll]="3" [circular]="true"  autoPlayInterval="3000">
+            <ng-template let-comments pTemplate="item">
+                <div class="border-1 surface-border border-round m-2 text-center py-5 px-3 card">
+                    <div class="mb-3">
+                       <div class="row" *ngFor="let user of userList"><img src="{{user.avatar}}" height="160px"   *ngIf="comments.email==user.email" alt="" srcset=""></div>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">{{ comments.username }}</h4>
+                        <h6 class="mt-0 mb-3">{{ comments.email }}</h6>
+                        <p> {{comments.feedback}}</p>
+                        
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+
+</div>
