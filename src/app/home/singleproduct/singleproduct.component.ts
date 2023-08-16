@@ -38,7 +38,6 @@ export class SingleproductComponent implements OnInit {
     this.registerService.getActiveUser().subscribe(
       (response) => {
         this.activeUserId = response[0].id;
-        
         this.favService.getFavourites(this.activeUserId).subscribe(
           (res: Favourites[]) => {
             this.favoritesList = res;

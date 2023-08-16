@@ -102,11 +102,25 @@ export class ViewproductComponent implements OnInit {
       chatPost: this.chatPost,
       receiverId: this.receiverId,
       receiverName: this.receiverName
+    });
 
-    })
+    this.registerService.getActiveUser().subscribe(
+      (response) => {
+        this.activeUserId = response[0].id;
+        this.favService.getFavourites(this.activeUserId).subscribe(
+          (res: Favourites[]) => {
+            this.favoritesList = res;
+            console.log(this.favoritesList);
+          },
+          (error) => {
+            console.error('Error fetching favorites:', error);
+          });
+      });
   }
 
   activeUserId: number = 0;
+  favoritesList: Favourites[] = [];
+
   fav: Favourites = {
     brand: '',
     year: 0,
@@ -119,11 +133,20 @@ export class ViewproductComponent implements OnInit {
     user_id: 0,
   };
 
-  addtoFav(products: Favourites) {
+addtoFav(products: Favourites) {
+  this.registerService.getActiveUser().subscribe(
+    (response) => {
+      this.fav.user_id = response[0].id;
+     
+      const isAlreadyInFavorites = this.checkIfProductIsInFavorites(products);
 
-
-    this.registerService.getActiveUser().subscribe(
-      (response) => {
+      if (isAlreadyInFavorites) {
+        Swal.fire({
+          icon: 'info',
+          title: 'Already in Favorites',
+          text: 'This item is already in your favorites list.',
+        });
+      } else {
         this.fav.brand = products.brand;
         this.fav.year = products.year;
         this.fav.kmdriven = products.kmdriven;
@@ -132,30 +155,31 @@ export class ViewproductComponent implements OnInit {
         this.fav.price = products.price;
         this.fav.city = products.city;
         this.fav.imagelink = products.imagelink;
-        this.fav.user_id = response[0].id;
-        console.log(this.activeUserId);
+
+        
         const token = localStorage.getItem('token');
         if (token) {
           this.favService.addtoFav(this.fav);
+          this.favoritesList.push(this.fav);
         } else {
-        
-          const Toast = Swal.mixin({
-            toast: true,
-            position: 'top',
-            showConfirmButton: false,
-            timer: 2000,
-            timerProgressBar: true,
-        })
-        Toast.fire({
-            icon: 'warning',
+          Swal.fire({
+            icon: 'error',
             title: 'Please login to continue',
-            text: 'You need an account for adding favourite list'
-        })
+            text: 'You need an account for adding favorite items',
+          });
           this.router.navigate(['/signin']);
         }
       }
-    )
-  }
+    }
+  );
+}
 
+checkIfProductIsInFavorites(product: Favourites): boolean {
+  const isAlreadyInFavorites = this.favoritesList.some(
+    (favProduct) =>
+      favProduct.brand === product.brand && favProduct.adtitle === product.adtitle
+  );
+  return isAlreadyInFavorites;
+}
 
 }
