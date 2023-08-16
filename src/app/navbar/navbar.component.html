@@ -57,12 +57,27 @@
 
 <p-sidebar [(visible)]="notifications" position="right" [style]="{background: '#64CCC5'}">
     <h2 class="noti">Notifications</h2>
-    <div class="card" *ngFor="let m of Messages">
-        <div class="card-title p-2">
+    <div class="card mb-2" *ngFor="let m of Messages">
+        <div class="card-title p-1">
             Message From {{m.senderName}}
         </div>
         <div class="card-body">
             {{m.chatPost}}
+        </div>
+        <div class="card-footer">
+            <form [formGroup]="ReplyChat" (ngSubmit)="ReplyChat.valid && postReplyDetails(m)">
+                <input type="text" class="form-control" formControlName="senderId" hidden>
+                <input type="text" class="form-control" formControlName="senderName" hidden>
+                <div class="chat-txt justify-content-end d-flex">
+                    <mat-form-field class="reply me-2">
+                        <input matInput type="text" class="form-control" formControlName="chatPost"
+                            placeholder="Reply back">
+                    </mat-form-field>
+                    <button class="send mt-2" mat-mini-fab color="warn" (click)="postReplyDetails(m)">
+                        <mat-icon matSuffix style="font-size: 1.5em;">send</mat-icon>
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </p-sidebar>

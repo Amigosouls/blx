@@ -79,8 +79,6 @@
                                 <input type="text" class="form-control" placeholder="Type here..." id="chat" formControlName="chatPost" [ngClass]="{ 'is-invalid':chatPost.errors&&(chatPost.touched||chatPost.dirty), 'is-valid':chatPost.valid}"><br>
                                 <button class="btn mb-4" id="post" type="submit" data-bs-dismiss="modal" [disabled]="!postChat.valid"><i class="fs-6 fa-solid fa-paper-plane " id="icon"  (click)="postChatDetails()"></i></button>
                             </div>
-
-
                         </div>
                     </div>
                 </form>

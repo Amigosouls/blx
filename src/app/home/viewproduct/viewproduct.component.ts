@@ -88,6 +88,7 @@ export class ViewproductComponent implements OnInit {
       this.model = res;
       this.activeUserId = this.model[0].user_id;
       console.log(this.activeUserId);
+      
       this.registerService.getUserName(this.activeUserId).subscribe((res) => {
         this.postedUser = res;
         this.receiverId.setValue(this.postedUser.id);
