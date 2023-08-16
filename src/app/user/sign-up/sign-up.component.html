@@ -1,4 +1,4 @@
-<p-toast position="top-center" key="tc"></p-toast> 
+<p-toast position="top-center" key="tc"></p-toast>
 <div class="container  mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-lg-6 shadow-lg mt-5 mb-5 text-center rounded-3  col-sm-12">
@@ -6,11 +6,11 @@
             <form class="example-form container" [formGroup]="signupForm" (ngSubmit)="signupForm.valid && onSubmit()" novalidate>
                 <div class="row d-flex">
                     <div class="col">
+
                         <mat-form-field class="example-full-width form-group">
                             <mat-label>Firstname</mat-label>
                             <input matInput formControlName="firstname" [errorStateMatcher]="matcher">
-                            <mat-error *ngIf="First_Name.hasError('pattern') && !First_Name.hasError('required')">Please
-                                enter a valid First Name</mat-error>
+                            <mat-error *ngIf="First_Name.hasError('pattern') && !First_Name.hasError('required')">Please enter a valid First Name</mat-error>
                             <mat-error *ngIf="First_Name.hasError('required')">
                                 First Name is required</mat-error>
                         </mat-form-field>
@@ -19,8 +19,7 @@
                         <mat-form-field class="example-full-width form-group">
                             <mat-label>Lastname</mat-label>
                             <input matInput formControlName="lastname" [errorStateMatcher]="matcher">
-                            <mat-error *ngIf="Last_Name.hasError('pattern') && !Last_Name.hasError('required')">Please
-                                enter a valid Last Name</mat-error>
+                            <mat-error *ngIf="Last_Name.hasError('pattern') && !Last_Name.hasError('required')">Please enter a valid Last Name</mat-error>
                             <mat-error *ngIf="Last_Name.hasError('required')">
                                 Last Name is required</mat-error>
                         </mat-form-field>
@@ -34,7 +33,7 @@
                             <mat-error *ngIf="Email.hasError('required')">Email Is Required</mat-error>
                             <mat-error *ngIf="Email.hasError('pattern')">
                                 Email Should end with @gmail.com</mat-error>
-                                <label style="color: red;font-size: 10px;" *ngIf="emailExist">Email Already Exists</label>
+                            <label style="color: red;font-size: 10px;" *ngIf="emailExist">Email Already Exists</label>
                         </mat-form-field>
                     </div>
                 </div>
@@ -44,26 +43,23 @@
                             <mat-label>Password</mat-label>
                             <input type="password" id="password" matInput formControlName="password" [errorStateMatcher]="matcher" [type]="hide ? 'password' : 'text'">
                             <mat-hint *ngIf="Password.valid">Looks Strong Like You!</mat-hint>
-                            <mat-error *ngIf="Password.hasError('pattern') && !Password.hasError('required')">Password
-                                must include 1 uppercase, 1 special symbol and 1 number</mat-error>
+                            <mat-error *ngIf="Password.hasError('pattern') && !Password.hasError('required')">Password must include 1 uppercase, 1 special symbol and 1 number</mat-error>
                             <mat-error *ngIf="Password.hasError('required')">
                                 Password is required</mat-error>
-                                <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                            [attr.aria-pressed]="hide">
-                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </a>
+                            <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </a>
                         </mat-form-field>
                     </div>
                     <div class="col">
                         <mat-form-field class="example-full-width form-group">
                             <mat-label>Confirm Password</mat-label>
-                            <input type="password" matInput  formControlName="confirmpassword" [errorStateMatcher]="matcher" [type]="c_hide ? 'password' : 'text'" >
+                            <input type="password" matInput formControlName="confirmpassword" [errorStateMatcher]="matcher" [type]="c_hide ? 'password' : 'text'">
                             <mat-error *ngIf="Confirm_Password.hasError('required')">Required Field</mat-error>
                             <mat-error *ngIf="Confirm_Password.hasError('matching')">Passwords not matched</mat-error>
-                            <a mat-icon-button matSuffix (click)="c_hide = !c_hide" [attr.aria-label]="'Hide password'"
-                            [attr.aria-pressed]="hide">
-                            <mat-icon>{{c_hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </a>
+                            <a mat-icon-button matSuffix (click)="c_hide = !c_hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{c_hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </a>
                         </mat-form-field>
                     </div>
                 </div>
@@ -117,29 +113,37 @@
                             <mat-label>Your favourite nickname</mat-label>
                             <mat-hint>It is a security question!</mat-hint>
                             <input matInput formControlName="secret" [errorStateMatcher]="matcher">
-                            <mat-error *ngIf="secret.hasError('pattern') && !secret.hasError('required')">Please
-                                enter a valid Name</mat-error>
+                            <mat-error *ngIf="secret.hasError('pattern') && !secret.hasError('required')">Please enter a valid Name</mat-error>
                             <mat-error *ngIf="secret.hasError('required')">
-                               Required Field</mat-error>
+                                Required Field</mat-error>
                         </mat-form-field>
                     </div>
                 </div>
                 <br>
-                <div class="row d-flex">
+                <div class="row d-flex ">
                     <div class="col">
                         <mat-form-field>
                             <mat-label>Avatar</mat-label>
                             <mat-select formControlName="avatar" [errorStateMatcher]="matcher">
-                                <mat-option  *ngFor="let img of avatarList" id="avatarImg"  value={{img}} (click)="avatar_click(img)" ><img id="avatarImg" src={{img}} class="ms-5 rounded" alt="" height="50px" width="50px"></mat-option>
+                                <mat-option *ngFor="let img of avatarList" id="avatarImg" value={{img}} (click)="avatar_click(img)"><img id="avatarImg" src={{img}} class="ms-5 rounded" alt="" height="50px" width="50px"></mat-option>
                             </mat-select>
-                            <mat-error *ngIf="avatar.hasError('required')">Avatar is Required</mat-error>              
+                            <mat-error *ngIf="avatar.hasError('required')">Avatar is Required</mat-error>
                         </mat-form-field>
                         <img *ngIf="selected_Avatar" [src]="selected_Avatar" class="ms-5 mb-3 rounded" height="40px" width="40px" alt="">
                     </div>
                 </div>
+                <div class="row ">
+                    <div class="col-12 ">
+                        <div class="form-group text-center mt-3">
+                            <re-captcha class="g-recaptcha" (resolved)="resolved($event)" siteKey="6LeHRDsfAAAAAOkNj6VcGBU8jcX1qjiMqV_jhXMf" formControlName="recaptcha"></re-captcha>
+                            <mat-error *ngIf="recaptcha.hasError('required')">Human Verification</mat-error>
+
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col pb-5">
-                    <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/signin"
-                            class="text-decoration-none">Already have
+                    <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/signin" class="text-decoration-none">Already have
                             an account?Login!</a></p>
                     <button mat-raised-button color="primary" type="submit" class="example-full-width">
                         Register
@@ -149,4 +153,3 @@
         </div>
     </div>
 </div>
-

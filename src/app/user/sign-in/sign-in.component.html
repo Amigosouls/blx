@@ -3,37 +3,33 @@
     <div class="row justify-content-center">
         <div class="col-lg-6 shadow-lg mt-5 mb-5 text-center rounded-3  col-sm-12">
             <h3 class="text-center p-4">Sign-In</h3>
-            <form class="example-form container" [formGroup]="signinForm" (ngSubmit)="signinForm.valid && onSubmit()"
-                novalidate>
+            <form class="example-form container" [formGroup]="signinForm" (ngSubmit)="signinForm.valid && onSubmit()" novalidate>
                 <div class="row">
+
 
                     <mat-form-field class="example-full-width form-group">
                         <mat-label>Email</mat-label>
                         <input matInput formControlName="email" [errorStateMatcher]="matcher">
-                        <mat-error *ngIf="Email.hasError('email') && !Email.hasError('required')">Please enter a
-                            valid email address</mat-error>
+                        <mat-error *ngIf="Email.hasError('email') && !Email.hasError('required')">Please enter a valid email address</mat-error>
                         <mat-error *ngIf="Email.hasError('required')">
                             Email is required</mat-error>
                     </mat-form-field>
                     <mat-form-field class="example-full-width form-group">
                         <mat-label>Password</mat-label>
                         <input type="password" matInput formControlName="password" [errorStateMatcher]="matcher" [type]="hide ? 'password' : 'text'">
-                        <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                            [attr.aria-pressed]="hide">
+                        <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </a>
+                        </a>
 
-                        
+
                         <mat-error *ngIf="Password.hasError('required')">
                             Password is required</mat-error>
                     </mat-form-field>
-                    <mat-hint class="text-end" data-bs-toggle="modal" data-bs-target="#forgotPassword"><a
-                            routerLink=".">Forgot Password?</a></mat-hint>
+                    <mat-hint class="text-end" data-bs-toggle="modal" data-bs-target="#forgotPassword"><a routerLink=".">Forgot Password?</a></mat-hint>
                 </div>
                 <br>
                 <div class="col pb-5">
-                    <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/signup"
-                            class="text-decoration-none">Don't have an Account? Signup!</a></p>
+                    <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/signup" class="text-decoration-none">Don't have an Account? Signup!</a></p>
                     <button mat-raised-button color="primary" type="submit" class="example-full-width">
                         Login
                     </button>
@@ -50,23 +46,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form [formGroup]="forgotpassword" (ngSubmit)="forgotpassword.valid && changePassword(forgotpassword)"
-                    novalidate>
+                <form [formGroup]="forgotpassword" (ngSubmit)="forgotpassword.valid && changePassword(forgotpassword)" novalidate>
                     <input type="email" class="form-control mb-3" placeholder="Email" formControlName="fmail">
-                    <input type="text" placeholder="Favourite Nickname" class="form-control mb-3"
-                        formControlName="fanswer">
+                    <input type="text" placeholder="Favourite Nickname" class="form-control mb-3" formControlName="fanswer">
                     <div *ngIf="validdetail">
-                        <input type="password" class="form-control mb-3" placeholder="enter your Passsword"
-                            formControlName="chpass">
-                        <input type="password" placeholder="Re-enter your Passsword" class="form-control mb-3"
-                            formControlName="conchpass">
+                        <input type="password" class="form-control mb-3" placeholder="enter your Passsword" formControlName="chpass">
+                        <input type="password" placeholder="Re-enter your Passsword" class="form-control mb-3" formControlName="conchpass">
                         <span id="error" *ngIf="chpass.hasError('pattern')">Password must contain more than 6 characters
                             with a Uppercase,lowercase,number and a symbol.</span>
                         <span id="error" *ngIf="conchpass.hasError('matching')">Passwords Must Match</span>
                     </div>
                     <button type="button" class="btn btn-secondary me-3" data-bs-dismiss="modal">Close</button>
-                    <button type="button" *ngIf="!validdetail" (click)="forgotPassword(forgotpassword)"
-                        class="btn btn-primary">Next</button>
+                    <button type="button" *ngIf="!validdetail" (click)="forgotPassword(forgotpassword)" class="btn btn-primary">Next</button>
                     <button type="submit" *ngIf="validdetail" class="btn btn-danger" data-bs-dismiss="modal">Change
                         Password</button>
                 </form>

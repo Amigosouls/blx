@@ -49,6 +49,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { BackbtnDirective } from '../services/backbtn.directive';
+import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 
 
 @NgModule({
@@ -95,8 +96,9 @@ import { BackbtnDirective } from '../services/backbtn.directive';
     CardModule,
     MatIconModule,
     AvatarModule,
-    SidebarModule
-
+    SidebarModule,
+    RecaptchaModule,
+    RecaptchaFormsModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

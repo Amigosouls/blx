@@ -65,6 +65,7 @@ export class SignInComponent implements OnInit {
     });
     this.fmail = new FormControl('', [Validators.required]);
     this.fanswer = new FormControl('', [Validators.required]);
+
     this.chpass = new FormControl('', [
       Validators.required,
       Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{6,}$/),
