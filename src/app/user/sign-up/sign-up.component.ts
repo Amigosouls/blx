@@ -46,6 +46,7 @@ export class SignUpComponent implements OnInit {
   ) { }
 
   signupForm!: FormGroup;
+  recaptcha!:FormControl;
   First_Name!: FormControl;
   Last_Name!: FormControl;
   Email!: FormControl;
@@ -61,9 +62,12 @@ selected_Avatar:string='';
 hide = true;
 c_hide = true;
 emailExist:boolean=false;
+cap:boolean=false;
+resolved(captchaResponse: string) {
+  console.log(`Resolved captcha with response: ${captchaResponse}`);}
   ngOnInit(): void {
     this.First_Name = new FormControl('', [
-      Validators.required,
+      Validators.required, 
       Validators.pattern(/^[a-zA-Z]{3,}$/),
     ]);
     this.characterName=["Punk","Asian","Afrohair","Normiefemale","Older","Firehair","Batman","Wonder","Superman","Aesthetic","Monkey","Hero","Villain","Happy","Romeo","Cute","Cool","Angry","Crazy"];
@@ -86,6 +90,8 @@ emailExist:boolean=false;
       Validators.required,
       matchValidator('password'),
     ]);
+    this.recaptcha= new FormControl('', [Validators.required]);
+
     this.State = new FormControl('', [Validators.required]);
     this.secret = new FormControl('', [
       Validators.required,
@@ -101,14 +107,20 @@ emailExist:boolean=false;
       state: this.State,
      secret: this.secret,
      avatar: this.avatar,
+     recaptcha:this.recaptcha,
+     
       islogged: this.builder.control(false),
     });
+    if(!this.recaptcha){
+      this.cap = true;
+    }
 
     this.http.get<user_details[]>(environment.user_details).subscribe({
       next:(res)=>{
         this.user_details=res;
       }
     })
+   
   }
   matcher = new MyErrorStateMatcher();
 onSubmit() {

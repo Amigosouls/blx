@@ -2,16 +2,26 @@
     min-width: 150px;
     max-width: 500px;
     width: 100%;
-  }
-  
-  .example-full-width {
+}
+
+.example-full-width {
     width: 100%;
-  }
-  
-  mat-hint,mat-error{
+}
+
+mat-hint,
+mat-error {
     font-size: small;
-  }
-  mat-hint{
+}
+
+mat-hint {
     font-size: small;
-    color:#3f51b5;
-  }
+    color: #3f51b5;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.g-recaptcha {
+    display: inline-block;
+}
