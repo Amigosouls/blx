@@ -68,8 +68,6 @@
             <div class="modal-body">
                 <form [formGroup]="postChat" (ngSubmit)="postChat.valid&& postChatDetails()">
                     <div class="justify-content-center">
-
-
                         <h4 class="float-start" id="font-style">Write a message to {{postedUser.firstname}}</h4> <img src={{postedUser.avatar}} class="mt-1 ms-1" alt="avatar" width="32px"><br><br>
                         <div class="row">
                             <input type="text" class="form-control" formControlName="receiverId" hidden>
@@ -83,7 +81,6 @@
                     </div>
                 </form>
             </div>
-
         </div>
     </div>
 </div>
