@@ -151,6 +151,30 @@
       "senderId": 5,
       "senderName": "Vicky",
       "id": 5
+    },
+    {
+      "chatPost": "hello",
+      "receiverId": 3,
+      "receiverName": "Srikanth",
+      "senderId": 1,
+      "senderName": "Sharon",
+      "id": 6
+    },
+    {
+      "chatPost": "Hello!@",
+      "senderId": 3,
+      "senderName": "Srikanth",
+      "receiverId": 1,
+      "receiverName": "Sharon",
+      "id": 7
+    },
+    {
+      "chatPost": "Hey!",
+      "senderId": 3,
+      "senderName": "Srikanth",
+      "receiverId": 7,
+      "receiverName": "Darshan",
+      "id": 8
     }
   ],
   "Vehicles": [

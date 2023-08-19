@@ -68,8 +68,6 @@
             <div class="modal-body">
                 <form [formGroup]="postChat" (ngSubmit)="postChat.valid&& postChatDetails()">
                     <div class="justify-content-center">
-
-
                         <h4 class="float-start" id="font-style">Write a message to {{postedUser.firstname}}</h4> <img src={{postedUser.avatar}} class="mt-1 ms-1" alt="avatar" width="32px"><br><br>
                         <div class="row">
                             <input type="text" class="form-control" formControlName="receiverId" hidden>
@@ -79,13 +77,10 @@
                                 <input type="text" class="form-control" placeholder="Type here..." id="chat" formControlName="chatPost" [ngClass]="{ 'is-invalid':chatPost.errors&&(chatPost.touched||chatPost.dirty), 'is-valid':chatPost.valid}"><br>
                                 <button class="btn mb-4" id="post" type="submit" data-bs-dismiss="modal" [disabled]="!postChat.valid"><i class="fs-6 fa-solid fa-paper-plane " id="icon"  (click)="postChatDetails()"></i></button>
                             </div>
-
-
                         </div>
                     </div>
                 </form>
             </div>
-
         </div>
     </div>
 </div>
